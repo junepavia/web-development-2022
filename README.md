@@ -2,4 +2,6 @@
 Web development course 
 
 # Firstname Lastname Notes
+Bien De Guzman
+JavaScript
 Notes here
