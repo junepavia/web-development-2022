@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Introduction</title>
+    <link rel="stylesheet" href="jsintro.css" />
+    <script src="jsintro.js"></script>
+  </head>
+  <body>
+    <div id="intro-container">
+      <!--Onclick-->
+      <h2>JavaScript can change HTML content.</h2>
+      <p id="transform">Click the button to Transform me!</p>
+      <button
+        type="button"
+        onclick='document.getElementById("transform").innerHTML = "Tada! I Transformed"'
+      >
+        On Click
+      </button>
+      <br />
+      <p id="display" style="display: none">Secret Text is Shown. Congrats!</p>
+      <button
+        id="shazam"
+        type="button"
+        onclick="document.getElementById('display').style.display='block'"
+      >
+        Shazam
+      </button>
+      <br />
+      <!--External Script-->
+      <p id="external">Lorem, ipsum dolor.</p>
+      <button type="button" onclick="myFunction()">Try it</button>
+      <!--Internal Script-->
+      <p><span id="compute"></span> Im Computed in ln 48</p>
+      <!--Bulb on/off-->
+      <button
+        id="bulon"
+        onclick="document.getElementById('myImage').src='bulbon.jpg'"
+      >
+        Bulb ON
+      </button>
+      <img id="myImage" src="bulb.jpg" style="width: 100px" />
+      <button
+        id="buloff"
+        onclick="document.getElementById('myImage').src='bulb.jpg'"
+      >
+        Bulb Off
+      </button>
+      <br />
+      <p>
+        Clicking the button will pop-up dialog box for printing this current
+        page.
+      </p>
+      <button onclick="window.print()">Print</button>
+    </div>
+    <div id="state-container">
+      <h2>JavaScript Statements</h2>
+      <h4>Semicolons</h4>
+      <p><span id="state1"></span> -- To show this number I use js statement</p>
+      <h4>Code Block</h4>
+      <p id="para1"></p>
+      <p id="para2"></p>
+      <p id="para3"></p>
+      <button type="button" onclick="myFunction()">Click Me!</button>
+      <h2>JS Syntax</h2>
+      <p><span id="decimal"></span> -- We can use decimal</p>
+      <p><span id="varia"></span> -- Using var to declare variable</p>
+      <p>
+        <span id="arith"></span> -- Using arithmetic operators to compute values
+      </p>
+    </div>
+
+    <script>
+      document.getElementById("compute").innerHTML = 3 * 3;
+      let a, b, c;
+      a = 100;
+      b = 4;
+      c = a / b;
+      document.getElementById("state1").innerHTML = c;
+      document.getElementById("decimal").innerHTML = 2.3719 + 5.445;
+      var q, w, e, r;
+      q = 2;
+      w = 7;
+      e = 4;
+      r = q * e + w;
+      document.getElementById("varia").innerHTML = r;
+      document.getElementById("arith").innerHTML = (9 + 7) * 4;
+      // this is comment for script
+      /* I can also be use */
+    </script>
+  </body>
+</html>

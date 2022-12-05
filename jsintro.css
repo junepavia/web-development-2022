@@ -1,0 +1,25 @@
+body{
+    display: flex;
+}
+#intro-container, #state-container{
+    flex-direction: row;
+}
+#transform{
+    color: royalblue;
+}
+#shazam{
+    border-radius: 10px;
+    color: red;
+    background-color: silver;
+    font-weight: bold;
+}
+#shazam:active{
+    outline: outset 2px yellow;
+}
+#bulon{
+    background-color: gold;
+}
+#buloff{
+    background-color: black;
+    color: white;
+}
