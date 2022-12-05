@@ -12,3 +12,9 @@ window.alert / alert --> to show an alert box
 window.print --> print current page
 semicolon --> use to seperate js statement
 var,let,const --> to declaire variable
+
+# June Rodney Pavia
+
+HTML
+CSS
+JAVASCRIPT
