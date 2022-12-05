@@ -3,7 +3,8 @@
 Web development course
 
 # Firstname Lastname Notes
- AL Christian Simene Notes
+
+ # AL Christian Simene 
  innerHTML-will return our html element as a javascript object
 
 Notes here
