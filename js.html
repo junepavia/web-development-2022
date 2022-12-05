@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="js.css">
+    <link rel="stylesheet" href="js.js">
+</head>
+<body>
+<div class="main">  
+    <h1>Bien Marco De Guzman(JS)</h1>
+    <div class="first">
+        <p id="demo">InnerHTML</p>
+        <button type="button" onclick='document.getElementById
+        ("demo").innerHTML = 5 * 10 ;'>Click Me!</button>
+        </div>
+    <div class="imageswitch">
+        <marquee><img id="image" src="smile.png" style="width:100px"></marquee>
+        <button onclick="document.getElementById('image'). src='smile.png'">Smile</button>
+        <button onclick="document.getElementById('image'). src='sad.png'">Sad</button>
+    </div>
+    <!--Values, Operators, Expressions, Keywords, and Comments-->
+    <div class="statement">
+        <h4>JS Statement</h4>
+        <p>x * y</p>
+        <p>z = x * y</p>
+        <p id="state"></p>
+        <script>
+            let x, y, z;    //Statement
+            x = 2;  //Statement
+            y = 5;  //Statement
+            z = x * y;  //Statement
+            document.getElementById("state").innerText = z;
+        </script>
+    </div>
+    <!--Hiding and Showing Element using display-->
+    <div id="hideshow">
+        <script src="javascript.js">
+            <h3>Hide/Show Element</h3>
+        </script>
+            <p>Hide and Show element can be done by changing using display style</p>
+        </div>
+        <br>
+        <button onclick="myFunction()">Hide/Show</button>
+    </div>
+</body>
+</html>
