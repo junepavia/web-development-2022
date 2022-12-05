@@ -13,6 +13,7 @@ window.print --> print current page
 semicolon --> use to seperate js statement
 var,let,const --> to declaire variable
 
+<<<<<<< HEAD
 # Firstname Lastname Notes
 
 Notes here
@@ -28,3 +29,8 @@ window alert meron mini box lalabas sa taas
 HTML
 CSS
 JAVASCRIPT
+=======
+# Bien Marco De Guzman
+JavaScript
+
+>>>>>>> 0d2bfe94925175faf5aac319b629e5eb03b18ec5
