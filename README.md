@@ -1,5 +1,7 @@
 # web-development-2022
 Web development course 
 
-# Firstname Lastname Notes
-Notes here
+# June Rodney Pavia
+HTML
+CSS
+JAVASCRIPT
