@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="ziegy.css">
+</head>
+<body>
+    <div id="zieg">
+        <p>This is ziegler azarcon</p>
+    </div>
+    <img id="minions" src="minions1.jpg">
+    <button onclick="turnOn()">
+        Sad
+    </button>
+    <button onclick="turnOff()">
+        Happy
+    </button>
+    <script>
+        function turnOn(){
+            document.getElementById("minions").src="minions1.jpg"
+        }
+        function turnOff(){
+            document.getElementById("minions").src="minions2.jpg"
+        }
+        </script>
+</body>
+</html>
