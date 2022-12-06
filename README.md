@@ -43,3 +43,10 @@ JavaScript Operators - (+ * / -)
 JavaScript Expression - (x + 1)
 JavaScript Keywords are used to identify actions to be perfomed.
 JavaScript Comments - (// /**/)
+-CSS
+-JAVASCRIPT
+# Ziegler Azarcon
+-HTML zieg.html
+-CSS -ziegy.css
+-JS -used script tag
+
