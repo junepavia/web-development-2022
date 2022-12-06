@@ -44,6 +44,18 @@ HTML
 CSS
 JAVASCRIPT
 
+# Princess Mauricio
+PR approved
+-CSS
+
+-JAVASCRIPT -create dynamic and interactive web
+method - getElementById()
+single or double quote, no problem
+href- for css
+src- for js
+<!--html comment-->
+/*css comment*/
+//js comment
 # Bien Marco De Guzman
 JavaScript update
 JavaScript Variable
