@@ -12,6 +12,10 @@ window.alert / alert --> to show an alert box
 window.print --> print current page
 semicolon --> use to seperate js statement
 var,let,const --> to declaire variable
+var --> use to run code in older browser
+const --> general rule : always use to declare variable
+let --> if the variable value can change
+hyphen - --> not allowed in js, reserve for subtraction
 
 # Firstname Lastname Notes
 
