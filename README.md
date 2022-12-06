@@ -33,15 +33,15 @@ document write pag na trigger or ma use nag laod ang pag pero dsiplay na yung va
 window alert meron mini box lalabas sa taas
 # June Rodney Pavia
 HTML
-<<<<<<< HEAD
+
 CSS
 JAVASCRIPT
 =======
 # Bien Marco De Guzman
-JavaScript
-
->>>>>>> 0d2bfe94925175faf5aac319b629e5eb03b18ec5
-=======
--CSS
--JAVASCRIPT
->>>>>>> main
+JavaScript update
+JavaScript Variable
+var, let, const
+JavaScript Operators - (+ * / -)
+JavaScript Expression - (x + 1)
+JavaScript Keywords are used to identify actions to be perfomed.
+JavaScript Comments - (// /**/)
