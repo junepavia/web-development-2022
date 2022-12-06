@@ -37,5 +37,5 @@ HTML
 # Ziegler Azarcon
 -HTML zieg.html
 -CSS -ziegy.css
--JS -not yet
+-JS -used script tag
 

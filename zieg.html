@@ -11,5 +11,31 @@
     <div id="zieg">
         <p>This is ziegler azarcon</p>
     </div>
+    <button onclick="clickMe()">
+        click new
+    </button>
+    <img id="minions" src="minions1.jpg">
+    <button onclick="turnOn()">
+        Turn On
+    </button>
+    <button onclick="turnOff()">
+        Turn Off
+    </button>
+    <script>
+        function clickMe(){
+            let element = document.getElementById("course");
+            element.innerHTML="Cantilan";
+            element.style.color="red";
+            document.getElementById("Zieg").innerHTML="Babar Madrid";
+            document.getElementById("Jav").innerHTML="Consuelo Surigao";
+            document.getElementById("Jav").style.color="blue";
+        }
+        function turnOn(){
+            document.getElementById("minions").src="minions1.jpg"
+        }
+        function turnOff(){
+            document.getElementById("minions").src="minions2.jpg"
+        }
+        </script>
 </body>
 </html>
