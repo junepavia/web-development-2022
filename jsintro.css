@@ -1,8 +1,11 @@
 body{
     display: flex;
 }
-#intro-container, #state-container{
+#intro-container, #state-container, #operate-container{
     flex-direction: row;
+    border: outset 4px black;
+    padding: 4px;
+    width: 32%;
 }
 #transform{
     color: royalblue;
