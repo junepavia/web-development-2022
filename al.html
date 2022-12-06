@@ -11,9 +11,11 @@
 </head>
 <body>
     <h1 style="text-align: center;">JAVASCRIPT</h1>
+
 <div id="hide" class="hd">
     <p style="color: whitesmoke;">Click button to show image</p>
     <img id="myImage" src="akita.jfif" alt="Dog" style="display:none ; height: 400px; width: 500px;">
+    
     <button  style="margin-top: 20px;" onclick="document.getElementById('myImage').style.display='block'">Show</button>
     <button style="margin-top: 20px;" onclick="document.getElementById('myImage').style.display='none'" >Hide</button>
     <button style="margin-top: 20px;" onclick="document.getElementById('hide').style.backgroundColor='black'" >Change background Color to black</button>
@@ -33,7 +35,7 @@
 <button type="button" onclick="document.getElementById('change').innerHTML = 'Hello Everyone!'">Click Me!</button>
 
 <h1 style="text-align: center;">JavaScript Output</h1>
-<p>Enter two numbers to add</p>
+<p>Enter two numbers</p>
 <input type="text" id="firstno" size="4"> <span id="operator"></span> <input type="text" id="secondno" size="4"> = <p id="sum" size ="4"></p>  <br> 
 
 <button onclick="addition()"  style="margin-top: 20px;" >ADD</button>
@@ -52,8 +54,8 @@
     //document.getElementById("sum").innerHTML=sum;
    // document.getElementById("sum").style.color="white";
     //document.write(sum);
-     //   window.alert(sum);
-     console.log(sum)
+     //  alert(sum);
+     //console.log(sum)
     }
 </script>
 <script src="al.js"></script>

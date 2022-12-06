@@ -1,8 +1,9 @@
+
 function subtraction(){
-    var firstno,secondno,sum;
-    firstno=parseInt(document.getElementById("firstno").value)
-    secondno=parseInt(document.getElementById("secondno").value)
-    sum = firstno - secondno;
+    var firstNo, secondNo, sum;
+    firstNo=parseInt(document.getElementById("firstNo").value)
+    secondNo=parseInt(document.getElementById("secondNo").value)
+    sum = firstNo - secondNo;
     document.getElementById("operator").innerHTML= "-"
    //document.getElementById("sum").value=sum;
     document.getElementById("sum").innerHTML=sum;
@@ -13,10 +14,10 @@ function subtraction(){
 }
 
 function multiply(){
-    var firstno,secondno,sum;
-    firstno=parseInt(document.getElementById("firstno").value)
-    secondno=parseInt(document.getElementById("secondno").value)
-    sum = firstno * secondno;
+    var firstNo, secondNo, sum;
+    firstNo=parseInt(document.getElementById("firstNo").value)
+    secondNo=parseInt(document.getElementById("secondNo").value)
+    sum = firstNo * secondNo;
     document.getElementById("operator").innerHTML= "*"
    //document.getElementById("sum").value=sum;
     document.getElementById("sum").innerHTML=sum;
@@ -26,10 +27,10 @@ function multiply(){
      //console.log(sum)
 }
 function divide(){
-    var firstno,secondno,sum;
-    firstno=parseInt(document.getElementById("firstno").value)
-    secondno=parseInt(document.getElementById("secondno").value)
-    sum = firstno / secondno;
+    var firstNo, secondNo, sum;
+    firstNo=parseInt(document.getElementById("firstNo").value)
+    secondNo=parseInt(document.getElementById("secondNo").value)
+    sum = firstNo / secondNo;
     document.getElementById("operator").innerHTML= "/"
    //document.getElementById("sum").value=sum;
     document.getElementById("sum").innerHTML=sum;
