@@ -19,7 +19,7 @@ window.print --> print current page
 semicolon --> use to seperate js statement
 var,let,const --> to declaire variable
 
-
+# Firstname Lastname Notes
  # AL Christian Simene 
  innerHTML--will return our html element as a javascript object, changes the element content
  getElementById() -- finds an HTML element
