@@ -1,0 +1,52 @@
+body {
+    background-image: url(web.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    font-size: 30px;
+    padding:15px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(237, 223, 223, 0.425);
+  }
+
+  li {
+    float: left;
+    padding: 10px;
+
+  }
+
+  .info {
+    float: left;
+    width: 33%;
+    padding: 20px;
+  }
+   p {
+    color: white;
+    font-size: 25px;
+    background-color: rgba(237, 223, 223, 0.425);
+    padding: 15px;
+   }
+
+   h3 {
+    font-size: 40px;
+    background-color: rgba(237, 223, 223, 0.425);
+    padding: 15px;
+    width: fit-content;
+    color: white;
+   }
+
+   .first:after {
+    display: table;
+    clear:both;
+    content:"";
+   }
+ 
+ .ends {
+ text-align: center;
+ }
