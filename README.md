@@ -31,6 +31,6 @@ innerhtml need pa ng id para ma diplays yung string or yung data
 document write pag na trigger or ma use nag laod ang pag pero dsiplay na yung value naka input
 window alert meron mini box lalabas sa taas
 # June Rodney Pavia
-
 HTML
-CSS
+-CSS
+-JAVASCRIPT
