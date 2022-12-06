@@ -39,3 +39,8 @@ window alert meron mini box lalabas sa taas
 HTML
 -CSS
 -JAVASCRIPT
+# Ziegler Azarcon
+-HTML zieg.html
+-CSS -ziegy.css
+-JS -used script tag
+
