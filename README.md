@@ -3,10 +3,12 @@
 Web development course
 
 # Missy May Cabrera Notes
-HTML - Index.html
+HTML - index.html
 CSS - Javascript.css
-my Javascript - later
-
+Javascript - jsmissy.js
+/-external javascript=separates HTML and code,
+                     easier to read and maintain,
+                     files can speed up page loads.
 # Brent de Guzman Notes
 
 JavaScript --> to program the behavior of web pages

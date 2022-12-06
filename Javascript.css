@@ -9,3 +9,19 @@ header{ background-color: palevioletred;
         margin: 10px;
         text-align: center;
         }
+.firstdiv{ padding:5px;
+           width: 300px;
+           text-align: center;
+           background-color: rgb(143, 51, 143);
+           margin: 10px;
+           float:left;
+           display: block;
+           }
+.seconddiv{ padding:5px;
+            width: 300px;
+            text-align: center;
+            background-color: rgb(37, 133, 66);
+            margin: 10px;
+            float:left;
+            display: block;
+          }
