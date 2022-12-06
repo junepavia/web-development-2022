@@ -18,7 +18,6 @@ window.print --> print current page
 semicolon --> use to seperate js statement
 var,let,const --> to declaire variable
 
-<<<<<<< HEAD
 # Firstname Lastname Notes
 
  # AL Christian Simene 
@@ -33,10 +32,9 @@ document write pag na trigger or ma use nag laod ang pag pero dsiplay na yung va
 window alert meron mini box lalabas sa taas
 # June Rodney Pavia
 HTML
-
 CSS
 JAVASCRIPT
-=======
+
 # Bien Marco De Guzman
 JavaScript update
 JavaScript Variable
