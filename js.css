@@ -1,0 +1,43 @@
+body{
+    background-image: url(code.jpg);
+    background-size: cover;
+}
+h1{
+    background-image: url(paper.jpg);
+    background-size: cover;
+    text-align: center;
+    color: rgb(109, 91, 91);
+    height: 50px;
+    padding: 10px;
+    margin-top: 0;
+}
+#image{
+    margin-top: 10px;
+}
+.main{
+    margin-bottom: 20px;
+}
+.first{
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 200px;
+    display: inline-block;
+}
+.imageswitch{
+    background-image: linear-gradient(to right,green, yellow);
+    width: 300px;
+    display: inline-block;
+}
+#hideshow{
+    width: 200px;
+    background-image: linear-gradient(to bottom,orange, red);
+    border: 2px dotted;
+    border-radius: 20px;
+}
+.statement{
+    width: 200px;
+    border: 2px solid;
+    display: inline-block;
+    background-image: linear-gradient(to top,white,grey);
+}
