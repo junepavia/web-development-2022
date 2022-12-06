@@ -5,13 +5,26 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAVASCRIPT</title>
+    <link rel="stylesheet" href="al.css">
+    
     
 </head>
 <body>
     <h1 style="text-align: center;">JAVASCRIPT</h1>
-<p id="hide">Click to hide contents</p>
+
+<div id="hide" class="hd">
+    <p style="color: whitesmoke;">Click button to show image</p>
+    <img id="myImage" src="akita.jfif" alt="Dog" style="display:none ; height: 400px; width: 500px;">
+    
+    <button  style="margin-top: 20px;" onclick="document.getElementById('myImage').style.display='block'">Show</button>
+    <button style="margin-top: 20px;" onclick="document.getElementById('myImage').style.display='none'" >Hide</button>
+    <button style="margin-top: 20px;" onclick="document.getElementById('hide').style.backgroundColor='black'" >Change background Color to black</button>
+</div>
+
+
+
 <!--Get the HTML content of an element with id="hide"-->
-<button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+<button style="margin-top: 20px;" type="button" onclick="document.getElementById('hide').style.display='none'">Hide</button>
 
 <p id="change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus esse ullam repellat laudantium suscipit, doloremque quae animi iusto architecto blanditiis ipsum, possimus sint mollitia quibusdam inventore, provident natus voluptates deleniti.</p>
 
@@ -21,9 +34,31 @@
 <!--The innerHTML manipulates the HTML content -->
 <button type="button" onclick="document.getElementById('change').innerHTML = 'Hello Everyone!'">Click Me!</button>
 
-<p>Click button to show image</p>
-<img id="myImage" src="akita.jfif" alt="Dog" style="display:none ; height: 400px; width: 300px;">
-<button onclick="document.getElementById('myImage').style.display='block'">Show</button>
-<button onclick="document.getElementById('myImage').style.display='none'">Hide</button>
+<h1 style="text-align: center;">JavaScript Output</h1>
+<p>Enter two numbers</p>
+<input type="text" id="firstno" size="4"> <span id="operator"></span> <input type="text" id="secondno" size="4"> = <p id="sum" size ="4"></p>  <br> 
+
+<button onclick="addition()"  style="margin-top: 20px;" >ADD</button>
+<button onclick="subtraction()"  style="margin-top: 20px; margin-left: 10px;" >SUBTRACT</button>
+<button onclick="multiply()"  style="margin-top: 20px; margin-left: 10px;" >MULTIPLY</button>
+<button onclick="divide()"  style="margin-top: 20px; margin-left: 10px;" >DIVIDE</button>
+
+<script>
+    function addition(){
+    var firstno,secondno,sum,operator;
+    firstno=parseInt(document.getElementById("firstno").value)
+    secondno=parseInt(document.getElementById("secondno").value)
+    sum = firstno + secondno;
+    document.getElementById("operator").innerHTML= "+"
+   //document.getElementById("sum").value=sum;
+    //document.getElementById("sum").innerHTML=sum;
+   //document.getElementById("sum").style.color="white";
+    //document.write(sum);
+       //alert(sum);
+     //console.log(sum)
+    }
+</script>
+<script src="al.js"></script>
+
 </body>
 </html>

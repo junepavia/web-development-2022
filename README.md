@@ -25,12 +25,16 @@ let --> if the variable value can change
 hyphen - --> not allowed in js, reserve for subtraction
 
 # Firstname Lastname Notes
+ # AL Christian Simene 
+ innerHTML--will return our html element as a javascript object, changes the element content
+ getElementById() -- finds an HTML element
+ parseINT-- states that, an int (integer) value of an HTML element whose id is firstno gets initialized to firstno. 
+ console.log () ---writes a message to the console. The  console is useful for debuggin purposes.
+ document.write -- creates another document, useful for testing purposes
+ window.alert -- show visual alert box on the screen whatever we pass to window.alert is displayed to the user in plain text.
 
-# AL Christian Simene
 
-innerHTML-will return our html element as a javascript object
 
-Notes here
 
 # Erwin Rey Jumamil
 
