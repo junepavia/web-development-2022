@@ -38,6 +38,7 @@ JAVASCRIPT
 # Princess Mauricio
 PR approved
 -CSS
+
 -JAVASCRIPT -create dynamic and interactive web
 method - getElementById()
 single or double quote, no problem
@@ -46,4 +47,3 @@ src- for js
 <!--html comment-->
 /*css comment*/
 //js comment
-
