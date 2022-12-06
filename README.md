@@ -41,6 +41,17 @@ operators are use usually in condition like if switch
 # June Rodney Pavia
 
 HTML
+CSS
+JAVASCRIPT
+
+# Bien Marco De Guzman
+JavaScript update
+JavaScript Variable
+var, let, const
+JavaScript Operators - (+ * / -)
+JavaScript Expression - (x + 1)
+JavaScript Keywords are used to identify actions to be perfomed.
+JavaScript Comments - (// /**/)
 -CSS
 -JAVASCRIPT
 # Ziegler Azarcon
