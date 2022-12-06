@@ -1,0 +1,11 @@
+*{ box-sizing: border-box;}
+
+body{ background-color: khaki;}
+
+h1 {color:blue;}
+
+header{ background-color: palevioletred;
+        padding: 5px;
+        margin: 10px;
+        text-align: center;
+        }
