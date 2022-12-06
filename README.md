@@ -20,6 +20,9 @@ var,let,const --> to declaire variable
 
 # Firstname Lastname Notes
 
+ # AL Christian Simene 
+ innerHTML-will return our html element as a javascript object
+
 Notes here
 
 Erwin Rey Jumamil
