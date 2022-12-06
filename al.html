@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">JAVASCRIPT</h1>
+<p id="hide">Click to hide contents</p>
+<!--Get the HTML content of an element with id="hide"-->
+<button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+
+<p id="change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus esse ullam repellat laudantium suscipit, doloremque quae animi iusto architecto blanditiis ipsum, possimus sint mollitia quibusdam inventore, provident natus voluptates deleniti.</p>
+
+
+<!--Get the HTML content of an element with id="change"-->
+<!--will return our html element as a javascript object -->
+<!--The innerHTML manipulates the HTML content -->
+<button type="button" onclick="document.getElementById('change').innerHTML = 'Hello Everyone!'">Click Me!</button>
+
+<p>Click button to show image</p>
+<img id="myImage" src="akita.jfif" alt="Dog" style="display:none ; height: 400px; width: 300px;">
+<button onclick="document.getElementById('myImage').style.display='block'">Show</button>
+<button onclick="document.getElementById('myImage').style.display='none'">Hide</button>
+</body>
+</html>
