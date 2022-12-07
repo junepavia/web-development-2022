@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+      #function-cont {
+        border: outset 5px gray;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Javascript Continuation</h1></header>
+    <div id="function-cont">
+      <h2>Functions</h2>
+      <p><span id="func1"></span> -- This is the return product</p>
+      <p id="func2"></p>
+      <h2>Objects</h2>
+      <p><span id="obj1"></span></p>
+      <button onkeydown="displayDate()">What time is it?</button>
+      <!-- <element event='some JavaScript'> -->
+      <p id="event"></p>
+      <h2>Strings</h2>
+      <p id="string"></p>
+      <p id="string2"></p>
+      <p><span id="string3"></span> -- Total lenght of string</p>
+      <p><span id="string4"></span> -- === operator is use</p>
+      <!--equal value and equal type, == equal to -->
+      <p><span id="string5"></span> -- Slice Method of String</p>
+      <p><span id="string6"></span> -- Substring Method of String</p>
+      <button onclick="functionreplace()">Replace</button>
+      <p id="string7">Try our new Melon Shake with real Melon</p>
+    </div>
+
+    <script>
+      var x = myFunction(8, 6); // a=8 * b=6
+      document.getElementById("func1").innerHTML = x;
+      //use to display the data
+      function myFunction(a, b) {
+        return a * b; // return will be x ang give the product
+      }
+      function toFahrenheit(f) {
+        return (30 * 9) / 5 + 32;
+      } // Convertion Celsius to Fahrentheit
+      document.getElementById("func2").innerHTML =
+        "30 Degree Celsius is equal to " +
+        toFahrenheit() +
+        " degree Fahrentheit";
+      // () is use to only show the result
+      const person = {
+        firstName: "John",
+        lastName: "Wick",
+        id: "[Excomminicado]",
+        fullName: function () {
+          return this.firstName + " " + this.lastName + " " + this.id;
+        }, //this --> use to call content in same group
+      };
+      document.getElementById("obj1").innerHTML = person.fullName();
+      function displayDate() {
+        document.getElementById("event").innerHTML = Date();
+      }
+      let text = "Galaxy the Dog"; // string - sequence of characters
+      document.getElementById("string").innerHTML = text;
+      let text2 = "Dori the Cat"; // single or double quote is accepted
+      document.getElementById("string2").innerHTML = text2;
+      let text3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZalphabet";
+      document.getElementById("string3").innerHTML = text3.length;
+      let p = "String"; // declaring using new will create on object
+      let q = new String("String"); // q is an object
+      document.getElementById("string4").innerHTML = p === q;
+      // avoid using new as keyword it will slow down the page
+      let text4 = "Elephant, Raccoon, Tiger";
+      let part = text4.slice(10, 17); //Slice Method can use - value[-5]
+      document.getElementById("string5").innerHTML = part;
+      let str = "Elephant, Raccoon, Tiger"; // substring cut on 19 then take 4 string
+      document.getElementById("string6").innerHTML = str.substr(19, 4);
+      function functionreplace() {
+        //text.replace is case sensitive
+        let text5 = document.getElementById("string7").innerHTML;
+        document.getElementById("string7").innerHTML = text5.replace(
+          "Melon", // switch to /MELON/i
+          "Banana"
+        );
+      }
+    </script>
+  </body>
+</html>
