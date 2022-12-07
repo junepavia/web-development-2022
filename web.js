@@ -24,6 +24,7 @@ function myFunction() {
 
 //you can skip window keyword
   // window.alert(10 * 10);
+  
 
 // debugging purposes, you can call the console.log()
   console.log(10 + 9);
