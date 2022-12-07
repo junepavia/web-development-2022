@@ -20,7 +20,7 @@ function myFunction() {
 
 
 // For testing purposes, it is convenient to use document.write():
-  document.write(100 * 4);
+  document.write(100 * 5);
 
 //you can skip window keyword
   // window.alert(10 * 10);
