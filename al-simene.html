@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <style>
+            .topNav{
+                display: flex;
+                border-radius: 10px;
+                background-color: rgb(33, 31, 31);
+            }
+            a{
+                text-decoration: none;
+            }
+            li{
+                list-style-type: none;
+                padding: 10px;
+                display: inline-block;
+            }
+            body{
+                background-color: rgb(19, 18, 18);
+                color: white;
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <h1 style="text-align: center; background-color: black; color: antiquewhite;">JAVASCRIPT</h1>
+    </header>
+    <div class="topNav">
+        <nav>
+        <ul>
+            <li><a href="erwin-jumamil.html">Go to Erwin's Page</a></li>
+            <li><a href="princess-mauricio.html">Go to Princess's Page</a></li>
+            <li><a href="missy-cabrera.html">Go to Missy's Page</a></li>
+            <li><a href="al-simene.html">Go to Al's Page</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!--Click Event-->
+    <h1 style="text-align: center; background-color: black; color: antiquewhite;">JAVASCRIPT EVENTS</h1>
+    <p ondblclick="dclick()">Click button</p> <h1 id="dbclick" style="text-align: center;"></h1>
+    <input type = "button" onclick = "popUp()" value = "ClickMe!!" />
+    <!--Mouse Event-->
+    <p>Bring your mouse inside the div1</p>      
+    <div id="over" onmouseover =over() onmouseout = out()>
+       <h2 style="text-align: center;"> THIS IS DIV1 </h2>
+    </div>   
+    <!--Input Events-->
+    <label for="fname">Enter Complete Name:</label><br>
+    <input type="text" id="fname" onblur="blurInput()">
+
+
+
+    <script>
+            function popUp() {
+              alert("BONJOUR!!!")}
+            function over() {
+               document.getElementById('over').style.backgroundColor='red';}            
+            function out() {
+                document.getElementById('over').style.backgroundColor="lime";}            
+            function dclick() {
+                document.getElementById("dbclick").innerHTML = "Surprise!!!";}
+            function blurInput() {
+                var x = document.getElementById("fname");
+                x.value = x.value.toUpperCase();}
+     </script>      
+
+
+ 
+
+
+
+</body>
+</html>
