@@ -35,6 +35,8 @@
       <p><span id="string6"></span> -- Substring Method of String</p>
       <button onclick="functionreplace()">Replace</button>
       <p id="string7">Try our new Melon Shake with real Melon</p>
+      <button onclick="functioncase()">Click me</button>
+      <p id="string8">Lorem ipsum dolor sit.</p>
     </div>
 
     <script>
@@ -86,6 +88,11 @@
           "Melon", // switch to /MELON/i
           "Banana"
         );
+      }
+      function functioncase() {
+        let text = document.getElementById("string8").innerHTML;
+        document.getElementById("string8").innerHTML = text.toUpperCase();
+        //document.getElementById("string8").innerHTML = text.toLowerCase();
       }
     </script>
   </body>
