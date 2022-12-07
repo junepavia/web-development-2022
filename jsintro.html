@@ -31,7 +31,7 @@
       <p id="external">Lorem, ipsum dolor.</p>
       <button type="button" onclick="myFunction()">Try it</button>
       <!--Internal Script-->
-      <p><span id="compute"></span> Im Computed in ln 48</p>
+      <p><span id="compute"></span> Im Computed on internal script.</p>
       <!--Bulb on/off-->
       <button
         id="bulon"
@@ -53,6 +53,7 @@
       </p>
       <button onclick="window.print()">Print</button>
     </div>
+
     <div id="state-container">
       <h2>JavaScript Statements</h2>
       <h4>Semicolons</h4>
@@ -61,13 +62,29 @@
       <p id="para1"></p>
       <p id="para2"></p>
       <p id="para3"></p>
-      <button type="button" onclick="myFunction()">Click Me!</button>
+      <button type="button" onclick="functionpara()">Click Me!</button>
       <h2>JS Syntax</h2>
       <p><span id="decimal"></span> -- We can use decimal</p>
       <p><span id="varia"></span> -- Using var to declare variable</p>
       <p>
         <span id="arith"></span> -- Using arithmetic operators to compute values
       </p>
+      <p><span id="consta"></span> -- Using const to declare vairable</p>
+    </div>
+
+    <div id="operate-container">
+      <h2>JS Operators</h2>
+      <p id="sample1"></p>
+      <p><span id="arith2"></span> -- Arithmetic operators to compute</p>
+      <p><span id="arith3"></span> -- ** Exponent</p>
+      <p><span id="opera1"></span> -- Written using operator</p>
+      <h2>JS Data Type</h2>
+      <h4>Arrays</h4>
+      <p>
+        <span id="fruit"></span> -- Text displayed here is selected in array
+      </p>
+      <h4>Objects</h4>
+      <p><span id="object"></span> -- To display the text i used js object</p>
     </div>
 
     <script>
@@ -85,6 +102,42 @@
       r = q * e + w;
       document.getElementById("varia").innerHTML = r;
       document.getElementById("arith").innerHTML = (9 + 7) * 4;
+      const h = 12;
+      j = 8;
+      k = h - j;
+      document.getElementById("consta").innerHTML = k;
+      let text1 = "It was me Dio ";
+      text1 += "ZAWARDO"; //+= assignment operator
+      document.getElementById("sample1").innerHTML = text1;
+      let u = 5;
+      let t = (450 / 50) * u;
+      document.getElementById("arith2").innerHTML = t;
+      {
+        //re declare the value of a only for this id
+        let a = 5;
+        a **= 4;
+        document.getElementById("arith3").innerHTML = "Value of a is: " + a;
+      }
+      let name1 = "Brent";
+      let name2 = "Michael";
+      let name3 = "de Guzman";
+      let name4 = name1 + " " + name2 + "" + name3;
+      document.getElementById("opera1").innerHTML = name4;
+      const fruits = ["Banana", "Apple", "Melon", "Grape", "Orange"]; //Array - group of element
+      document.getElementById("fruit").innerHTML = fruits[0]; //Count starts from 0
+      const myinfo = {
+        firstName: "Brent",
+        lastName: "de Guzman",
+        age: 27,
+        hairColor: "black",
+      };
+
+      document.getElementById("object").innerHTML =
+        myinfo.firstName +
+        myinfo.lastName +
+        " is " +
+        myinfo.age +
+        " years old.";
       // this is comment for script
       /* I can also be use */
     </script>
