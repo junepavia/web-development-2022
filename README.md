@@ -3,11 +3,12 @@
 Web development course
 
 # Missy May Cabrera Notes
-
-HTML - Index.html
+HTML - index.html
 CSS - Javascript.css
-my Javascript - later
-
+Javascript - jsmissy.js
+/-external javascript=separates HTML and code,
+                     easier to read and maintain,
+                     files can speed up page loads.
 # Brent de Guzman Notes
 
 JavaScript --> to program the behavior of web pages
@@ -45,14 +46,11 @@ hyphen - --> not allowed in js, reserve for subtraction
 innerhtml need pa ng id para ma diplays yung string or yung data
 document write pag na trigger or ma use nag laod ang pag pero dsiplay na yung value naka input
 window alert meron mini box lalabas sa taas
-<<<<<<< HEAD
-=======
 12-06-22
 pag gumamit ng external js needed sa script mag input ng source para ma basa nya yung js mo
 tapos para na triggger yung function needed mo ng button na onclcick
 addinng number and string the number will treat as string
 operators are use usually in condition like if switch
->>>>>>> main
 
 # June Rodney Pavia
 
@@ -80,8 +78,15 @@ JavaScript Operators - (+ * / -)
 JavaScript Expression - (x + 1)
 JavaScript Keywords are used to identify actions to be perfomed.
 JavaScript Comments - (// /**/)
--CSS
--JAVASCRIPT
+__________________________________________________
+Variables - containers for storing data, variables declared inside a {}
+Let - cannot b e redeclared, must be declared before use.
+Const - cannot be reassign or redeclared
+__________________________________________________
+Javascript string - are written with quotes single or double (""/'')
+Javascript number - can be written in with or without decimal
+EL or ES numbers can be written in exponential (-e)
+Boolean can only have 2 values(True or False)
 # Ziegler Azarcon
 -HTML zieg.html
 -CSS -ziegy.css

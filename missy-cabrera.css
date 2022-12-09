@@ -1,28 +1,28 @@
-*{ box-sizing: border-box;}
-
-body{ background-color: khaki;}
-
-h1 {color:blue;}
+* { box-sizing: border-box;}
+body{ background-color: powderblue;}
 
 header{ background-color: palevioletred;
         padding: 5px;
         margin: 10px;
         text-align: center;
-        }
+    }
 .flex { display:flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-evenly;}
+.fbox { margin-top: 5px;
+        width:300px;
+        padding:5px;
+        background-color: fuchsia;
+        text-align: center;
+}
 .firstdiv{ padding:5px;
            width: 300px;
            text-align: center;
            background-color: rgb(143, 51, 143);
-           float:left;
-           display: block;
-           }
+       }
 .seconddiv{ padding:5px;
             width: 300px;
             text-align: center;
             background-color: rgb(37, 133, 66);
-            float:left;
-            display: block;
-          }
+      }
