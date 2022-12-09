@@ -41,3 +41,35 @@ h1{
     display: inline-block;
     background-image: linear-gradient(to top,white,grey);
 }
+.arithmetic{
+    background-color: pink;
+    border: 2px solid;
+    display: inline-block;
+    padding: 20px;
+}
+.strings{
+    background: greenyellow;
+    border: 2px solid;
+    display: inline-block;
+    padding: 20px;
+}
+.assope{
+    color:White;
+    background-color: red;
+    border: 2px solid yellow;
+    display: inline-block;
+    padding: 20px;
+}
+.incre{
+    background-image: linear-gradient(pink, rgb(255, 255, 59));
+    border: 2px solid yellow;
+    display: inline-block;
+    padding: 20px;
+}
+.snum{
+    background-image: linear-gradient(brown, grey);
+    border:2px solid white;
+    display: inline-block;
+    padding: 10px;
+    height: auto;
+}
