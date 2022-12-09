@@ -1,23 +1,28 @@
 * { box-sizing: border-box;}
 body{ background-color: powderblue;}
-.topnav {
-    overflow: hidden;
-    background-color: pink;
-  }
-.topnav a {
-    float: left;
-    display: block;
-    color: green;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-.topnav a:hover {
-    background-color: purple;
-    color: black;
-  }
-.topnav .icon {
-    display: none;
-  }
-  
+
+header{ background-color: palevioletred;
+        padding: 5px;
+        margin: 10px;
+        text-align: center;
+    }
+.flex { display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;}
+.fbox { margin-top: 5px;
+        width:300px;
+        padding:5px;
+        background-color: fuchsia;
+        text-align: center;
+}
+.firstdiv{ padding:5px;
+           width: 300px;
+           text-align: center;
+           background-color: rgb(143, 51, 143);
+       }
+.seconddiv{ padding:5px;
+            width: 300px;
+            text-align: center;
+            background-color: rgb(37, 133, 66);
+      }
