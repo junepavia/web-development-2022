@@ -33,6 +33,10 @@ hyphen - --> not allowed in js, reserve for subtraction
  console.log () ---writes a message to the console. The  console is useful for debuggin purposes.
  document.write -- creates another document, useful for testing purposes
  window.alert -- show visual alert box on the screen whatever we pass to window.alert is displayed to the user in plain text.
+ A JavaScript function --- a block of JavaScript code, that can be executed when "called". (A set of procedure/instruction)
+ const -- value should not be changed.
+ JavaScript counts positions from zero.     
+
 
 
 
