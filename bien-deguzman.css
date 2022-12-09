@@ -1,11 +1,16 @@
 h1{
     background-color: aquamarine;
-    border: 3px solid;
+    border: 3px dotted;
     text-align: center;
 }
 body{
-    background-image: linear-gradient(pink, green);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(122, 122, 122), rgb(101, 255, 216));
+    background-size: auto;
+}
+.top{
+    background-image: linear-gradient(orange, rgb(81, 255, 65));
+    border: 3px solid;
+    padding: 20px;
 }
 .arithmetic{
     background-color: pink;
@@ -38,4 +43,30 @@ body{
     display: inline-block;
     padding: 10px;
     height: auto;
+}
+.dtypes{
+    background-image: linear-gradient(to left, rgb(252, 86, 113), rgb(134, 134, 109));
+    border: 2px dashed rgb(0, 255, 55);
+    display: inline-block;
+    padding: 20px;
+}
+.mid{
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+    display: block;
+}
+.exponential{
+    background-color: pink;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+}
+.bool{
+    background-color: rgb(237, 255, 79);
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
 }
