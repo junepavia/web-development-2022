@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta name="description" content="Javascript">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./missy-cabrera.css">
+        
+    </head>
+<body>
+    <header>
+        <h1 id="missy1"></h1>
+         <script>document.getElementById("missy1").innerHTML = 'Missy Cabrera';</script>
+    </header>
+    <div class="flex">
+    <div class="firstdiv">
+   <h1> My Javascript</h1>
+   <!-- external jsmissy.js-->
+   <p id="missy2">innerHTML for html content</p>
+   <p id="missy3"></p>
+   <p id="missy4"></p>
+   <button type="button" onclick="myFunction()">Hello!</button>
+   </div>
+   
+   <div class="seconddiv">
+       <h1>I overwrite</h1>
+       <button type="button" onclick="document.write(88)">Doc.write</button>
+   </div>
+   <div class="fbox">
+    <h1>Window Alert button</h1>
+    <button type="button" onclick="window.alert(88)">alert.box</button>
+   </div>
+   <div class="fbox">
+    <h1> Console.log </h1>
+
+   </div>
+   <div class="fbox">
+    <h1> Print button</h1>
+    <button type="button" onclick="window.print()">Print my page</button>
+   </div>
+   </div>
+   <script src="jsmissy.js"></script>
+
+</body>
+</html>
