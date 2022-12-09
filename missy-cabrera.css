@@ -12,6 +12,7 @@ header{ background-color: palevioletred;
         justify-content: space-evenly;}
 .fbox { margin-top: 5px;
         width:300px;
+        height: auto;
         padding:5px;
         background-color: fuchsia;
         text-align: center;

@@ -20,7 +20,7 @@
    <p id="missy2">innerHTML for html content</p>
    <p id="missy3"></p>
    <p id="missy4"></p>
-   <button type="button" onclick="myFunction()">Hello!</button>
+   <button type="button" onclick="test()">Hello!</button>
    </div>
    
    <div class="seconddiv">
@@ -33,12 +33,36 @@
    </div>
    <div class="fbox">
     <h1> Console.log </h1>
-
+    <p>debugging purposes</p>
+    <button type="button" onclick="console.log( 5 + 3)">inspect</button>
    </div>
    <div class="fbox">
     <h1> Print button</h1>
     <button type="button" onclick="window.print()">Print my page</button>
    </div>
+   <div class="fbox">
+    <h1>Variable</h1>
+    <p> <mark>var</mark> x, y, m;<br>
+        x = 20; <br>
+        y = 8;<br>
+        m = x + y;</p>
+    <p id="missy5"></p>
+    <button type="button" onclick="test1()">var</button>
+   </div>
+   <div class="fbox">
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name"><br>
+        <label for="surname">Surname:</label><br>
+        <input type="text" id="surname"><br>
+        <label for="age">Age:</label><br>
+        <input type="age" id="age" ><br><br>
+        <button type="button" onclick="test2()">Register</button>
+      </form>
+      <p id="missy6"></p>
+      
+   </div>
+
    </div>
    <script src="jsmissy.js"></script>
 
