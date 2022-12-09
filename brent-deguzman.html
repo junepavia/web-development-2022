@@ -117,30 +117,29 @@
       let part = text4.slice(10, 17); //Slice Method can use - value[-5]
       document.getElementById("string5").innerHTML = part;
       let str = "Elephant, Raccoon, Tiger"; // substring cut on 19 then take 4 string
-      document.getElementById("string6").innerHTML = str.substr(19, 4);
+      document.getElementById("string6").innerHTML = str.substr(19, 5);
       function functionreplace() {
         //text.replace is case sensitive
         let text5 = document.getElementById("string7").innerHTML;
         document.getElementById("string7").innerHTML = text5.replace(
-          "Melon", // switch to /MELON/i
+          /MELON/i, // switch to /MELON/i
           "Banana"
         );
       }
       function functioncase() {
         let text = document.getElementById("string8").innerHTML;
-        document.getElementById("string8").innerHTML = text.toUpperCase();
-        //document.getElementById("string8").innerHTML = text.toLowerCase();
+        //document.getElementById("string8").innerHTML = text.toUpperCase();
+        document.getElementById("string8").innerHTML = text.toLowerCase();
       }
       let lorem = "wap"; //padding string
-      lorem = lorem.padStart(12, "badu");
-      //lorem = lorem.padEnd(12, "badu");
+      //lorem = lorem.padStart(12, "badu");
+      lorem = lorem.padEnd(12, "badu");
       document.getElementById("string9").innerHTML = lorem;
       const mapa = "One Punch Man";
-      document.getElementById("string10").innerHTML = mapa.charAt(4);
+      document.getElementById("string10").innerHTML = mapa.charAt(0);
       document.getElementById("string11").innerHTML = mapa.charCodeAt(2);
       const sample = "This text is for string search text fish";
       document.getElementById("strings1").innerHTML = sample.indexOf("for");
-      //document.getElementById("strings1").innerHTML =
       sample.lastIndexOf("text");
       const match = sample.match(/is/gi);
       document.getElementById("strings2").innerHTML =
@@ -168,7 +167,7 @@
       let price = 20;
       let VAT = 0.345;
       let disc = 2;
-      let total = `Total: ${((price * (1 + VAT)) / disc).toFixed(3)}`;
+      let total = `Total: ${((price * (1 + VAT)) / disc).toFixed(5)}`;
       //toFixed () converts a number to a string
       document.getElementById("temp5").innerHTML = total;
     </script>
