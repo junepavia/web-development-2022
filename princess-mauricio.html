@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="web.js"></script>
+    
+    <title>JavaScript</title>
+</head>
+<body>
+
+<h1>JS</h1>
+
+<p id="demo">changing content</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = 
+"You have just successfully changed the content!"'>
+    JavaScript can change HTML content.<br>Click Me!</button><br><br><br>
+
+
+<h2>What Can JavaScript Do?</h2>
+<p id="dem">Changing font size</p>
+<button type="button" onclick="document.getElementById('dem').style.fontSize=
+'55px'">JavaScript can change the style of an HTML element.<br>Click Me!</button>
+<br><br><br>
+
+
+<h2>Hiding content</h2>
+<p id="de">JavaScript can hide HTML elements.</p>
+<button type="button" onclick="document.getElementById('de').style.display='none'">
+    Click Me to hide this text!</button><br><br><br>
+
+
+<h2>showing content</h2>
+<p id="d" style="display:none">You can see me now!</p>
+<button type="button" onclick="document.getElementById('d').style.display=
+'block'">Click Me to show something!</button><br><br><br>
+
+
+<p id="demo1"></p>
+
+<h2>Demo JavaScript in Head</h2>
+<p id="demo2">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button><br><br><br>
+
+
+<p id="demo3"></p><br>
+
+
+<!-- <h3>Using document.write() after an HTML document is loaded, will delete all existing HTML:</h3> -->
+<!-- <h3>The document.write() method should only be used for testing</h3> . -->
+<!--<button type="button" onclick="document.write(5 + 6)">Try it</button> -->
+
+
+<h2>Activate Debugging</h2>
+
+<p>F12 on your keyboard will activate debugging.</p>
+<p>Then select "Console" in the debugger menu.</p>
+<p>Then click Run again.</p><br><br><br>
+
+
+
+<h2>The window.print() Method</h2>
+<p>Click the button to print the current page.</p>
+<button onclick="window.print()">Print this page</button><br><br><br>
+
+
+<h1>LEARNINGS</h1>
+<li>JS can be inline, internal or external just like CSS</li>
+<li>script tag</li>
+<li>JS can be place in the body or in the head section </li>
+<li>document.write() is for testing purposes; if after an html, will delete all existing html</li>
+<li>alert() is use to display data, can skip window</li>
+<li>document.getElementById(id) is use for html element, id attrb is the element, innerhTML is the content</li>
+<li>console.log() is use for debugging purposes</li>
+<li>window.print() is use for printng</li>
+
+<script src="web.js"></script>
+</body>
+</html>
