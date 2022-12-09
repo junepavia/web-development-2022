@@ -24,7 +24,7 @@
             }
         </style>
     </head>
-<body>
+<body onload="docload()">
     <header>
         <h1 style="text-align: center; background-color: black; color: antiquewhite;">JAVASCRIPT</h1>
     </header>
@@ -47,9 +47,38 @@
     <div id="over" onmouseover =over() onmouseout = out()>
        <h2 style="text-align: center;"> THIS IS DIV1 </h2>
     </div>   
+    <p id="clk" onmousedown="mouseDown()" onmouseup="mouseUp()">01001000 01000101 01001100 01010000</p>
     <!--Input Events-->
-    <label for="fname">Enter Complete Name:</label><br>
-    <input type="text" id="fname" onblur="blurInput()">
+    <label for="fname">Type Anything:</label><br>
+    <input type="text" id="fname" onblur="blurInput()"><br>  
+    <!--Load Events-->
+    <img src="smile.png" alt="smile" onerror="errorLoading()" style="margin-top: 20px; margin-bottom: 20px;"> <br>
+    <!--Comparison operator-->
+    <label for="name">Enter Name</label>
+    <input type="text" id="name" required>
+    <button onclick="chkname()">Log in</button>
+    <h1 style="text-align: center;" id="logIn" ></h1>
+    <!--String-->
+    <label for="string">Enter anything:</label><br>
+    <input type="text" id="string" ><br>
+    <label>Enter a number</label><br>
+    <input type="text" id="start" ><br>
+    <input type="text" id="end" ><br>
+    <button onclick="checkLength()">Press me</button>
+    <p>The String has <i id="lngth"></i> characters</p>
+    <p id="partOfSent"></p><br><br>
+    <label for="parag">Enter a sentence:</label><br>
+    <input type="text" id="parag" ><br>
+    <label for="replacement">Enter a Word to replace:</label><br>
+    <input type="text" id="replacement" ><br>
+    <label for="replaceInto">Replaced the word into:</label><br>
+    <input type="text" id="replaceInto" ><br>
+    <button onclick="change()">Replace</button>
+    <p id="rep"></p>
+
+
+
+
 
 
 
@@ -65,12 +94,44 @@
             function blurInput() {
                 var x = document.getElementById("fname");
                 x.value = x.value.toUpperCase();}
+            function mouseDown(){
+                document.getElementById('clk').innerHTML= "HELP"}
+            function mouseUp(){
+                document.getElementById('clk').innerHTML= "01001000 01000101 01001100 01010000"}
+            function errorLoading(){
+                alert("The program failed successfully!");}
+            function docload(){
+                alert("Welcome!");}
+            function chkname(){
+                var name;
+                name=document.getElementById('name').value
+                const owner="Al Christian";
+                const owner1="al christian";
+               if (name == owner){
+                    output = "Log in Successfully!";}
+                    else if(name==owner1){
+                        output= "Log in Successfully!";}
+                    else{
+                        output="INTRUDER ALERT!!!";}
+                    document.getElementById('logIn').innerHTML=output;
+                 }
+            function checkLength(){
+                var string,start,end;
+                string=document.getElementById('string').value
+                start=document.getElementById('start').value
+                end=document.getElementById('end').value
+                part=string.slice(start,end);
+                document.getElementById('lngth').innerHTML=string.length;
+                document.getElementById('partOfSent').innerHTML=part;
+                    }
+            function change(){
+                var parag, replacement, replaceInto; 
+                parag=document.getElementById('parag').value
+                replacement=document.getElementById('replacement').value
+                replaceInto=document.getElementById('replaceInto').value
+                document.getElementById('rep').innerHTML = 
+                parag.replace('replacement','replaceInto');
+            }
      </script>      
-
-
- 
-
-
-
 </body>
 </html>
