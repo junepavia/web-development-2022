@@ -21,5 +21,11 @@ function test2(){
     name + " " + surname +" "+
    " " + age +" " +"y/o.";
 }
+function test3(){
+  const peso = 55.38
+  const dollar = document.getElementById("dollar").value;
+  document.getElementById("missy7").innerHTML =
+  "Php"+ " " + dollar * peso ; 
+}
   
 
