@@ -5,16 +5,20 @@
     <title>Javascript</title>
     <style>
       body {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0;
+        row-gap: 0;
       }
       #function-cont,
-      #string-cont {
+      #string-cont,
+      #number-cont,
+      #ways-cont {
         border: outset 5px gray;
         padding: 2px;
         margin: 2px;
-        width: 48%;
-        flex-direction: row;
         font-size: 24px;
+        width: auto;
       }
       h1 {
         text-align: center;
@@ -73,6 +77,53 @@
       <p><span id="temp4"></span> -- String Interpolation</p>
       <!--subtitute for variable $-->
       <p><span id="temp5"></span> -- Expression Substitution</p>
+    </div>
+    <div id="number-cont">
+      <h2>Numbers</h2>
+      <p><span id="numb"></span> -- Numbers can be in Decimal</p>
+      <p><span id="numb1"></span> -- Scientific Notation</p>
+      <p>
+        <span id="numb2"></span> -- Integer Precision accurate up to 15 digits
+      </p>
+      <p><span id="numb3"></span> -- Adding number/string</p>
+      <p><span id="numb4"></span> -- Not a Number</p>
+      <p><span id="numb5"></span> -- NaN type</p>
+      <p><span id="numb6"></span> -- Infinity in JS</p>
+      <p>
+        <span id="numb7"></span> -- Calculates number outside the largest
+        possible
+      </p>
+      <p><span id="numb8"></span> -- Divided by 0</p>
+      <p><span id="numb9"></span> -- Big Integer(BigInt)/n</p>
+      <p><span id="numb0"></span> -- Integer Precision</p>
+      <p><span id="numb01"></span> -- Max and Min. Safe Integer</p>
+      <h4>Number Method</h4>
+      <p><span id="numb02"></span> -- isInteger() Method</p>
+      <!--to know if integer is safe-->
+      <p><span id="numbet"></span> -- toString() Method</p>
+      <!--returns a number as a string-->
+      <p><span id="numbet1"></span> -- toExponential() Method</p>
+      <!--returns a string, with a number rounded-->
+      <p><span id="numbet2"></span> -- toFixed() Method</p>
+      <!--number written with a specified number of decimals-->
+      <p><span id="numbet3"></span> -- toPrecision() Method</p>
+      <!--number written with a specified length-->
+    </div>
+    <div id="ways-cont">
+      <h4>Number Properties</h4>
+      <p><span id="numpro1"></span> -- EPSILON Property</p>
+      <!--difference between 1 and the smallest floating point number-->
+      <p><span id="numpro2"></span> -- MAX_VALUE/MIN_VALUE Property</p>
+      <!--largest possible number in JavaScript-->
+      <h2>Ways to Access Object Properties</h2>
+      <ul>
+        <li>Dot property accessor: object.property</li>
+        <li>Square brackets property access: object['property']</li>
+        <li>Object destructuring: const { property } = object</li>
+      </ul>
+      <p><span id="ways1"></span> -- Dot Method</p>
+      <p><span id="ways2"></span> -- Square brackets property accessor</p>
+      <p><span id="ways3"></span> Check me on Console</p>
     </div>
 
     <script>
@@ -170,6 +221,100 @@
       let total = `Total: ${((price * (1 + VAT)) / disc).toFixed(5)}`;
       //toFixed () converts a number to a string
       document.getElementById("temp5").innerHTML = total;
+
+      //Numbers
+      let f = 3.1416;
+      document.getElementById("numb").innerHTML = f;
+      let g = 42e3; //Decimal Places
+      let h = 42e-3;
+      document.getElementById("numb1").innerHTML = g + "<br>" + h;
+      let j = 999999999999999;
+      document.getElementById("numb2").innerHTML = j;
+      let k = 30; //k = "30"
+      let l = 25; //l = "25";
+      let m = k + l; //+ operator to concatenate the strings
+      document.getElementById("numb3").innerHTML = m;
+      // subtract, divide, and multiply will convert string
+      document.getElementById("numb4").innerHTML = 2 * "Two";
+      //number and non-numeric string
+      let n = NaN;
+      document.getElementById("numb5").innerHTML = typeof n;
+      document.getElementById("numb6").innerHTML = typeof Infinity;
+      let dizNumb = 5;
+      let txt = "";
+      while (dizNumb != Infinity) {
+        dizNumb = dizNumb * dizNumb;
+        txt = txt + dizNumb + "<br>";
+      }
+      document.getElementById("numb7").innerHTML = txt;
+      let r = 2 / 0;
+      let s = -2 / 0;
+      document.getElementById("numb8").innerHTML = r + "<br>" + s;
+      document.getElementById("numb9").innerHTML = 12345678901234599;
+      let t = 9007199254740996 === 9007199254740997;
+      document.getElementById("numb0").innerHTML = t;
+      let u = Number.MAX_SAFE_INTEGER;
+      document.getElementById("numb01").innerHTML = u;
+      document.getElementById("numb02").innerHTML =
+        Number.isInteger(55) + "<br>" + Number.isInteger(55.1);
+      //Fraction and Decimal are not integer
+      let aa = 420;
+      document.getElementById("numbet").innerHTML =
+        aa.toString() +
+        "<br>" +
+        (420).toString() +
+        "<br>" +
+        (400 + 20).toString();
+      let ab = 2.456;
+      document.getElementById("numbet1").innerHTML =
+        ab.toExponential() +
+        "<br>" +
+        ab.toExponential(2) +
+        "<br>" +
+        ab.toExponential(4);
+      document.getElementById("numbet2").innerHTML =
+        ab.toFixed(0) +
+        "<br>" +
+        ab.toFixed(2) +
+        "<br>" +
+        ab.toFixed(4) +
+        "<br>";
+      document.getElementById("numbet3").innerHTML =
+        ab.toPrecision() +
+        "<br>" +
+        ab.toPrecision(2) +
+        "<br>" +
+        ab.toPrecision(4) +
+        "<br>";
+      let ac = Number.EPSILON;
+      document.getElementById("numpro1").innerHTML = ac;
+      let ad = Number.MAX_VALUE;
+      document.getElementById("numpro2").innerHTML = ad;
+      //3Ways to Access Object Properties
+      const car = {
+        name: "Toyota",
+        some: "Ford",
+        kotse: "Honda",
+        type: {
+          model: "Avanza",
+          model1: "Fortuner",
+          model3: "HI-ACE",
+        },
+      };
+      document.getElementById("ways1").innerHTML = car.name;
+      //expression.identifier
+      const placeholder = { lorem: "ipsum", lurem: "dolor" };
+      document.getElementById("ways2").innerHTML = placeholder["lorem"];
+      const aboutMe = {
+        name: "Brent",
+        position: "Second",
+        birthDate: "April 11, 1995",
+      };
+      const { name, position, birthDate } = aboutMe;
+      console.log(name);
+      console.log(position);
+      console.log(birthDate);
+      //const { identifier } = expression; you can extract as many properties as you'd like
     </script>
   </body>
 </html>
