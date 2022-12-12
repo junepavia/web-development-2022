@@ -9,6 +9,7 @@
 <body>
     <h1>Bien-Deguzman</h1>
     <div class = "top">
+        <center><h2>1st Part</h2></center>
     <!--A typical arithmetic operation takes two numbers (or expressions) and produces a new number.-->
     <div class="arithmetic">
         <h3>Arithmetic Operators</h3>
@@ -41,14 +42,40 @@
     </div>
     </div>  
     <div class="mid">
+        <center><h2>2nd Part</h2></center>
         <!--Exponential Numbers-->
         <div class="exponential">
             <h3>Exponential</h3>
             <p id = "expo"></p>
         </div>
+        <!--Boolean-->
         <div class="bool">
             <h3>Boolean</h3>
             <p id="boolean"></p>
+        </div>
+        <!--Array-->
+        <div class="arrays">
+            <h3>Array</h3>
+            <p id="arrayy"></p>
+        </div>
+        <!--Object returns an array whose elements are strings corresponding to the 
+            enumerable string-keyed property values found directly upon object-->
+        <div class="obj">
+            <h3>Objects</h3>
+            <p id="obje"></p>
+        </div>
+        <!--Function a set of statements that performs a task or calculates a value-->
+        <div class="funct">
+            <h3>Function</h3>
+            <p id="func"></p>
+        </div>
+        <!--HTML events are "things" that happen to HTML elements-->
+        <div class="events">
+            <h3>Events</h3>
+            <p id="event"></p>
+            <button onclick="document.getElementById('event').innerHTML=Date()">Time check: </button>
+            <br><br>
+            Enter your name: <input type="text" id="fname" onchange="upperCase()">
         </div>
     </div>
 </body>
@@ -108,5 +135,37 @@
         let n = 8;
         document.getElementById("boolean").innerHTML =
         (p == n) + "<br>" + (p == m) + "<br>" + (m == n);
+    </script>
+    <!--Array always start zero-based which is 0 is 1-->
+    <script>
+        const planet = ["Pluto","Mars","Jupiter","Saturn","Earth"];     
+        document.getElementById("arrayy").innerHTML = "The planet is: "+ planet[4];
+    </script>
+    <!--Javascript Objects returns an array whose elements are strings 
+        corresponding to the enumerable string-keyed property values found directly upon object-->
+    <script>
+        const me = {
+            firstName : "Bien",
+            lastName  : "De Guzman",
+            age     : 22,
+            sport : "Basketball"
+            };            
+            document.getElementById("obje").innerHTML =
+            me.lastName + " favourite " + " sport is "+ me.sport;
+    </script>
+    <!--Function The return statement stops the execution of a function and returns a value-->
+    <script>
+        var f = myFunction(10, 20);
+        document.getElementById("func").innerHTML = f;       
+        function myFunction(x, y) {
+          return "Multiply is equal to: "+ x * y;
+        }
+        </script>   
+    <!--HTML events are "things" that happen to HTML elements-->
+    <script>
+        function upperCase() {
+          const x = document.getElementById("fname");
+          x.value = x.value.toUpperCase();
+        }
     </script>
 </html>
