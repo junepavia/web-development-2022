@@ -27,5 +27,48 @@ function test3(){
   document.getElementById("missy7").innerHTML =
   "Php"+ " " + dollar * peso ; 
 }
-  
+function test4(){
+  const num1 = document.getElementById("num1").value;
+  const num2 = document.getElementById("num2").value; 
+  document.getElementById("missy8").innerHTML =
+  "Product:"+ " " + num1 * num2 ;
+}
+  function test5(){
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let num3 = num1 + num2 ;
+  document.getElementById("missy9").innerHTML = "Sum:"
+  +" "+ num3;
+  }
+  function test6(){
+    const num1 = document.getElementById("num1").value;
+    const num2 = document.getElementById("num2").value;
+  document.getElementById("missy10").innerHTML =
+  "Quotient:"+ " " + num1 / num2 ;
+}
+  function test7(){
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let minus = num1 - num2;
+   document.getElementById("missy11").innerHTML =
+  "Difference:"+ " " + minus ; 
+}
+function test8(){
+  const person = {
+    firstName: "Missy",
+    lastName: "Cabrera",
+    age: 28,
+    fullName: function() {
+      return this.firstName + " " + this.lastName +" "
+      + this.age +"y.o";
+    }
+  };
+  document.getElementById("missy12").innerHTML = person.fullName();
+}
+
+/*function test9( m )
+ { return (8-4) * (m-36);}
+  document.getElementById(missy12).innerHTML = test9(58);*/
+
+
 
