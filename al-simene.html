@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <style>
+            .topNav{
+                display: flex;
+                border-radius: 10px;
+                background-color: rgb(33, 31, 31);
+            }
+            a{
+                text-decoration: none;
+            }
+            li{
+                list-style-type: none;
+                padding: 10px;
+                display: inline-block;
+            }
+            body{
+                background-color: rgb(19, 18, 18);
+                color: white;
+            }
+        </style>
+    </head>
+<body onload="docload()">
+    <header>
+        <h1 style="text-align: center; background-color: black; color: antiquewhite;">JAVASCRIPT</h1>
+    </header>
+    <div class="topNav">
+        <nav>
+        <ul>
+            <li><a href="erwin-jumamil.html">Go to Erwin's Page</a></li>
+            <li><a href="princess-mauricio.html">Go to Princess's Page</a></li>
+            <li><a href="missy-cabrera.html">Go to Missy's Page</a></li>
+            <li><a href="al-simene.html">Go to Al's Page</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!--Click Event-->
+    <h1 style="text-align: center; background-color: black; color: antiquewhite;">JAVASCRIPT EVENTS</h1>
+    <p ondblclick="dclick()">Click button</p> <h1 id="dbclick" style="text-align: center;"></h1>
+    <input type = "button" onclick = "popUp()" value = "ClickMe!!" />
+    <!--Mouse Event-->
+    <p>Bring your mouse inside the div1</p>      
+    <div id="over" onmouseover =over() onmouseout = out()>
+       <h2 style="text-align: center;"> THIS IS DIV1 </h2>
+    </div>   
+    <p id="clk" onmousedown="mouseDown()" onmouseup="mouseUp()">01001000 01000101 01001100 01010000</p>
+    <!--Input Events-->
+    <label for="fname">Type Anything:</label><br>
+    <input type="text" id="fname" onblur="blurInput()"><br>  
+    <!--Load Events-->
+    <img src="smile.png" alt="smile" onerror="errorLoading()" style="margin-top: 20px; margin-bottom: 20px;"> <br>
+    <!--Comparison operator-->
+    <label for="name">Enter Name</label>
+    <input type="text" id="name" required>
+    <button onclick="chkname()">Log in</button>
+    <h1 style="text-align: center;" id="logIn" ></h1>
+    <!--String-->
+    <label for="string">Enter anything:</label><br>
+    <input type="text" id="string" ><br>
+    <label>Enter a number</label><br>
+    <input type="text" id="start" ><br>
+    <input type="text" id="end" ><br>
+    <button onclick="checkLength()">Press me</button>
+    <p>The String has <i id="lngth"></i> characters</p>
+    <p id="partOfSent"></p><br><br>
+    <label for="parag">Enter a sentence:</label><br>
+    <input type="text" id="parag" ><br>
+    <label for="replacement">Enter a Word to replace:</label><br>
+    <input type="text" id="replacement" ><br>
+    <label for="replaceInto">Replaced the word into:</label><br>
+    <input type="text" id="replaceInto" ><br>
+    <button onclick="change()">Replace</button>
+    <p id="rep"></p>
+
+
+
+
+
+
+
+    <script>
+            function popUp() {
+              alert("BONJOUR!!!")}
+            function over() {
+               document.getElementById('over').style.backgroundColor='red';}            
+            function out() {
+                document.getElementById('over').style.backgroundColor="lime";}            
+            function dclick() {
+                document.getElementById("dbclick").innerHTML = "Surprise!!!";}
+            function blurInput() {
+                var x = document.getElementById("fname");
+                x.value = x.value.toUpperCase();}
+            function mouseDown(){
+                document.getElementById('clk').innerHTML= "HELP"}
+            function mouseUp(){
+                document.getElementById('clk').innerHTML= "01001000 01000101 01001100 01010000"}
+            function errorLoading(){
+                alert("The program failed successfully!");}
+            function docload(){
+                alert("Welcome!");}
+            function chkname(){
+                var name;
+                name=document.getElementById('name').value
+                const owner="Al Christian";
+                const owner1="al christian";
+               if (name == owner){
+                    output = "Log in Successfully!";}
+                    else if(name==owner1){
+                        output= "Log in Successfully!";}
+                    else{
+                        output="INTRUDER ALERT!!!";}
+                    document.getElementById('logIn').innerHTML=output;
+                 }
+            function checkLength(){
+                var string,start,end;
+                string=document.getElementById('string').value
+                start=document.getElementById('start').value
+                end=document.getElementById('end').value
+                part=string.slice(start,end);
+                document.getElementById('lngth').innerHTML=string.length;
+                document.getElementById('partOfSent').innerHTML=part;
+                    }
+            function change(){
+                var parag, replacement, replaceInto; 
+                parag=document.getElementById('parag').value
+                replacement=document.getElementById('replacement').value
+                replaceInto=document.getElementById('replaceInto').value
+                document.getElementById('rep').innerHTML = 
+                parag.replace('replacement','replaceInto');
+            }
+     </script>      
+</body>
+</html>
