@@ -44,7 +44,19 @@ The match() method matches a string against  a pattern of characters
 The includes() method determines whether one string may be found within another string, returning true or false as appropriate.
 The startsWith() method returns true if a string begins with a specified value.
 The endsWith() method returns true if a string ends with a specified value.    
-
+Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+is a number without a decimal point
+A float is a floating-point number, which means it is a number that has a decimal place.
+JavaScript uses the + operator to concatenate the strings.
+JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number.
+A BigInt can not have decimals.
+JavaScript Number Methods
+   Method	 Description
+toString()	Returns a number as a string
+toExponential()	Returns a string, with the number rounded and written 			using exponential notation.
+toFixed()	Returns a number written with a number of decimals		(rounds a number to a given number of digits.)
+toPrecision()	Returns a number written with a specified length
+ValueOf()	Returns a number as a number
 
 
 
