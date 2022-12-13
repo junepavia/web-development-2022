@@ -62,4 +62,36 @@ function upperCase() {
     const x = document.getElementById("fname");
     x.value = x.value.toUpperCase();
   }
-/**/         
+/*String length*/    
+let text = "BIENMARCODEGUZMAN";
+document.getElementById("stringer").innerHTML = text.length;
+/*Strings as Object(strings can also be defined as objects with the keyword new)*/
+let l = "Marco";
+let k = new String("Bien");
+document.getElementById("obs").innerHTML =
+typeof l + "<br>" + typeof k;     
+/*String Slice*/
+let fruit = "Apple, Banana, Manggo";
+let part = fruit.slice(0,5);
+document.getElementById("slices").innerHTML = part; 
+/*Substring*/
+let str = "Apple, Banana, Kiwi";
+document.getElementById("subs").innerHTML = str.substring(7);
+/*Replace method replaces a specified value with another value in a string*/
+function myName() {
+    let me = document.getElementById("replace").innerHTML;
+    document.getElementById("replace").innerHTML =
+    me.replace("Pogi","De Guzman");
+}
+/*Concat joins two or more strings*/
+let text5 = "HTML";
+let text6 = "CSS";
+let text7 = " and JavaScript"
+let text8 = text5.concat(" ",text6,text7);
+document.getElementById("concat").innerHTML = text8;
+/*method returns the index of (position of) the first occurrence of a string in a string*/
+let textt = "Please locate where 'locate' occurs!";
+document.getElementById("indof").innerHTML = textt.indexOf("occurs");
+/**/
+/**/
+/**/
