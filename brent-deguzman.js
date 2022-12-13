@@ -187,3 +187,80 @@ var x = myFunction(8, 6); // a=8 * b=6
       console.log(birthDate);
       document.getElementById("ways3").innerHTML = `position ${birthDate}`;
       //const { identifier } = expression; you can extract as many properties as you'd like
+      
+      //Arrays
+      const Toyota = ["Avanza", "Veloz", "Innova", "Fortuner"];
+      document.getElementById("array").innerHTML = Toyota;
+      //array_name = ["sample0" , "sample1"]
+      const Ford = [];
+        Ford[0]= "Everest";
+        Ford[1]= "Ranger";
+        Ford[2]= "Raptor";
+      document.getElementById("array1").innerHTML = Ford;
+      const Honda = new Array("City", "Civic", "Odyssey");
+      Honda[0] = "CR-V"; //Replacing an Array Element
+      document.getElementById("array2").innerHTML = Honda;
+      document.getElementById("array3").innerHTML = Ford[2];
+      document.getElementById("array4").innerHTML = typeof Toyota;
+      const Cars = [];
+        Cars[0]= Toyota;
+        Cars[1]= Ford;
+        Cars[2]= Honda[2]
+      document.getElementById("array5").innerHTML = Cars;
+      document.getElementById("array6").innerHTML = Toyota.length;
+      Toyota.sort();
+      document.getElementById("array7").innerHTML = Toyota;
+      let forf = "<ul>";
+        Ford.forEach(forfunction);
+        forf += "</ul>";
+      document.getElementById("array8").innerHTML = forf;
+      function forfunction(value) {
+        forf += "<li>" + value + "</li>";
+      } 
+      const Mitsubishi = ["Mirage", "Xpander", "Montero", "Strada"]
+      Mitsubishi.push("L300") //Add element in array
+      document.getElementById("array9").innerHTML = Mitsubishi;
+      const Chevrolet = ["Camaro", "Trailblazer", "Spark"];
+      Chevrolet[5] = "Corvette";
+      let chevi = Chevrolet.length;
+      let chevitext = "";
+      for (i = 0; i < chevi; i++) {// ++ increment one by one
+        chevitext += Chevrolet[i] + "<br>";
+      }
+      document.getElementById("array0").innerHTML = chevitext;
+      const Sample = new Array (30); // const Sample = [30]
+      document.getElementById("arrayer").innerHTML = Sample;
+      document.getElementById("arrayer1").innerHTML = Array.isArray(Toyota); 
+      //document.getElementById("arrayer1").innerHTML = Toyota instanceof Array;
+      //typeof returns string while instance of return boolean
+      document.getElementById("arrmet").innerHTML = Honda.join(" @ ");
+      //to specify seperator
+      const BMW = ["X8", "iX", "M850", "Z4 M40i", "M2 Competition"];
+      BMW.pop()//remove last element | switch innerHTML
+      document.getElementById("arrmet1").innerHTML = BMW;
+      document.getElementById("arrmet2").innerHTML = BMW.push("M5");
+      const Ducati = ["Diavel", "Panigale", "Streetfighter", "Multistrada"];
+      Ducati.shift(); //remove first element
+      document.getElementById("arrmet3").innerHTML = Ducati;
+      Ducati.unshift("Supersport"); // Add new element in beginning
+      document.getElementById("arrmet4").innerHTML = Ducati;
+      delete Ducati[1]; // Delete element on the index
+      document.getElementById("arrmet5").innerHTML = Ducati[1];
+      const CarNMotor = BMW.concat(Ducati);
+      document.getElementById("arrmet6").innerHTML = CarNMotor;
+      const Berry = ["Rasp", "Blue", "Goji"]; //splice by lenght not index
+      Berry.splice(1, 0, "Cloud", "Straw"); // parameters (where to add, how many to be remove after)
+      document.getElementById("arrmet7").innerHTML = Berry;
+      const Reddish = Berry.slice(2); 
+      // Slice 2 element out of array and form new but does not change anything from source array
+      document.getElementById("arrmet8").innerHTML = Berry + "<br><br>" + Reddish;
+      Reddish.sort();
+      Reddish.reverse();//sort from last alphabet
+      document.getElementById("arsort").innerHTML = Reddish;
+      const numeric = [1, -2, 2, 3, 0, -1];
+      document.getElementById("arsort1").innerHTML = numeric;
+      //less than 0, equal to 0, greater than 0
+      numeric.sort(function(a, b){return a - b}); //compare function a[smaller] b[larger]
+      document.getElementById("arsort2").innerHTML = numeric;
+
+      

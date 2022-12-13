@@ -10,15 +10,22 @@
         column-gap: 0;
         row-gap: 0;
       }
+      span {
+        color: red;
+      }
       #function-cont,
       #string-cont,
       #number-cont,
-      #ways-cont {
-        border: outset 5px gray;
+      #ways-cont,
+      #array-cont,
+      #arsort-cont {
+        border: outset 5px royalblue;
         padding: 2px;
         margin: 2px;
         font-size: 24px;
         width: auto;
+        background: url(https://wallpaperaccess.com/full/2728566.jpg) no-repeat;
+        background-size: cover;
       }
       h1 {
         text-align: center;
@@ -124,6 +131,59 @@
       <p><span id="ways1"></span> -- Dot Method</p>
       <p><span id="ways2"></span> -- Square brackets property accessor</p>
       <p><span id="ways3"></span> Check me on Console</p>
+    </div>
+
+    <div id="array-cont">
+      <h2>Arrays</h2>
+      <p>Array is a special variable, which can hold more than one value</p>
+      <pre>
+Instead of using
+let Toyota = Avanza
+let Toyota1 = Veloz
+let Toyota2 = Innova
+let Toyota4 = Fortunure
+      </pre>
+      <p><span id="array"></span> -- We use Array</p>
+      <p><span id="array1"></span> -- Multiple Lines</p>
+      <p><span id="array2"></span> -- Using new Array</p>
+      <!--For simplicity, readability and execution speed, use the array literal method-->
+      <p>
+        <span id="array3"></span> -- Array element by referring to the index
+        number
+      </p>
+      <p><span id="array4"></span> -- Array is special type of Object</p>
+      <p>Array - index number to access values while Objects use names</p>
+      <p><span id="array5"></span></p>
+      <p>Arrays in Array</p>
+      <p><span id="array6"></span> -- Using array.lenght</p>
+      <!--Total number of array not index number-->
+      <p><span id="array7"></span> -- Using array.sort</p>
+      <!--Sort the values alphabetically-->
+      <p>Loop using .forEach(function)<span id="array8"></span></p>
+      <p><span id="array9"></span> -- .push() Array</p>
+      <p>Adding Element using Arrar[Index] <br /><span id="array0"></span></p>
+      <p>Errors in Array</p>
+      <p><span id="arrayer"></span> -- new Array with one element</p>
+      <p><span id="arrayer1"></span> -- Fix the type of Array</p>
+      <!--European Computer Manufacturers Association ECMAScript 5 (JavaScript 2009)-->
+      <h4>Array Method</h4>
+      <p><span id="arrmet"></span> -- .join("@")</p>
+      <p><span id="arrmet1"></span> -- .pop()</p>
+      <p><span id="arrmet2"></span> -- .push() in innerHTML</p>
+      <!--length of array-->
+      <p><span id="arrmet3"></span> -- .shift()</p>
+      <p><span id="arrmet4"></span> -- .unshift()</p>
+      <p><span id="arrmet5"></span> -- delete Array[Index]</p>
+      <p>Array .concat(Array)</p>
+      <span id="arrmet6"></span>
+      <p><span id="arrmet7"></span> -- .splice()</p>
+      <p><span id="arrmet8"></span> -- .splice()</p>
+    </div>
+    <div id="arsort-cont">
+      <h4>Array Sort</h4>
+      <p><span id="arsort"></span> -- .reverse()</p>
+      <p><span id="arsort1"></span> -- Base for compare</p>
+      <p><span id="arsort2"></span> -- Compare Function</p>
     </div>
 
     <script src="/brent-deguzman.js"></script>
