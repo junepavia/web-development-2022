@@ -92,6 +92,10 @@ document.getElementById("concat").innerHTML = text8;
 /*method returns the index of (position of) the first occurrence of a string in a string*/
 let textt = "Please locate where 'locate' occurs!";
 document.getElementById("indof").innerHTML = textt.indexOf("occurs");
-/**/
+/*matchAll method returns an iterator 
+containing the results of matching a string against a string (or a regular expression).*/
+let text10 = "This is lorem not a lorem about lorem"
+const iterator = text10.matchAll("lorem");
+document.getElementById("matchs").innerHTML = Array.from(iterator);
 /**/
 /**/
