@@ -62,40 +62,72 @@ function upperCase() {
     const x = document.getElementById("fname");
     x.value = x.value.toUpperCase();
   }
+
 /*String length*/    
 let text = "BIENMARCODEGUZMAN";
 document.getElementById("stringer").innerHTML = text.length;
+
 /*Strings as Object(strings can also be defined as objects with the keyword new)*/
 let l = "Marco";
 let k = new String("Bien");
 document.getElementById("obs").innerHTML =
-typeof l + "<br>" + typeof k;     
+typeof l + "<br>" + typeof k;
+
 /*String Slice*/
 let fruit = "Apple, Banana, Manggo";
 let part = fruit.slice(0,5);
 document.getElementById("slices").innerHTML = part; 
+
 /*Substring*/
 let str = "Apple, Banana, Kiwi";
 document.getElementById("subs").innerHTML = str.substring(7);
+
 /*Replace method replaces a specified value with another value in a string*/
 function myName() {
     let me = document.getElementById("replace").innerHTML;
     document.getElementById("replace").innerHTML =
     me.replace("Pogi","De Guzman");
 }
+
 /*Concat joins two or more strings*/
 let text5 = "HTML";
 let text6 = "CSS";
 let text7 = " and JavaScript"
 let text8 = text5.concat(" ",text6,text7);
 document.getElementById("concat").innerHTML = text8;
+
 /*method returns the index of (position of) the first occurrence of a string in a string*/
 let textt = "Please locate where 'locate' occurs!";
 document.getElementById("indof").innerHTML = textt.indexOf("occurs");
+
 /*matchAll method returns an iterator 
 containing the results of matching a string against a string (or a regular expression).*/
-let text10 = "This is lorem not a lorem about lorem"
-const iterator = text10.matchAll("lorem");
+let text10 = "This is lorem not a lorem about lorem about"
+const iterator = text10.matchAll("about");
 document.getElementById("matchs").innerHTML = Array.from(iterator);
+
+/*Include method returns true if a string contains a specified value*/
+let text11 = "Hello We Are Venom";
+document.getElementById("includes").innerHTML = text11.includes("Spiderman");
+
+/*Startswith method returns true if a string begins with a specified value*/
+let text12 = "I am Venom";
+document.getElementById("starts").innerHTML = text12.startsWith("I");
+
+/*EndsWith method returns true if a string ends with a specified value*/
+let text13 = "Peter Parker";
+document.getElementById("end").innerHTML = text13.endsWith("Peter");
+
+/*Template Literals use back-ticks (``) rather than the quotes ("") to define a string*/
+let text14 = `Im Bien`;
+document.getElementById("tic").innerHTML = text14;
+
+/*Variables Substitution*/
+let firstName = "Bien";
+let lastName = "De Guzman";
+let text15 = `Hello sir,  ${firstName} ${lastName}!`;
+document.getElementById("vs").innerHTML = text15;
+/**/
+/**/
 /**/
 /**/
