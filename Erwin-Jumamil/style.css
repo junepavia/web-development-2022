@@ -1,0 +1,35 @@
+input{
+    background-color: white;
+    text-align: center;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+
+  }
+.btn{
+    font-size: 150%;
+
+}
+#ans{
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    height: 50px;
+    width: auto;
+    font-size: 150%;
+}
+.calculator{
+    padding: 10px;
+    background-color: blueviolet;
+}
+#test1{
+    margin-top: 28px;
+}
+span{
+    color: red;
+}
+#searchWord{
+    width: 45rem;
+    height: 60px;
+    font-size: 150%;
+}
