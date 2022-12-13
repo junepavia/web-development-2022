@@ -1,274 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erwin JS</title>
+    <title>JavaScript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
     crossorigin="anonymous">
-    <style>
-        mark{
-            background-color: yellow;
-            color: black;
-            font-size: 120%;
-        }
-        span{
-            font-size: 150%;
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark"><!-- onload="myFunction2()" -->
-    <div class="container-fluid bg-secondary">
-        <div class="row">
-            <div class="col-6 border text-center">
-                <h2>JavaScript Functions</h2>
-                <p>This example calls a function which performs a calculation, and returns the result:</p>
-                <p id="demo"></p>
-                <script>
-                function myFunction(p1, p2) {
-                  return p1 * p2;
-                }
-                document.getElementById("demo").innerHTML = myFunction(4, 3);
-                </script>
+<body class="bg-dark">
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">JavaScript</a>
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#" class="nav-link">Page 1</a>
+                        <a href="#" class="nav-link">Page 2</a>
+                        <a href="#" class="nav-link">Page 3</a>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-item nav-link">Extra</a>
+                    </div>
+                </div>
+        </nav>
+        <div class="container-fluid text-white text-center"><h1>JavaScript</h1></div>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-3 bg-white border border-primary">
+                    <h1>Data Type's Of JavaScript</h1>
+                    <p class="text-center" style="font-size: 150%;">
+                        // Numbers: <br>
+                        let length = 16;<br>
+                        let weight = 7.5;<br>
+                        // Strings: <br>
+                        let color = "Yellow"; single<br>
+                        let lastName = "Johnson";double<br>
+                        let text = `He's often called "Johnny"`; Back-Tics <br>
+                        // Booleans <br>
+                        let x = true;<br>
+                        let y = false;<br>
+                        // Object: <br>
+                        const person = {firstName:"John", lastName:"Doe"};<br>
+                        // Array object: <br>
+                        const cars = ["Saab", "Volvo", "BMW"];<br>
+                        // Date object: <br>
+                        const date = new Date("2022-03-25");
+                    </p>
+                </div>
+                <div class="col-6 bg-white border border-danger text-center">
+                    <div class="calculator text-center mt-3">
+                        <input type="number" name="number" id="num1">
+                        <input type="number" name="number" id="num2"><br> <br>
+                        <button class="btn btn-primary" onclick='answer("+")'>+</button>
+                        <button class="btn btn-secondary" onclick='answer("-")'>-</button>
+                        <button class="btn btn-success" onclick='answer("*")'>*</button>
+                        <button class="btn btn-warning" onclick='answer("/")'>/</button><br>
+                        <button class="btn btn-danger mt-2" onclick="noreset()">RESET</button>
+                        <h3 class="mt-2">The Anser is :</h3>
+                        <p id="ans" class="bg-white text-primary mt-2"></p>
+                    </div>
+                    <div class="container-fluid bg-info">
+                        <div class="row">
+                            <div class="col-3">
+                                <h2>JavaScript onclick Event</h2>
+                                <button class="btn btn-success" onclick="document.
+                                getElementById('myImage').src='sonic.gif'">Run</button>
+                                <button class="btn btn-danger" onclick="document.
+                                getElementById('myImage').src='sonic1.gif'">Rest</button>
+                                <img class="mt-3" id="myImage" style="width:100%">
+                            </div>
+                            <div class="col-3">
+                                <h3>JavaScript onchange Event</h3>
+                                <select class="btn btn-dark text-white" id="mySelect" onchange="myFunction4()">
+                                <option value="" selected disabled hidden>Choose here</option>
+                                <option value="sonic.gif">Sonic Run</option>
+                                <option value="sonic1.gif">Sonic Rest</option>
+                                </select>
+                                <p id="test1"></p>
+                            </div>
+                            <div class="col-3">
+                                <h1>JavaScript mouseOver Event</h1>
+                                <p onmouseover="document.but.src='sonic.gif'"
+                                onmouseout="document.but.src='sonic1.gif'">
+                                <IMG SRC="sonic1.gif" NAME="but" width="100%"></p>
+                            </div>
+                            <div class="col-3">
+                                <h1>JavaScript onload Event</h1>
+                                <img src="sonic.gif" width="100%">
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="col-6 border text-center">
-                <p>This example calls a function which performs a calculation and returns the result:</p>
-                <p id="demo1"></p>
-                <script>
-                var x = myFunction1(4, 3);
-                document.getElementById("demo1").innerHTML = x;
-                function myFunction1(a, b) {
-                  return a * b;
-                }
-                </script>  
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-info">
-        <div class="row">
-            <div class="col-6 border text-center">
-                <h2>JavaScript Variables</h2>
-                <p id="demo2"></p>
-                <script>// Create and display a variable:
-                let car1 = "Fiat";
-                document.getElementById("demo2").innerHTML = car1;
-                </script>
-            </div>
-            <div class="col-6 border text-center">
-                <h2>JavaScript Objects</h2>
-                <p id="demo3"></p>
-                <script>// Create an object:
-                const car = {type:"Fiat", model:"500", color:"white"}; // Display some data from the object:
-                document.getElementById("demo3").innerHTML = "The car type is " + car.type;
-                </script>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-info">
-        <div class="row">
-            <div class="col-6 border text-center">
-                <h2>JavaScript Objects</h2>
-                <p id="demo4"></p>
-                <script>// Create an object:
-                const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};// Display some data from the object:
-                document.getElementById("demo4").innerHTML =
-                person.firstName + " is " + person.age + " years old.";
-                </script>
-            </div>
-            <div class="col-6 border text-center">
-                <h2>JavaScript Objects</h2>
-                <p id="demo5"></p>
-                <script>// Create an object:
-                const person1 = {
-                firstName: "John",
-                lastName: "Doe",
-                age: 50,
-                eyeColor: "blue"
-                };// Display some data from the object:
-                document.getElementById("demo5").innerHTML =
-                person1.firstName + " is " +
-                 person1['age'] + " years old.";
-                 </script>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white text-center bg-primary mt-2"><h1>JavaScript Events</h1></div>
-    <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-3 bg-white border">
-                <h1>JavaScript onclick Event</h1>
-                <button class="btn btn-success" onclick="document.getElementById('myImage').src='sonic.gif'">Run</button>
-                <img id="myImage" src="sonic1.gif" style="width:250px">
-                <button class="btn btn-danger" onclick="document.getElementById('myImage').src='sonic1.gif'">Rest</button>
-            </div>
-            <div class="col-3 bg-white border">
-                <h1>JavaScript onchange Event</h1>
-                <select id="mySelect" onchange="myFunction4()">
-                <option value="sonic.gif">Sonic Run</option>
-                <option value="sonic1.gif">Sonic Rest</option>
-                </select>
-                <p id="demo6" ></p>
-                <script>
-                function myFunction4() {
-                var x2 = document.getElementById("mySelect").value;
-                document.getElementById("demo6").innerHTML ="<img src='"+x2+"'style='width:300px' />";
-                }
-                </script>
-            </div>
-            <div class="col-3 bg-white">
-                <h1>JavaScript mouseOver Event</h1>
-                <h1 id="demo7">Mouse over me</h1>
-                <script>
-                document.getElementById("demo7").addEventListener("mouseover", mouseOver);
-                document.getElementById("demo7").addEventListener("mouseout", mouseOut);
-                function mouseOver() {
-                document.getElementById("demo7").style.color = "red";
-                }
-                function mouseOut() {
-                document.getElementById("demo7").style.color = "black";
-                }
-                </script>
-                <p  onmouseover="document.but.src='sonic.gif'"
-                onmouseout="document.but.src='sonic1.gif'">
-                
-                <IMG SRC="sonic1.gif" NAME="but" 
-                WIDTH="250" HEIGHT="250" BORDER="0" ALT="...">
-                
-                </p>
-            </div>
-            <div class="col-3 bg-white border">
-                    <h1>JavaScript onload Event</h1>
-                    <img src="giphy.gif" width="100%">
-                    <script>
-                    function myFunction2() {
-                      alert("Page is loaded");
-                    }
-                    </script>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white text-center bg-primary mt-2"><h1>JavaScript STRING & METHODS</h1></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3 bg-white text-center border">
-                <h1>JavaScript Strings</h1>
-                <p>Strings are written inside quotes. You can use single or double quotes:</p>
-                <p id="demo8"></p>
-                <script>
-                let carName1 = "Jumamil"; // Double quotes
-                let carName2 = 'Erwin'; // Single quotes
-                document.getElementById("demo8").innerHTML =
-                carName1 + "<br> " + carName2; 
-                </script>
-                <p>The escape sequence \" inserts a double quote in a string.</p>
-                <mark id="demo9"></mark>
-                <script>
-                let text = "My name is Erwin Im a \"Vikings\" that eat chicken";
-                document.getElementById("demo9").innerHTML = text; 
-                </script>
-            </div>
-            <div class="col-3 bg-white text-center border">
-                <h2>The length Property
-                    Apple, Banana, Kiwi
-                </h2>
+            <div class="col-3 bg-white border border-primary text-center">
+                <h2>The length Property <br>Apple, Banana, Kiwi</h2>
                 <input type="text" id="word">
-                <button onclick="word()">enter word</button>
-                <p class="bg-black text-white mt-2">The length of the string is:<mark id="length"></mark> </p>
-                <p class="bg-black text-white">The sliced (extracted) part of the string is:<span id="sliced"></span></p>
-                <p class="bg-black text-white">The substring() method extract a part of a string and 
-                    returns the extracted parts in a new string: <mark id="substring"></mark></p>
-                <p class="bg-black text-white">The substr() method extract a part of a string
-                    and returns the extracted parts in a new string: <mark id="substr"></mark></p>
-                
-                <script>
-                    function word(){
-                       let word =document.getElementById('word').value;
-                        document.getElementById('length').innerHTML=word.length;
-                        document.getElementById('sliced').innerHTML=word.slice(7,13);
-                        // document.getElementById('sliced').innerHTML=word.slice(-12);
-                        document.getElementById('substring').innerHTML=word.substring(7,13);
-                        document.getElementById('substr').innerHTML=word.substr(7,6);
-                        // document.getElementById('substr').innerHTML=word.substr(-5);
-                        // document.getElementById('sliced').innerHTML=word.slice(5,2);
-                        // document.getElementById('substring').innerHTML=word.substring(5,2);
-
-                    }
-                </script>
-
+                <button class="btn btn-success" onclick="word()">enter word</button>
+                <h2 class="bg-black text-white mt-2">The length of the string is: <br><span id="length"></span> </h2>
+                <h2 class="bg-black text-white">The sliced (extracted) part of the string is: <br><span id="sliced"></span></h2>
+                <h2 class="bg-black text-white">The substring() method extract a part of a string and 
+                    returns the extracted parts in a new string: <br><span id="substring"></span></h2>
+                <h2 class="bg-black text-white">The substr() method extract a part of a string
+                    and returns the extracted parts in a new string: <br><span id="substr"></span></h2>
             </div>
-            <div class="col-3 bg-white text-center border">
-                <label for="name">Inpu your full name</label>
-                <input type="text" name="name" id="name">
-                <button onclick="replace()">enter</button>
-                <p id="replaced" class="bg-info mt-3">Thank You Messages To Patient <mark>Patients</mark> 
-                    <br> I am immensely thankful for being a patient at our clinic. You may 
-                    not know our first purpose here is to give the best health treatment 
-                    in a comfortable setting at a reasonable fee. We hope you would not 
-                    disagree that we are unfailingly fulfilling this purpose.</p>
-                    <h2>The replaceAll() Method</h2>
-                    <p>ES2021 intoduced the string method replaceAll().</p>
-                    <p id="demo12"></p>
-                <script>
-                    function replace(){
-                        let text1 = document.getElementById("name").value;
-                        let text = document.getElementById("replaced").innerHTML;
-                        document.getElementById("replaced").innerHTML =
-                        text.replace("Patients",text1);
-                    }
-                    let text2 = "I love cats. Cats are very easy to love. Cats are very popular."
-                        text2 = text2.replaceAll("Cats","Dogs");
-                        text2 = text2.replaceAll("cats","dogs");
-                        document.getElementById("demo12").innerHTML = text2;
-                </script>
-            </div>
-            <div class="col-3 bg-white text-center border">
-                <h1>JavaScript String Methods</h1>
-                <p id="demo14">CONVERT STRING TO LOWER CASE:</p>
-                <p id="demo13">convert string to upper care</p>
-                <button onclick="myFunction()">Try it</button>
-                <script>
-                function myFunction() {
-                let text = document.getElementById("demo13").innerHTML;
-                document.getElementById("demo13").innerHTML =
-                text.toUpperCase();
-                let text2 = document.getElementById("demo14").innerHTML;
-                document.getElementById("demo14").innerHTML =
-                text2.toLowerCase();
-                }
-                </script>
-                <h2>JavaScript String Methods</h2>
-                <p id="demo15" class="border bg-black text-info"></p>
-                <p id="demo16" class="border bg-black text-success"></p>
-                <script>
-                let text5 = "Hello";
-                let text6 = "World!";
-                let text3 = text5.concat(" ",text6);
-                document.getElementById("demo15").innerHTML = text3;
-                document.getElementById("demo16").innerHTML = text5 + ' '+ text6;
-                </script>
-                <h2>The trimStart() Method</h2>
-                <p id="demo17" class="bg-black text-danger"></p>
-                <script>
-                let text7 = "     Hello World!     ";
-                let text8 = text7.trimStart();
-                document.getElementById("demo17").innerHTML = text8 +"<br>  " +
-                "Length text1 = " + text7.length + "<br>Length text2 = " + text8.length;
-                </script>
-                <h2>JavaScript String Methods</h2>
-                <p>The charAt() method returns the character at a given position in a string:</p>
-                <p id="demo18" class="bg-black text-danger"></p>
-                <script>
-                var text9 = "ERWIN";
-                document.getElementById("demo18").innerHTML = text9.charAt(1);
-                </script>
-            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-warning text-center"><p class="display-1">JavaScript String Search</p></div>
+    <div class="row">
+        <div class="col-6 bg-info mh-100 text-center border">
+            <h1>JavaScript String indexOf()</h1>
+            <p id="replaced">The inputed sentence will be replaced</p>
+            <p>Please locate where 'locate' occurs!</p>
+            <input type="text" name="searchWord" id="searchWord" placeholder="Please enter the word"><br>
+            <button class="btn btn-primary mt-2" onclick="locator(); replace()">Click To locate</button>
+            <p id="indexof"></p>
+            <p id="lastindexof"></p>
+            <p id="lastindexofError"></p>
+            <p id="search"></p>
+            <p id="match"></p>
+        </div>
+        <div class="col-6 bg-info mh-100 text-center border">
+            <h2>JavaScript Template Literals</h2>
+            <p>Template literals allows variables in strings:</p>
+            <p id="demo"></p>
+            <script>
+            let firstName = "John";
+            let lastName = "Doe";
+            let text = `Welcome ${firstName}, ${lastName}!`;
+            document.getElementById("demo").innerHTML = text;
+            </script>
+            <p id="demo1"></p>            
+            <script>
+            let price = 10;
+            let VAT = 0.25;
+            let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+            document.getElementById("demo1").innerHTML = total;
+            </script>
+            <p>Template literals allows variables in strings:</p>
+            <p id="demo2"></p>
+            <p>Template literals are not supported in Internet Explorer.</p>
+            <script>
+            let header = "Templates Literals";
+            let tags = ["template literals", "javascript", "es6"];
+            let html = `<h2>${header}</h2><ul>`;
+            for (const x of tags) {
+            html += `<li>${x}</li>`;
+            }
+            html += `</ul>`;
+            document.getElementById("demo2").innerHTML = html;
+            </script>
         </div>
     </div>
     <script src="myScript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
-    crossorigin="anonymous"></script>
 </body>
 </html>
