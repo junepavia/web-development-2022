@@ -54,3 +54,70 @@ function locator(){
   document.getElementById("match").innerHTML = myArr.length + " " + myArr;
 
 }
+function total(){
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+let test1 = document.getElementById("test1").value;
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+document.getElementById("demo2").innerHTML = html;
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+document.getElementById("demo1").innerHTML = total;
+let firstName = "Erwin";
+let lastName = "Rey";
+let text = `Welcome ${firstName}, ${lastName}!`;
+document.getElementById("demo").innerHTML = text;
+}
+const namelist = [];
+function attendance(){
+  let addname = document.getElementById("name").value;
+  namelist.push(addname);
+  let display = `<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">FULL NAME</th>
+    </tr>
+  </thead>
+  <tbody>`;
+      for (const x of namelist) {
+        let i=1;
+        display += `<tr>
+                    <th scope="row">${++i}</th>
+                    <td>${x}</td>
+                    </tr>`;
+        }
+    display+=`
+            </tbody>
+            </table>`;
+  document.getElementById("animeList").innerHTML=display;
+}
+  function deleted (){
+    console.log(namelist)
+    namelist.pop();
+    let display = `<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">FULL NAME</th>
+      </tr>
+    </thead>
+    <tbody>`;
+        for (const x of namelist) {
+          let i=1;
+          display += `<tr>
+                      <th scope="row">${i}</th>
+                      <td>${x}</td>
+                      </tr>`;
+          }
+      display+=`
+              </tbody>
+              </table>`;
+    document.getElementById("animeList").innerHTML=display;
+}
+
