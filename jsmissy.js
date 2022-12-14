@@ -104,7 +104,34 @@ function test9() {
     let e = 12345678901234567890123n;
     document.getElementById("missy29").innerHTML = c + "<br>" + d + "<br>BigInt "+ e;
 }
-
+function test13() {
+  const f = parseFloat(document.getElementById("nummethods").value);
+  document.getElementById("missy30").innerHTML = f;
+  document.getElementById("missy31").innerHTML ="<mark>toString:</mark>" +" "+ f.toString();
+  document.getElementById("missy32").innerHTML =
+   "<mark>toExponential(4):</mark>" +" "+ f.toExponential(4);
+  document.getElementById("missy33").innerHTML = "<mark>toFixed(3):</mark>" +" "+ f.toFixed(3);
+  document.getElementById("missy34").innerHTML = "<mark>toPrecision(6):</mark>" +" "+ f.toFixed(6);
+}
+function test14() {
+  let g = ["cat", "dog", "rabbit", "tiger", "monkey","goat",
+  "snake","rooster","horse"]
+  let h = g[document.getElementById("arra").value];
+  let i =["rat", "ants", "flies", "frog"]
+   document.getElementById("missy35").innerHTML=`Have a ${h}!`;
+   document.getElementById("missy36").innerHTML ="<mark>toString:</mark>" +" "+ g.toString();
+   document.getElementById("missy37").innerHTML ="<mark>join:</mark>" +" "+ g.join("@");
+   document.getElementById("missy38").innerHTML ="<mark>pop:</mark>" +" "+g; g.pop();
+   document.getElementById("mis38").innerHTML ="<mark>pop2:</mark>" +" "+ g;
+   document.getElementById("missy39").innerHTML ="<mark>shift:</mark>" +" "+g; g.shift();
+   document.getElementById("mis39").innerHTML ="<mark>shift2:</mark>" +" "+ g;
+   document.getElementById("missy40").innerHTML ="<mark>concat:</mark>" +" "+g.concat(i);
+   document.getElementById("missy41").innerHTML ="<mark>sortalpha:</mark>" +" "+g; g.sort();
+   document.getElementById("missy42").innerHTML ="<mark>alphabetically:</mark>" +" "+ g ;
+   document.getElementById("missy43").innerHTML =
+   "<mark>sortrev:</mark>" +" "+g;g.sort(); g.reverse();
+   document.getElementById("missy44").innerHTML ="<mark>reverse:</mark>" +" "+ g ;
+}
 /*function test9( m )
  { return (8-4) * (m-36);
   document.getElementById(missy12).innerHTML = test9(58);*/
