@@ -30,6 +30,16 @@
       h1 {
         text-align: center;
       }
+      button {
+        border-radius: 10px;
+        background-color: orange;
+        padding: 10px;
+      }
+      button:active {
+        opacity: 0.7;
+        transition: 0.2s;
+        border: blue 3px solid;
+      }
     </style>
   </head>
   <body>
@@ -184,6 +194,31 @@ let Toyota4 = Fortunure
       <p><span id="arsort"></span> -- .reverse()</p>
       <p><span id="arsort1"></span> -- Base for compare</p>
       <p><span id="arsort2"></span> -- Compare Function</p>
+      <p>1, 22, 11, 2, 44, 4, 999 This array will be used below:</p>
+      <button onclick="funcsort()">Using .sort</button>
+      <button onclick="funcsort1()">Compare Function</button>
+      <button onclick="funcsort2()">Random Sort</button>
+      <button onclick="funcsort3()">New Index</button>
+      <button onclick="funcsort4()">Max/Min</button>
+      <p id="arsort3"></p>
+      <button onclick="funcsort5()">Arrays with object</button>
+      <p><span id="arsort4"></span> -- Arrays with object</p>
+      <h4>Array Iteration</h4>
+      <p>Array iteration methods operate on every array item.</p>
+      <p>[24, 5, 7, 12, 33] This is the array for below</p>
+      <p>.forEach(function)</p>
+      <span id="arrite"></span>
+      <p><span id="arrite1"></span> -- .map(function)</p>
+      <p><span id="arrite2"></span> -- .filter(function)</p>
+      <p><span id="arrite3"></span> -- .reduce(function)/.reduceRight</p>
+      <p><span id="arrite4"></span> -- .every(function)</p>
+      <p><span id="arrite5"></span> -- .some(function)</p>
+      <p><span id="arrite6"></span> -- .indexOf(function)</p>
+      <p><span id="arrite7"></span> -- .find(function)</p>
+      <p><span id="arrite8"></span> -- .findIndex(function)</p>
+      <p><span id="arrite9"></span> -- .from()</p>
+      <p><span id="arrite0"></span> -- .keys()</p>
+      <p><span id="arrite01"></span> -- .entries()</p>
     </div>
 
     <script src="/brent-deguzman.js"></script>

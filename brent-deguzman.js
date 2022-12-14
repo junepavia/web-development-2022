@@ -262,5 +262,100 @@ var x = myFunction(8, 6); // a=8 * b=6
       //less than 0, equal to 0, greater than 0
       numeric.sort(function(a, b){return a - b}); //compare function a[smaller] b[larger]
       document.getElementById("arsort2").innerHTML = numeric;
-
-      
+      //Array Continuation
+      const numeric1 = [1, 22, 11, 2, 44, 4, 999];
+      document.getElementById("arsort3").innerHTML = numeric1;  
+      function funcsort() {
+      numeric1.sort();
+      document.getElementById("arsort3").innerHTML = numeric1;
+      }
+      function funcsort1() {
+      numeric1.sort(function(a, b){return a - b});
+      document.getElementById("arsort3").innerHTML = numeric1;
+      }
+      function funcsort2() {// 0.5 is probability to shuffle
+        numeric1.sort(function(){return 0.5  - Math.random()});
+        document.getElementById("arsort3").innerHTML = numeric1;
+      }
+      function funcsort3(){//Sorting affect index
+        document.getElementById("arsort3").innerHTML = numeric1[0];
+      }
+      function funcsort4(){
+      document.getElementById("arsort3").innerHTML = `${ArrayMax(numeric1)} ${ArrayMin(numeric1)}`;
+      }
+      function ArrayMax(max) {
+        return Math.max.apply(null, max); //find the highest number in an array
+      }
+      function ArrayMin(min) {
+        return Math.min.apply(null, min); //find the lowest number in an array
+      }
+      const dogs = [
+        {name:"Molly", age:1},
+        {name:"Galaxy", age:7},
+        {name:"Kitkat", age:4}
+      ];
+      dogs.sort(function(a, b){return a.age - b.age});
+      function funcsort5() {
+        document.getElementById("arsort4").innerHTML =
+        dogs[0].name + " " + dogs[0].age + "<br>" +
+        dogs[1].name + " " + dogs[1].age + "<br>" +
+        dogs[2].name + " " + dogs[2].age;
+      }
+      const numeric2 = [24, 5, 7, 12, 33];
+      let teration = "";
+      numeric2.forEach(iteration); //function will be apply once on each array element
+      document.getElementById("arrite").innerHTML = teration;
+      function iteration(value,index,itself) { //3 Arguments for Iteration to be put on function parameter
+        teration += index + "<br>"; 
+      }
+      const numeric3 = numeric2.map(iteration1);
+      document.getElementById("arrite1").innerHTML = numeric3;
+      function iteration1(value, index, itself) {
+      return value + 5;
+      }//new array by performing a function
+      const filter = numeric2.filter(filterfunc);
+      document.getElementById("arrite2").innerHTML = filter;
+      function filterfunc(value, index, itself) {
+        return value > 8; //greater than 8
+      }//new array with elements more than given value
+      let differnce = numeric2.reduce(iteration2); //switch to reduceRight to begin @ end
+      document.getElementById("arrite3").innerHTML = "The differnce = " + differnce;
+      function iteration2(total, value, index, array) {
+      return total - value;
+      }//runs a function on each array element to produce single value
+      let every = numeric2.every(iteration3);
+      document.getElementById("arrite4").innerHTML = "All element is greater than 8 " + every;
+      function iteration3(value, index, array) {
+      return value > 8;
+      }//filter will form new array while every will return boolean
+      let some = numeric2.some(iteration4);
+      document.getElementById("arrite5").innerHTML = "Some of the elements are greater than 8 " + some;
+      function iteration4(value, index, array) {
+      return value > 8;
+      }//will return boolean
+      let index = numeric2.indexOf(7) + 1;
+      //let index = numeric2.lastIndexOf(7) + 1;
+      document.getElementById("arrite6").innerHTML = "7 is on position " + index;
+      let find = numeric2.find(iteration5); //Below are ES6 feature (JavaScript 2015) 
+      document.getElementById("arrite7").innerHTML = "First element over 8 is " + find;
+      function iteration5(value, index, array) {
+      return value > 8;
+      }//returns the value of the first array element that passes a test function
+      document.getElementById("arrite8").innerHTML = "First element over 25 index " + numeric2.findIndex(iteration6);
+      function iteration6(value, index, array) {
+      return value > 25;
+      }//returns the index of the first array element that passes a test function
+      const from = Array.from("LOREMIPSUM");
+      document.getElementById("arrite9").innerHTML = from;
+      //creates new array by converting each string given to array
+      const keys = from.keys();//creates an object of the type array iterator
+      let key = "";
+      for (let x of keys) {
+        key += x + "<br>";
+      } //Create an Array Iterator
+      document.getElementById("arrite0").innerHTML = key;
+      const ent = from.entries();
+      for (let x of ent) {
+      document.getElementById("arrite01").innerHTML += x + "<br>";
+      }//Return with Key + Element
+      //for statement defines a code block that is executed as long as a condition is true
