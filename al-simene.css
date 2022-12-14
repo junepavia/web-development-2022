@@ -1,0 +1,36 @@
+
+.topNav{
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(33, 31, 31);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    padding: 10px;
+    display: inline-block;
+}
+body{
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 2px solid rgb(149, 143, 143);
+    padding: 5px;
+    margin: 20px;
+    gap: 10px;
+}
+.container>div{
+    border: 2px solid rgb(149, 143, 143);
+}
+div{
+    padding: 10px;
+}
+.box4{
+    grid-column: 1/span 3;
+    
+}

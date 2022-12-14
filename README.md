@@ -35,8 +35,28 @@ hyphen - --> not allowed in js, reserve for subtraction
  window.alert -- show visual alert box on the screen whatever we pass to window.alert is displayed to the user in plain text.
  A JavaScript function --- a block of JavaScript code, that can be executed when "called". (A set of procedure/instruction)
  const -- value should not be changed.
- JavaScript counts positions from zero.     
-
+ JavaScript counts positions from zero. 
+ The indexOf() method returns the position of the first occurrence of a string in a string
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+The search() method matches a string against a regular expression 
+returns the index (position) of the first match.
+The match() method matches a string against  a pattern of characters
+The includes() method determines whether one string may be found within another string, returning true or false as appropriate.
+The startsWith() method returns true if a string begins with a specified value.
+The endsWith() method returns true if a string ends with a specified value.    
+Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+is a number without a decimal point
+A float is a floating-point number, which means it is a number that has a decimal place.
+JavaScript uses the + operator to concatenate the strings.
+JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number.
+A BigInt can not have decimals.
+JavaScript Number Methods
+   Method	 Description
+toString()	Returns a number as a string
+toExponential()	Returns a string, with the number rounded and written 			using exponential notation.
+toFixed()	Returns a number written with a number of decimals		(rounds a number to a given number of digits.)
+toPrecision()	Returns a number written with a specified length
+ValueOf()	Returns a number as a number
 
 
 

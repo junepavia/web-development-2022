@@ -4,25 +4,7 @@
         <title>Javascript</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width= device-width, initial-scale=1.0">
-        <style>
-            .topNav{
-                display: flex;
-                border-radius: 10px;
-                background-color: rgb(33, 31, 31);
-            }
-            a{
-                text-decoration: none;
-            }
-            li{
-                list-style-type: none;
-                padding: 10px;
-                display: inline-block;
-            }
-            body{
-                background-color: rgb(19, 18, 18);
-                color: white;
-            }
-        </style>
+        <link rel="stylesheet" href="al-simene.css">
     </head>
 <body onload="docload()">
     <header>
@@ -67,14 +49,70 @@
     <button onclick="checkLength()">Press me</button>
     <p>The String has <i id="lngth"></i> characters</p>
     <p id="partOfSent"></p><br><br>
-    <label for="parag">Enter a sentence:</label><br>
-    <input type="text" id="parag" ><br>
-    <label for="replacement">Enter a Word to replace:</label><br>
-    <input type="text" id="replacement" ><br>
-    <label for="replaceInto">Replaced the word into:</label><br>
-    <input type="text" id="replaceInto" ><br>
-    <button onclick="change()">Replace</button>
-    <p id="rep"></p>
+
+    <label for="input">Enter a sentence:</label><br>
+    <input type="text" id="input" ><br>
+    <label for="newInput">Enter a Word to replace:</label><br>
+    <input type="text" id="newInput" ><br>
+    <label for="replaced">Replaced the word into:</label><br>
+    <input type="text" id="replaced" ><br>
+    <button onclick="change()" style="margin-top: 20px;">Replace</button>
+    
+    <p >The new Sentence will be <mark id="rep"></mark></p>
+    <!--indexOf-->
+    <p>The word <i id="newInput1"> </i> first appeared at position <i id="ndx"></i></p>
+    <!--Lastindexof-->
+    <p>The word <i id="input1"> </i> last appeared at position <i id="lastndx"></i></p>
+    <!--Using Search method-->
+    <p>Using Search Method the word <i id="srchWord"></i> appeared at position <mark id="srchWord1"></mark></p>
+    <!--Using match method-->
+    <label style="margin-top:20px;" for="mtch">Enter a sentence:</label><br>
+    <input type="text" id="mtch" ><br>
+    <label for="srchMatch">Enter Word to search</label><br>
+    <input type="text"  id="srchMatch"><br>
+    <button onclick="mtchMethod()">Search</button>
+    <p id="exist"></p> 
+    <p id="exist1"></p> 
+    <p id="tru" style="margin-bottom:30px;"></p>
+    <label for="srchMatch">Type a sentence: </label><br>
+    <input type="text"  id="paraWith"><br>
+    <p>Does the sentence starts with</p>
+    <input type="text"  id="sWith"><mark id="stWith"></mark> <br>
+    <p>Does the sentence ends with</p>
+    <input type="text"  id="eWith"><mark id="enWith"></mark> <br>
+    <button onclick="seWith()">Search</button>
+    <div class="container">
+        <div>
+            <h3 style="text-align: center;">JAVA NUMBERS</h3>
+            <p id="int">Integer</p> 
+            <p id="flt">Float</p> 
+            <p id="str">str and no</p> 
+            <p id="cncat">Concat</p> 
+            <p id="nan">Error</p> 
+            <p id="typ">type</p>
+            <button onclick="integerExample()">Show</button>
+            
+        </div>
+        <div>
+            <h3 style="text-align: center;">JAVA BigInt</h3>
+            <p id="bgint">BigInt</p>
+            <button onclick="bigInt()">Show</button>
+        </div>
+        <div>
+            <h3 style="text-align: center;">JAVA NUMBER METHODS</h3>
+            <p id="toStr">To String</p>
+            <p id="toExp"> To Exponential</p>
+            <p id="toFix">To fixed</p>
+            <p id="toPrec">To Precision</p>
+            
+            <button onclick="numMethods()">Show</button>
+        </div>
+        <div class="box4" style="text-align: center;">  
+            <label for="integer">Enter a number: </label><br>
+            <input type="number"  id="integer"> <button onclick="intAndfloat()">Submit</button>
+            <p id="ans"></p>
+        </div>
+    </div>
 
 
 
@@ -82,56 +120,6 @@
 
 
 
-    <script>
-            function popUp() {
-              alert("BONJOUR!!!")}
-            function over() {
-               document.getElementById('over').style.backgroundColor='red';}            
-            function out() {
-                document.getElementById('over').style.backgroundColor="lime";}            
-            function dclick() {
-                document.getElementById("dbclick").innerHTML = "Surprise!!!";}
-            function blurInput() {
-                var x = document.getElementById("fname");
-                x.value = x.value.toUpperCase();}
-            function mouseDown(){
-                document.getElementById('clk').innerHTML= "HELP"}
-            function mouseUp(){
-                document.getElementById('clk').innerHTML= "01001000 01000101 01001100 01010000"}
-            function errorLoading(){
-                alert("The program failed successfully!");}
-            function docload(){
-                alert("Welcome!");}
-            function chkname(){
-                var name;
-                name=document.getElementById('name').value
-                const owner="Al Christian";
-                const owner1="al christian";
-               if (name == owner){
-                    output = "Log in Successfully!";}
-                    else if(name==owner1){
-                        output= "Log in Successfully!";}
-                    else{
-                        output="INTRUDER ALERT!!!";}
-                    document.getElementById('logIn').innerHTML=output;
-                 }
-            function checkLength(){
-                var string,start,end;
-                string=document.getElementById('string').value
-                start=document.getElementById('start').value
-                end=document.getElementById('end').value
-                part=string.slice(start,end);
-                document.getElementById('lngth').innerHTML=string.length;
-                document.getElementById('partOfSent').innerHTML=part;
-                    }
-            function change(){
-                var parag, replacement, replaceInto; 
-                parag=document.getElementById('parag').value
-                replacement=document.getElementById('replacement').value
-                replaceInto=document.getElementById('replaceInto').value
-                document.getElementById('rep').innerHTML = 
-                parag.replace('replacement','replaceInto');
-            }
-     </script>      
+    <script src="al-simene.js"></script>      
 </body>
 </html>
