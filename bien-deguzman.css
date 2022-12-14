@@ -109,6 +109,7 @@ body{
     border: 2px solid;
     display: inline-block;
     padding: 20px;
+    margin-right: 10px;
 }
 .matchy{
     background-image: linear-gradient(rgb(197, 109, 124), rgb(175, 105, 255));
@@ -116,4 +117,26 @@ body{
     display: inline-block;
     padding: 20px;
     vertical-align: top;
+    margin-right: 10px;
+}
+.bot2{
+    background-image: linear-gradient(to right,rgb(77, 255, 181), rgb(255, 176, 29));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+}
+.NaN{
+    background: rgb(100, 72, 255);
+    border: 2px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.toExpo{
+    background: rgb(77, 255, 100);
+    border: 2px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top; 
 }

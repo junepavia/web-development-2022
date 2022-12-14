@@ -127,7 +127,64 @@ let firstName = "Bien";
 let lastName = "De Guzman";
 let text15 = `Hello sir,  ${firstName} ${lastName}!`;
 document.getElementById("vs").innerHTML = text15;
-/**/
-/**/
-/**/
+
+/*Integers (numbers without a period or exponent notation) are accurate up to 15 digits*/
+let xx = 777777777777777;//15 numbers
+let yy = 9999999999999999;//16 numbers round off
+document.getElementById("inte").innerHTML = xx + "<br>" + yy;
+
+/*Javascript Numbers*/
+let xxx = 5;
+let yyy = 6;
+let zzz = xxx + yyy; //JavaScript uses the + operator to concatenate the strings
+document.getElementById("pnum2").innerHTML = zzz;
+
+/*NaN*/
+document.getElementById("notan").innerHTML = "Not a Number = " + 100 / "Apple";
+document.getElementById("notan2").innerHTML = "A Number = " + 100 / 10;
+
+/*Infinity*/
+let myNumber = 3; 
+let txt16 = "";
+while (myNumber != Infinity) {
+   myNumber = myNumber * myNumber;
+   txt16 = txt16 + myNumber + "<br>";
+}
+document.getElementById("infi").innerHTML = txt16;
+
+/*BigInt*/
+let x17 = 9999999999999999;//16 int only accurate 15 digits
+let y17 = BigInt("9999999999999999");//16 bigInt store big integer values that are too big to be represented
+document.getElementById("bigi").innerHTML = x17 + "<br>" + y17;
+
+/*toString*/
+let x18 = 101;
+document.getElementById("tos").innerHTML =
+  x18.toString() + "<br>" +
+   (101).toString() + "<br>" +
+   (99 + 2).toString();
+
+/*toExponential*/
+let x19 = 1.234;
+document.getElementById("expo2").innerHTML =
+  x19.toExponential(1) + "<br>" + 
+  x19.toExponential(2) + "<br>" + 
+  x19.toExponential(3) + "<br>" + 
+  x19.toExponential(4);
+
+/*ToFixed*/
+let x20 = 1.656;
+document.getElementById("fix").innerHTML =
+  x20.toFixed() + "<br>" +
+  x20.toFixed(2) + "<br>" +
+  x20.toFixed(4) + "<br>" +
+  x20.toFixed(5);
+
+/*ToPrecision*/
+let x21 = 1.656;
+document.getElementById("prec").innerHTML = 
+  x21.toPrecision() + "<br>" +
+  x21.toPrecision(2) + "<br>" +
+  x21.toPrecision(4) + "<br>" +
+  x21.toPrecision(5); 
 /**/
