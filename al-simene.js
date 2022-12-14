@@ -93,7 +93,7 @@ function popUp() {
         document.getElementById("int").innerHTML=x;
         document.getElementById("flt").innerHTML=t;
         document.getElementById("str").innerHTML=str+y;
-        document.getElementById("cncat").innerHTML=str*str1;
+        document.getElementById("cncat").innerHTML=str+str1;
         document.getElementById("nan").innerHTML=str1*str2;
         document.getElementById("typ").innerHTML=typeof str;
       }
@@ -141,5 +141,74 @@ function popUp() {
         no +" "+typeof no + "<br>" + 
         parsNo + " " + typeof parsNo + "<br>" + fltNo + " " + typeof fltNo;
             }
-           
+        
+    const person=["Juan","Al","Stan","Lee","Peter","Lois","Chris"];
+    document.getElementById('displayArr').innerHTML=person+ "<br>" + "The length of the array is "+ person.length ;
+    
+     
+      function addElem(){
+        let newElem=document.getElementById("newElem").value;
+        person.push(newElem);
+        document.getElementById('newArr').innerHTML=person+ "<br>" + "The length of the array is "+ person.length +" <br>" +person.sort()+" <br>" +person.reverse();
+      }
+      function  noElem(){
+        let numElem=document.getElementById("showElem").value;
+        person.length=numElem;
+        document.getElementById('nArr').innerHTML=person+ "<br>" + "The length of the array is "+ person.length;
+      }
+      function ind(){
+        //accessing elements of array using number indices
+        const person1=["Juan","Al","Stan","Lee","Peter","Lois","Chris"];
+        let dplay="";
+        
+        for( let i=0; i<person1.length; i++){
+            dplay +=person1[i] +"<br>"
+            document.getElementById("personDisplay").innerHTML =dplay;
+        }
+      }
+      
+      function conv()
+      {
+        const Names = ["Peter", "Jones", "Stewie", "Brian"];
+        document.getElementById("cn").innerHTML =Names.toString();
+        document.getElementById("jn").innerHTML = Names.join(" and ");
+        delLast=Names.pop();
+        document.getElementById("na").innerHTML = Names;
+        document.getElementById("ne").innerHTML = delLast;
+        delFirst=Names.shift();
+        document.getElementById("shft").innerHTML = Names;
+        document.getElementById("shft1").innerHTML = delFirst;
+        Names.unshift("Quagmire");
+        document.getElementById("ushft").innerHTML = Names;
+        
+
+      }
+      function concatStr(){
+    const animals=["Dog","Cat","Mouse"];
+    const fruits=["Durian","Mango","Pineapple"];
+    const combined = animals.concat(fruits);
+    let userinput=document.getElementById('userinput').value;
+    document.getElementById("mix").innerHTML = combined;
+    animals.splice(0,2, "Cow", "Rooster");
+    document.getElementById("anmls").innerHTML = animals;
+    document.getElementById("demo1").innerHTML = fruits;
+    const slce = combined.slice(2,5);
+    document.getElementById("demo").innerHTML = slce;
+
+    for(let i=0; i<combined.length; i++){
+        console.log(combined);
+        console.log(userinput);
+        if(combined[i]==userinput)//same type dapat
+        {
+            document.getElementById('typeIdhere').innerHTML="Word Exist"
+        }
+        else{
+            document.getElementById('typeIdhere').innerHTML="Word Does Not Exist"
+        }
+ 
+      }
+    }   
+
+
+        
       
