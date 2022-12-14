@@ -9,6 +9,7 @@
 <body>
     <h1>Bien-Deguzman</h1>
     <div class = "top">
+        <center><h2>1st Part</h2></center>
     <!--A typical arithmetic operation takes two numbers (or expressions) and produces a new number.-->
     <div class="arithmetic">
         <h3>Arithmetic Operators</h3>
@@ -39,74 +40,161 @@
         <h3>Data Types</h3>
         <p id="dtype"></p>
     </div>
-    </div>  
+</div>  
     <div class="mid">
+        <center><h2>2nd Part</h2></center>
         <!--Exponential Numbers-->
         <div class="exponential">
             <h3>Exponential</h3>
             <p id = "expo"></p>
         </div>
+        <!--Boolean-->
         <div class="bool">
             <h3>Boolean</h3>
             <p id="boolean"></p>
         </div>
+        <!--Array-->
+        <div class="arrays">
+            <h3>Array</h3>
+            <p id="arrayy"></p>
+        </div>
+        <!--Object returns an array whose elements are strings corresponding to the 
+            enumerable string-keyed property values found directly upon object-->
+        <div class="obj">
+            <h3>Objects</h3>
+            <p id="obje"></p>
+        </div>
+        <!--Function a set of statements that performs a task or calculates a value-->
+        <div class="funct">
+            <h3>Function</h3>
+            <p id="func"></p>
+        </div>
+        <!--HTML events are "things" that happen to HTML elements-->
+        <div class="events">
+            <h3>Events</h3>
+            <p id="event"></p>
+            <button onclick="document.getElementById('event').innerHTML=Date()">Time check: </button>
+            <br><br>
+            Enter your name: <input type="text" id="fname" onchange="upperCase()">
+        </div>
     </div>
+<div class="bot">
+        <center><h2>3rd Part</h2></center>
+        <!--String length-->
+        <div class="strings2">
+            <h3>Strings Length</h3>
+            <p>The text length of my name is: </p>
+            <p id="stringer"></p>
+        <!--Strings as Object(strings can also be defined as objects with the keyword new)-->
+        <div class="stringob">
+            <h3>Strings as Object</h3>
+            <p id="obs"></p>
+        </div>
+        <!--String Slice The method takes 2 parameters: start position, and end position (end not included).-->
+        <div class="slice">
+            <h3>String Slice</h3>
+            <p id="slices"></p>
+        </div>
+        <!--The difference is that start and end values less than 0 are treated as 0-->
+        <div class="substring">
+            <h3>Substring</h3>
+            <p id="subs"></p>
+        </div>   
+        <!--Replace method replaces a specified value with another value in a string-->
+        <div class="rep">
+            <h3>Replace Method</h3>
+            <button onclick="myName()">Replace me!</button>
+            <p id="replace">Bien Marco Pogi</p>
+        </div>    
+        <!--Concat joins two or more strings-->
+        <div class="con">
+            <h3>Concat</h3>
+            <p id="concat"></p>
+        </div> 
+        <!--IndexOf method returns the index of (position of) the first occurrence of a string in a string-->
+        <div class="ind">
+            <h3>Index Of</h3>
+            <p id="indof"></p>
+        </div>
+    </div>
+        <!--method returns an iterator containing the 
+            results of matching a string against a string (or a regular expression).-->
+        <div class="matchy">
+            <h3>MatchAll</h3>
+            <p id="matchs"></p>
+        <!--Include method returns true if a string contains a specified value-->
+        <div class="inc">
+            <h3>Include</h3>
+            <p id="includes"></p>
+        </div>
+        <!--Startswith method returns true if a string begins with a specified value-->
+        <div class="startwith">
+            <h3>StartsWith</h3>
+            <p id="starts"></p>
+        </div>
+        <!--EndsWith method returns true if a string ends with a specified value-->
+        <div class="endwith">
+            <h3>EndsWith</h3>
+            <p id="end"></p>
+        </div>
+        <!--Template Literals use back-ticks (``) rather than the quotes ("") to define a string-->
+        <div class="literals">
+            <h3>Back-Tics Syntax</h3>
+            <p id="tic"></p>
+        </div>
+        <!--Variables Substitutions-->
+        <div class="var">
+            <h3>Variables Substitutions</h3>
+            <p id="vs"></p>
+        </div>
+        <!--Integers (numbers without a period or exponent notation) are accurate up to 15 digits-->
+        <div>
+            <h3>Integer Precision</h3>
+            <p id="inte"></p>
+        </div>
+        <!--Javascript Numbers if you add quote it will be string-->
+        <div>
+            <h3>Javascript Numbers</h3>
+            <p id="pnum2"></p>
+        </div>
+    </div>
+    <!--Not a Number-->
+    <div class="NaN">
+        <h3>NaN</h3>
+        <p id="notan"></p>
+        <p id="notan2"></p>
+        <!--Infinity-->
+    <div>
+        <h3>Infinity</h3>
+        <p id="infi"></p>
+    </div>
+    <!--BigInt-->
+    <div class="big">
+        <h3>BigInt</h3>
+        <p id="bigi"></p>
+    </div>
+    <!--ToString method returns a number as a string-->
+    <div class="toS">
+        <h3>To String</h3>
+        <p id="tos"></p>
+    </div>
+    </div>
+    <!--ToExponential returns a string, with a number rounded and written using exponential notation-->
+    <div class="toExpo">
+        <h3>To Exponential</h3>
+        <p id="expo2"></p>
+    <!--ToFixed returns a string, with the number written with a specified number of decimals-->
+        <div class="toFix">
+            <h3>To Fixed</h3>
+            <p id="fix"></p>
+        </div>
+    <!--ToPrecision method returns a string, with a number written with a specified length-->
+        <div class="toPre">
+            <h3>To Precision</h3>
+            <p id="prec"></p>
+        </div>
+    </div>   
+</div>
+    <script src="bien-deguzman.js"></script>
 </body>
-
-<!--Arithmetic-->
-<script>
-    let a = 2;
-    let b = (5 + 10) * a;
-    document.getElementById("arith").innerHTML = b;
-    </script>
-    <!--Strings operator concatenates-->
-    <script>
-        let text1 = 'Bien';
-        let text2 = "De Guzman";
-        let text3 = text1 + " " + text2;
-        document.getElementById("string1").innerHTML = text3;
-    </script>
-    <!--Assignment Operator-->
-    <script>
-        let text4 = "Hello, ";
-        text4 += "I am Bien Marco de Guzman";
-        document.getElementById("assope1").innerHTML = text4;
-    </script>
-    <!--Adding a number and a string, returns a string.-->
-    <script>
-        let q = 2 + 1;
-        let w = "30" + 5;
-        let e = "Returns a string" + 1000;
-        document.getElementById("snums").innerHTML =
-        q + "<br>" + w + "<br>" + e;
-    </script>
-    <!--Increment-->
-    <script>
-        let o = 10;
-        o++;
-        let d = o;
-        document.getElementById("incren").innerHTML = d;
-    </script>
-    <!--Data Types-->
-    <script>
-        let x;         // Now x is undefined
-        x = 0;         // Now x is a Number
-        x = "Bien Marco";    // Now x is a String
-        document.getElementById("dtype").innerHTML = x;
-    </script>
-    <!--Exponential-->
-    <script>
-        let y = 149e5;
-        let z = 143e-2;   
-        document.getElementById("expo").innerHTML =
-        y + "<br>" + z;
-    </script>
-    <!--Boolean-->
-    <script>
-        let p = 8;
-        let m = 2;
-        let n = 8;
-        document.getElementById("boolean").innerHTML =
-        (p == n) + "<br>" + (p == m) + "<br>" + (m == n);
-    </script>
 </html>
