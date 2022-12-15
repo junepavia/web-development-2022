@@ -187,28 +187,76 @@ function popUp() {
     const animals=["Dog","Cat","Mouse"];
     const fruits=["Durian","Mango","Pineapple"];
     const combined = animals.concat(fruits);
-    let userinput=document.getElementById('userinput').value;
+    
     document.getElementById("mix").innerHTML = combined;
     animals.splice(0,2, "Cow", "Rooster");
     document.getElementById("anmls").innerHTML = animals;
     document.getElementById("demo1").innerHTML = fruits;
     const slce = combined.slice(2,5);
     document.getElementById("demo").innerHTML = slce;
-
-    for(let i=0; i<combined.length; i++){
-        console.log(combined);
-        console.log(userinput);
-        if(combined[i]==userinput)//same type dapat
-        {
-            document.getElementById('typeIdhere').innerHTML="Word Exist"
+     }   
+//search element of array
+     const phones=["Samsung","Huawei","Lenovo","Iphone","Nokia","LG", "Blackberry","Alcatel", "Xiaomi", "Oppo", "ROG", "Sony"];
+     document.getElementById('dElement').innerHTML=phones;
+     document.getElementById('expArr').innerHTML=phones;
+     function  searchElement(){
+      let userinput=document.getElementById('userinput').value;
+     
+      for(let i=0; i<phones.length; i++){
+        const name=phones[i];   
+        if(name.toLowerCase()===userinput){
+        document.getElementById("typeIdhere").innerHTML = "Element exist in index " + i;}
+     }
+    }
+    //foreach
+    
+    function  frEach(){
+      let txt="";  //current value(required), (optional)index at array
+      phones.forEach(function scanArr(item,index){
+        txt +="Index: "+index+"<mark>"+item+"</mark>" +"<br>";});
+      document.getElementById("displayHere").innerHTML = txt;
         }
-        else{
-            document.getElementById('typeIdhere').innerHTML="Word Does Not Exist"
+        //map
+    function  mapFunc(){
+      const num=["10","30","40","70","110"]
+      const newNum=num.map(function makeArr(digit){return digit*digit+2;})
+      document.getElementById("displayMap1").innerHTML = num;
+      document.getElementById("displayMap").innerHTML = newNum;
         }
- 
+    function filterFunc(){
+      const num1=[10,30,41,75,103];
+      const ans=num1.filter(fltr);
+      document.getElementById("displayFilter").innerHTML = ans;
+      function fltr(value){
+        return value <40;
       }
-    }   
+    }
+    //reduce
+    function reduc(){
+    const num2=[500,30,112,5,203,112,112,112];
+    let redu=num2.reduce(rReduc);
+    let Rredu=num2.reduceRight(rReduc);
+    let evrNum=num2.every(evry);
+    let someNum=num2.some(evry);
+    let findNum=num2.find(fnd);
+    let ndex=num2.indexOf(112);
+    let Lndex=num2.lastIndexOf(112);
+    document.getElementById('displayReduce').innerHTML= "Total is "+redu;
+    document.getElementById('displayReduceright').innerHTML= "Total is "+Rredu;
+    document.getElementById('displayEvery').innerHTML= evrNum;
+    document.getElementById('displaySome').innerHTML= someNum;
+    document.getElementById('displayFind').innerHTML= findNum;
+    document.getElementById('displayIndex').innerHTML= ndex;
+    document.getElementById('displaylastIndex').innerHTML= Lndex;
+    function rReduc(total, value){
+      return total - value;
+    }
+    function evry(value){
+        return value >112;
+    }
+    function fnd(number){
+      return number <30;
+    }
+  }
+    
 
-
-        
-      
