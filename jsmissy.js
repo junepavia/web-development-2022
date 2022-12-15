@@ -120,10 +120,10 @@ function test14() {
   let i =["rat", "ants", "flies", "frog"]
    document.getElementById("missy35").innerHTML=`Have a ${h}!`;
    document.getElementById("missy36").innerHTML ="<mark>toString:</mark>" +" "+ g.toString();
-   document.getElementById("missy37").innerHTML ="<mark>join:</mark>" +" "+ g.join("@");
+   document.getElementById("missy37").innerHTML ="<mark>join:</mark>" +" "+ g.join("&");
    document.getElementById("missy38").innerHTML ="<mark>pop:</mark>" +" "+g; g.pop();
    document.getElementById("mis38").innerHTML ="<mark>pop2:</mark>" +" "+ g;
-   document.getElementById("missy39").innerHTML ="<mark>shift:</mark>" +" "+g; g.shift();
+   document.getElementById("missy39").innerHTML ="<mark>shift:</mark>" +" "+g.shift();
    document.getElementById("mis39").innerHTML ="<mark>shift2:</mark>" +" "+ g;
    document.getElementById("missy40").innerHTML ="<mark>concat:</mark>" +" "+g.concat(i);
    document.getElementById("missy41").innerHTML ="<mark>sortalpha:</mark>" +" "+g; g.sort();
@@ -132,6 +132,56 @@ function test14() {
    "<mark>sortrev:</mark>" +" "+g;g.sort(); g.reverse();
    document.getElementById("missy44").innerHTML ="<mark>reverse:</mark>" +" "+ g ;
 }
+function test15() {
+  let j = ['Missy', 'Erwin', 'Al', 'Princess','Brent','Bien','Zieg'];
+  j.push(document.getElementById("pushy").value);
+         // console.log(j);
+document.getElementById("missy45").innerHTML =j.join(" ");
+}
+function test16() {
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction0);
+
+document.getElementById("missy46").innerHTML = numbers2;
+
+function myFunction0(value, index, array) {
+  return value * 2;
+}
+}
+function test17(){
+  const numbers = [45, 4, 9, 16, 25,2,38];
+  const overnumm = numbers.filter(myFunction);
+  document.getElementById("missy47").innerHTML = overnumm;
+
+  function myFunction(value, index, array) {
+    return value > document.getElementById("numm").value ;
+  }}
+  function test18(){
+  const numbers = [45, 4, 9, 16, 25];
+  let sum = numbers.reduceRight(myFunction3);
+  
+  document.getElementById("missy48").innerHTML = "The sum is " + sum;
+  
+  function myFunction3(total, value, index, array) {
+    return total + value;
+  }}
+  function test19(){
+  const numb = [15, 4, 9, 16, 10];
+let someOver18 = numb.some(myFunction5);
+document.getElementById("missy49").innerHTML = "Some over 18 is " + someOver18 +"["+numb+"]";
+function myFunction5(value, index, array) {
+  return value > 18;
+}}
+function test20(){
+const numbe = [4, 9, 16, 25, 29];
+let first = numbe.find(myFunction6);
+
+document.getElementById("missy50").innerHTML = "First number over 18 is " + first+"["+numbe+"]";
+
+function myFunction6(value, index, array) {
+  return value > 18;
+}}
+
 /*function test9( m )
  { return (8-4) * (m-36);
   document.getElementById(missy12).innerHTML = test9(58);*/
