@@ -187,4 +187,103 @@ document.getElementById("prec").innerHTML =
   x21.toPrecision(2) + "<br>" +
   x21.toPrecision(4) + "<br>" +
   x21.toPrecision(5); 
-/**/
+
+/*The largest possible number in JavaScript*/
+let x22 = Number.MAX_VALUE;
+document.getElementById("maxv").innerHTML = x22;
+
+/*smallest number possible in JavaScript*/
+let x23 = Number.MIN_VALUE;
+document.getElementById("minv").innerHTML = x23;
+
+/*JavaScript array elements are accessed using numeric indexes (starting from 0)*/
+const arr = ["One", "Two", "Three" ,"Four"];
+document.getElementById("arr").innerHTML = arr[2];
+
+/*This statement changes the value of the first element in arr1*/
+const arr1 = ["One", "Two", "Three","Four"];
+arr1[0] = "Zero";
+document.getElementById("arr1").innerHTML = arr1;
+
+/*Access the Full Array the full array can be accessed by referring to the array name*/
+const me1 = ["Bien", "Marco", "De Guzman"];
+document.getElementById("arr2").innerHTML = me1;
+/*Length property of an array returns the length of an array (the number of array elements)*/
+const fruits = ["Banana", "Orange", "Apple", "Mango","Watermelon"];
+document.getElementById("arr3").innerHTML = fruits.length;
+/*push method way to add a new element to an array is using the push() method*/
+const me2 = ["Bien", "Marco"];
+document.getElementById("arr4").innerHTML = me2;
+function myFunction1() {
+  me2.push("De Guzman");
+  document.getElementById("arr4").innerHTML = me2;
+}
+/*Associative Arrays with named indexes are called associative arrays (or hashes)*/
+const me3 = [];
+me3[0] = "Bien";
+me3[1] = "Marco";
+me3[2] = "De Guzman";
+me3[3] = 1;
+document.getElementById("arr5").innerHTML =
+me3[0] + " " + me3.length;
+/*The typeof operator, when used on an array, returns object*/
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("arr6").innerHTML = typeof fruits1;
+//const fruits2 = ["Banana", "Orange", "Apple"];
+//document.getElementById("arr6").innerHTML = Array.isArray(fruits2);
+
+/*String to Array*/
+const fruits2 = ["Banana", "Orange"];
+document.getElementById("meth1").innerHTML = fruits2.toString();
+/*The join() method joins array elements into a string. */
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("meth2").innerHTML = fruits3.join(" + ");//It this example we have used " * " as a separator between the elements
+
+/*Pop method removes the last element from an array*/
+const foods = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth3").innerHTML = foods;
+foods.pop();
+document.getElementById("meth4").innerHTML = foods;
+foods.pop();
+document.getElementById("meth5").innerHTML = foods;
+
+/*Push method method adds a new element to an array (at the end)*/
+const foods1 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth6").innerHTML = foods1;
+foods1.push("Hotdog");
+document.getElementById("meth7").innerHTML = foods1;
+
+/*Shift method removes the first array element and "shifts" all other elements to a lower index*/
+const foods2 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth8").innerHTML = foods2;
+foods2.shift();
+document.getElementById("meth9").innerHTML = foods2;
+
+/*Unshift method adds new elements to the beginning of an array*/
+const foods3 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth10").innerHTML = foods3;
+foods3.unshift("Adobo");
+document.getElementById("meth11").innerHTML = foods3;
+
+/*Array elements are accessed using their index number*/
+const foods4 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("change1").innerHTML = foods4;
+foods4[1] = "Afritada";
+document.getElementById("change2").innerHTML = foods4;
+
+/*Deleting elements leaves undefined holes in an array*/
+const foods5 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("ad1").innerHTML =
+"Ang lutong ulam ay: " + foods5[0];
+delete foods5[0];//Deleted 0 start
+document.getElementById("ad2").innerHTML =
+"Ang lutong ulam ay: " + foods5[0];
+
+/*Concat() method creates a new array by merging (concatenating) existing arrays*/
+const Girls = ["Missy", "Princess"];
+const Boys = ["Bien", "Brent", "Al", "Erwin", "Ziegler"];
+const myProgrammer = Girls.concat(Boys);
+document.getElementById("merges").innerHTML = myProgrammer;
+
+/* */
+/* */
