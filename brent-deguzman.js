@@ -359,3 +359,83 @@ var x = myFunction(8, 6); // a=8 * b=6
       document.getElementById("arrite01").innerHTML += x + "<br>";
       }//Return with Key + Element
       //for statement defines a code block that is executed as long as a condition is true
+
+      //JS Date
+      function datefunct() {//Shows the current date and time
+        const petsa = new Date();
+        document.getElementById("petsa").innerHTML = petsa;
+        }
+      function datefunct1() {
+        const petsa1 = new Date(2022, 11, 24, 23, 59, 59, 59);
+        document.getElementById("petsa1").innerHTML = petsa1;
+        }
+      function datefunct2() {
+        const petsa2 = new Date("December 15, 2022 13:26:52");
+        document.getElementById("petsa2").innerHTML = petsa2;
+      }
+      function datefunct3() {
+        const petsa3 = new Date(2022, 11);
+        document.getElementById("petsa3").innerHTML = petsa3;
+      }
+      function datefunct4() {
+        const petsa4 = new Date(2022); //use "" to be year
+        document.getElementById("petsa4").innerHTML = petsa4;
+      }//Standard Unix Time
+      function datefunct5() {
+        const petsa5 = new Date();
+        document.getElementById("petsa5").innerHTML = petsa5.toUTCString();
+      }//Coordinated Universal Time
+      function datefunct6() {
+        const petsa6 = new Date();
+        document.getElementById("petsa6").innerHTML = petsa6.toISOString();
+      }//International Organization for Standardization
+      function datefunct7() {
+      const petsa7 = Date.parse("December 15, 2022");
+      document.getElementById("petsa7").innerHTML = petsa7;
+      }//Date.parse convert the given date to millisecond
+      const methodget = new Date()
+      const months = ["January","February","March","April","May","June","July","August",
+      "September","October","November","December"];
+      let month = months[methodget.getMonth()];
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      let day = days[methodget.getDay()];
+      function datefunct8() {
+      document.getElementById("getmet").innerHTML = methodget.getFullYear();
+      document.getElementById("getmet1").innerHTML = methodget.getMonth() + 1;
+      //document.getElementById("getmet1").innerHTML = month;
+      document.getElementById("getmet2").innerHTML = methodget.getDate();
+      document.getElementById("getmet3").innerHTML = methodget.getDay();
+      //document.getElementById("getmet3").innerHTML = day;
+      document.getElementById("getmet4").innerHTML = methodget.getHours();
+      document.getElementById("getmet5").innerHTML = methodget.getMinutes();
+      document.getElementById("getmet6").innerHTML = methodget.getSeconds();
+      document.getElementById("getmet7").innerHTML = methodget.getMilliseconds();
+      document.getElementById("getmet0").innerHTML = methodget.getTimezoneOffset();
+      }// inset UTC after each get to check GMT
+      function LocaltoUTC() {
+      const Loc2UTC = new Date();
+      document.getElementById("getmet8").innerHTML = Loc2UTC;
+      }
+      function LocaltoUTC1() {
+        const Loc2UTC1 = new Date().toUTCString();
+        document.getElementById("getmet9").innerHTML = Loc2UTC1;
+      }
+      const setmet = new Date()
+      function datefunct9() {
+        setmet.setFullYear(1995);
+        document.getElementById("setmit").innerHTML = setmet; 
+        setmet.setMonth(3);
+        document.getElementById("setmit1").innerHTML = setmet;
+        setmet.setDate(11);
+        document.getElementById("setmit2").innerHTML = setmet;
+        setmet.setHours(10);
+        document.getElementById("setmit4").innerHTML = setmet;
+        setmet.setMinutes(30); 
+        document.getElementById("setmit5").innerHTML = setmet;
+        setmet.setSeconds(30);
+        document.getElementById("setmit6").innerHTML = setmet;
+        setmet.setMilliseconds(20);
+        document.getElementById("setmit7").innerHTML = setmet;
+        setmet.setTime(1671033600000);
+        document.getElementById("setmit8").innerHTML = setmet;
+      }

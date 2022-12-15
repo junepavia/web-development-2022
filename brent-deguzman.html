@@ -18,7 +18,8 @@
       #number-cont,
       #ways-cont,
       #array-cont,
-      #arsort-cont {
+      #arsort-cont,
+      #date-cont {
         border: outset 5px royalblue;
         padding: 2px;
         margin: 2px;
@@ -26,6 +27,9 @@
         width: auto;
         background: url(https://wallpaperaccess.com/full/2728566.jpg) no-repeat;
         background-size: cover;
+      }
+      #date-cont {
+        font-size: 18px;
       }
       h1 {
         text-align: center;
@@ -219,6 +223,82 @@ let Toyota4 = Fortunure
       <p><span id="arrite9"></span> -- .from()</p>
       <p><span id="arrite0"></span> -- .keys()</p>
       <p><span id="arrite01"></span> -- .entries()</p>
+    </div>
+    <div id="date-cont">
+      <h2>JS Dates</h2>
+      <p>
+        The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date
+        format
+      </p>
+      <p>Ways to create a new date object</p>
+      <ul>
+        <li>new Date()</li>
+        <li>new Date(date string)</li>
+        <li>new Date(year,month)</li>
+        <li>new Date(year,month,day)</li>
+        <li>new Date(year,month,day,hours)</li>
+        <li>new Date(year,month,day,hours,minutes)</li>
+        <li>new Date(year,month,day,hours,minutes,seconds)</li>
+        <li>new Date(year,month,day,hours,minutes,seconds,ms)</li>
+        <li>new Date(milliseconds)</li>
+      </ul>
+      <button onclick="datefunct()">i-Click</button
+      ><!--Tagalog-->
+      <button onclick="datefunct1()">Click</button>
+      <button onclick="datefunct2()">Klik</button
+      ><!--Indonesian-->
+      <button onclick="datefunct3()">Kurikku</button
+      ><!--Japanese-->
+      <button onclick="datefunct4()">Diǎnjī</button
+      ><!--Chinese-->
+      <button onclick="datefunct5()">Klicken</button
+      ><!--German-->
+      <button onclick="datefunct6()">Anqur</button
+      ><!--Arabic-->
+      <button onclick="datefunct7()">Clique</button
+      ><!--Portuguese-->
+      <p><span id="petsa"></span>Date()</p>
+      <!--JS will use browser timezone-->
+      <p>Date(year,month,day,hours,minutes,seconds,ms)</p>
+      <span id="petsa1"></span>
+      <p>Date(date string)</p>
+      <span id="petsa2"></span>
+      <p>Date(year,month)</p>
+      <span id="petsa3"></span>
+      <p>Date(1 parameter)</p>
+      <span id="petsa4"></span>
+      <p>Date() in UTC</p>
+      <!--GMT - Greenwich Mean Time-->
+      <span id="petsa5"></span>
+      <p>Date() in ISO</p>
+      <!--YYYY-MM-DDTHH:MM:SSZ-->
+      <span id="petsa6"></span>
+      <p>Date() in milliseconds</p>
+      <span id="petsa7"></span>
+      <h4>Date get Method</h4>
+      <button onclick="datefunct8()">Watashi o kurikku</button>
+      <p><span id="getmet"></span> -- .getFullYear()</p>
+      <p><span id="getmet1"></span> -- .getMonth()</p>
+      <p><span id="getmet2"></span> -- .getDate() - Day of the Month</p>
+      <p><span id="getmet3"></span> -- .getDay() - Day of the Week</p>
+      <p><span id="getmet4"></span> -- .getHours()</p>
+      <p><span id="getmet5"></span> -- .getMinutes()</p>
+      <p><span id="getmet6"></span> -- .getSeconds()</p>
+      <p><span id="getmet7"></span> -- .getMilliseconds()</p>
+      <p><span id="getmet0"></span> -- .getTimezoneOffset()</p>
+      <button onclick="LocaltoUTC()">Local</button>
+      <p>Local Time :<span id="getmet8"></span></p>
+      <button onclick="LocaltoUTC1()">UTC</button>
+      <p>Universal :<span id="getmet9"></span></p>
+      <button onclick="datefunct9()">Click Me!</button>
+      <p><span id="setmit"></span> -- .setFullYear()</p>
+      <p><span id="setmit1"></span> -- .setMonth()</p>
+      <p><span id="setmit2"></span> -- .setDate()</p>
+      <p><span id="setmit4"></span> -- .setHours()</p>
+      <p><span id="setmit5"></span> -- .setMinutes()</p>
+      <p><span id="setmit6"></span> -- .setSeconds()</p>
+      <p><span id="setmit7"></span> -- .setMilliseconds()</p>
+      <p><span id="setmit8"></span> -- .setTime()</p>
     </div>
 
     <script src="/brent-deguzman.js"></script>
