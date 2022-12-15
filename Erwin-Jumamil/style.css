@@ -25,11 +25,53 @@ input[type=text]:focus {
 #test1{
     margin-top: 28px;
 }
-span{
-    color: red;
-}
+
 #searchWord{
     width: 45rem;
     height: 60px;
     font-size: 150%;
+}
+#sentences{
+    border-radius: 5px;
+}
+.textarea {
+    border: 1px solid gray;
+    padding: 1px 6px;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    line-height: 25px;
+  }
+.cont1 {
+    border: 3px solid red ;
+    max-height: max-content;
+}
+#toString{
+    color: black;
+    background-color: cyan ;
+    border: 2px solid magenta;
+    font-size: 120%;
+    padding: 2px;
+    display: block;
+
+}
+#join{
+    margin-top: 10px;
+    display: block;
+    color: black;
+    background-color: yellow ;
+    border: 2px solid magenta;
+    font-size: 120%;
+    padding: 2px;
+}
+.btn{
+    font-size: 100%;
+}
+#joinForce{
+    background-color: cyan; display: block; 
+    color: magenta;
+    font-size: 120%;
+}
+#newHero{
+    width: 25rem;
 }

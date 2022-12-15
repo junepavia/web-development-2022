@@ -86,16 +86,16 @@ function attendance(){
   </thead>
   <tbody>`;
       for (const x of namelist) {
-        let i=1;
+        let i=x.indexOf(namelist);
         display += `<tr>
-                    <th scope="row">${++i}</th>
+                    <th scope="row">${i}</th>
                     <td>${x}</td>
                     </tr>`;
         }
     display+=`
             </tbody>
             </table>`;
-  document.getElementById("animeList").innerHTML=display;
+  document.getElementById("anList").innerHTML=display;
 }
   function deleted (){
     console.log(namelist)
@@ -118,6 +118,66 @@ function attendance(){
       display+=`
               </tbody>
               </table>`;
-    document.getElementById("animeList").innerHTML=display;
+    document.getElementById("anList").innerHTML=display;
 }
-
+const justiceLeague = ["Batman", "Superman", "Aquaman", "Flash"];
+const marvel = ["Captain America", "Ironman", "Thor", "Hulk"];
+document.getElementById("toString").innerHTML = justiceLeague.toString();
+document.getElementById("join").innerHTML = justiceLeague.join(" ! ");
+function insertHero(){
+  let newHero = document.getElementById("newHero").value;
+  // justiceLeague.push(newHero);
+  // justiceLeague[0]=(newHero);//using index number
+  justiceLeague[justiceLeague.length] = (newHero); // insert using length
+  document.getElementById("join").innerHTML = justiceLeague.join(" @ ");
+}
+function deleteHero(){
+  // justiceLeague.pop();
+  delete justiceLeague[0];
+  document.getElementById("join").innerHTML = justiceLeague.join(" # ");
+}
+function shiftHero(){
+  justiceLeague.shift(); // Delete the first element
+  document.getElementById("join").innerHTML = justiceLeague.join(" $ ");
+}
+function unShiftHero(){
+  let newHero = document.getElementById("newHero").value;
+  justiceLeague.unshift(newHero);// insert in the firtst index
+  document.getElementById("join").innerHTML = justiceLeague.join(" % ");
+}
+const joinForce = justiceLeague.concat(marvel); 
+document.getElementById("joinForce").innerHTML = joinForce;
+function sortHero(){
+  joinForce.sort();
+  // joinForce.reverse();
+  document.getElementById("joinForce").innerHTML = joinForce;
+}
+const numbers = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = numbers;
+numbers.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = numbers;
+document.getElementById("demo").innerHTML = numbers;  
+function myFunction() {
+  numbers.sort(function(){return 0.5 - Math.random()});
+  document.getElementById("demo").innerHTML = numbers;
+}
+numbers.sort(function(a, b){return a-b});
+document.getElementById("demo5").innerHTML = numbers[0];
+numbers.sort(function(a, b){return b-a});
+document.getElementById("demo6").innerHTML = numbers[0];
+document.getElementById("demo3").innerHTML = myArrayMax(numbers);
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+document.getElementById("demo7").innerHTML = myArrayMin(numbers);
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+const numberlist = [45, 4, 9, 16, 25];
+document.getElementById("demo8").innerHTML = numberlist;
+let txt = "";
+numberlist.forEach(myFunction1);
+document.getElementById("demo9").innerHTML = txt;
+function myFunction1(value, index, array) {
+  txt += value + "<br>"; 
+}
