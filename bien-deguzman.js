@@ -208,9 +208,11 @@ document.getElementById("arr1").innerHTML = arr1;
 /*Access the Full Array the full array can be accessed by referring to the array name*/
 const me1 = ["Bien", "Marco", "De Guzman"];
 document.getElementById("arr2").innerHTML = me1;
+
 /*Length property of an array returns the length of an array (the number of array elements)*/
 const fruits = ["Banana", "Orange", "Apple", "Mango","Watermelon"];
 document.getElementById("arr3").innerHTML = fruits.length;
+
 /*push method way to add a new element to an array is using the push() method*/
 const me2 = ["Bien", "Marco"];
 document.getElementById("arr4").innerHTML = me2;
@@ -226,15 +228,17 @@ me3[2] = "De Guzman";
 me3[3] = 1;
 document.getElementById("arr5").innerHTML =
 me3[0] + " " + me3.length;
+
 /*The typeof operator, when used on an array, returns object*/
-const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("arr6").innerHTML = typeof fruits1;
-//const fruits2 = ["Banana", "Orange", "Apple"];
-//document.getElementById("arr6").innerHTML = Array.isArray(fruits2);
+//const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+//document.getElementById("arr6").innerHTML = typeof fruits1;
+const fruits0 = ["Banana", "Orange", "Apple"];
+document.getElementById("arr6").innerHTML = Array.isArray(fruits0);
 
 /*String to Array*/
-const fruits2 = ["Banana", "Orange"];
+const fruits2 = ["Banana", "Orange", "Avocado"];
 document.getElementById("meth1").innerHTML = fruits2.toString();
+
 /*The join() method joins array elements into a string. */
 const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("meth2").innerHTML = fruits3.join(" + ");//It this example we have used " * " as a separator between the elements
@@ -281,7 +285,7 @@ document.getElementById("ad2").innerHTML =
 
 /*Concat() method creates a new array by merging (concatenating) existing arrays*/
 const Girls = ["Missy", "Princess"];
-const Boys = ["Bien", "Brent", "Al", "Erwin", "Ziegler"];
+const Boys = ["Bien", "Brent", "Al", "Erwin", "Ziegler",...Girls];
 const myProgrammer = Girls.concat(Boys);
 document.getElementById("merges").innerHTML = myProgrammer;
 
