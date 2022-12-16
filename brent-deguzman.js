@@ -525,7 +525,3 @@
       Toyota[id] = 4111995;
       alert(`${Toyota[id]} Unique Identifier` );
       document.getElementById("symbo").innerHTML = Symbol("id") == Symbol("id");
-
-
-        
-         
