@@ -272,24 +272,46 @@ function popUp() {
       }
    }*/
 
-   //arrow function
-
-   let guess=document.getElementById('guess').value;
-   console.log(guess);
-   let randm=Math.floor(Math.random()*10);
-   let guessNum = (guess, randm) => {
-    console.log(randm);
-    console.log(guess);
+   
+   //using form
+   /*let form=document.getElementById('frm')
+   form.addEventListener('submit', function(event){
+    event.preventDefault()//prevent form form auto submitting
+    let guess=document.getElementById('guess').value
+    console.log(guess,"guess");
+    let randm=Math.floor(Math.random()*10);
+    console.log(randm ,"random");
+   })
+   const guessNum1 = (guess,randm) => {
       if (randm==guess){
-        console.log(randm,"random");
-        console.log(guess,"guess");
+        console.log(randm,"random2");
+        console.log(guess,"guess1");
       return alert(`${randm} is right`);
-    
     }
-
       else
       return alert("Wrong! The number was ");
+    }*/
+   
+//arrow function
+    let guess;
+    document.getElementById('btn').addEventListener("click",getGuess());
+
+    function getGuess(){
+      guess=document.getElementById('guess').value;
     }
+
+    console.log(guess, "guess");
+    let randm=Math.floor(Math.random()*10);
+    console.log(randm ,"random");
+    const guessNum = () => {
+    console.log(randm,"random before if")
+    console.log(guess,"guess before if")
+        if (randm==guess){
+         return alert(`${randm} is right`);}
+        else{
+          return alert(`Wrong! The number was ${randm}`);}
+    }
+
    
 
 
