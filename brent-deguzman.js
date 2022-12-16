@@ -1,4 +1,4 @@
-var x = myFunction(8, 6); // a=8 * b=6
+      var x = myFunction(8, 6); // a=8 * b=6
       document.getElementById("func1").innerHTML = x;
       //use to display the data
       function myFunction(a, b) {
@@ -439,3 +439,93 @@ var x = myFunction(8, 6); // a=8 * b=6
         setmet.setTime(1671033600000);
         document.getElementById("setmit8").innerHTML = setmet;
       }
+      //ES6 
+      let  scope = `I'm outside block`;
+      {  
+        let scope = `I'm inside block`;
+        document.getElementById("varlet1").innerHTML = scope;
+      }
+      document.getElementById("varlet").innerHTML = scope;
+      function constfunct() {
+      const  block = `Using const outside block scope`;
+      document.getElementById("varlet").innerHTML = block;
+      {  
+        const block = `Using const inside block scope`;
+        document.getElementById("varlet1").innerHTML = block;
+        } 
+      }
+      const ax = (ax, ay) => ax * ay; //=> omits return and curly brackets
+      //const ax = function(ax, ay) { return ax * ay; };
+      //const ax = (ax, ay) => { return ax * ay };  //good habit to always keep them
+      document.getElementById("arrow").innerHTML = ax(10, 10);
+      const phold = ["Lorem", "Ipsum", ...'Dolor']; //expand the string like in from
+      const phold1 = ["Sit", "Amet", "Elit"];
+      const fusion = [phold, ...phold1]; // combines 2 array
+      document.getElementById("operator").innerHTML = fusion; 
+      const number0 = [10,20,-30,40,0];
+      let maxValue = Math.max(...number0); //Math.max/min.apply(null, max/min)
+      let minValue = Math.min(...number0);
+      document.getElementById("mathmax").innerHTML = `${maxValue}, ${minValue}`;
+      let loop = ""; // ln. 192
+      for (let x of Toyota) {
+        loop += x + "<br>";
+      }//loop over data structures[Array,String, etc]
+      document.getElementById("loopy").innerHTML = loop;
+      let loop1 = ""; // ln. 348
+      for (let x of from) { 
+        loop1 += x + "<br>";
+      }
+      document.getElementById("loopy1").innerHTML = loop1;
+      const perkilo = new Map([
+        ["Pork", 320],
+        ["Beef", 350],
+        ["Chicken", 250]
+      ]); //key-value pairs where the keys can be any datatype
+      document.getElementById("newmap").innerHTML = perkilo.get("Beef");
+      const lorems = new Set(['L','O','R','E','M','O','E']);
+      document.getElementById("newset").innerHTML = lorems.size;
+      //collection of unique values, value can only occur once
+      class Pet {//template for creating objects
+        constructor(name, born, breed) {
+          this.name = name;
+          this.born = born;
+          this.breed = breed;
+        }//executed automatically when a new object is created
+      }
+      const myPet = new Pet("Kirk", 2018, 'Half-chow Half-retriever');
+      document.getElementById("class").innerHTML =
+      myPet.name + " " + myPet.born + " " + myPet.breed;
+      const myPet1 = new Pet("Molly", 2021, 'Shih Tzu');
+      document.getElementById("class1").innerHTML =
+      myPet1.name + " " + myPet1.born + " " + myPet1.breed;
+
+      const curse = new Promise(function(curse1, myReject) {
+        setTimeout(function(){ curse1("Task failed successfully"); }, 2500);
+      });
+      curse.then(function(value) {
+        document.getElementById("promise").innerHTML = value;
+      })
+      //A Promise is a JavaScript object that links "Producing Code" and "Consuming Code".
+      function promifunct(some) {
+        document.getElementById("promi").innerHTML = some;
+      }
+      let curse2 = new Promise(function(success, fail) {
+        let x = "Yolo";
+        if (x == 'Yolo') {
+          success("Aw Yiss");
+        } else {
+          fail("Epic Fail");
+        }
+      });
+      curse2.then(
+        function(value) {promifunct(value);},
+        function(error) {promifunct(error);}
+      );
+      let id = Symbol('id');     
+      Toyota[id] = 4111995;
+      alert(`${Toyota[id]} Unique Identifier` );
+      document.getElementById("symbo").innerHTML = Symbol("id") == Symbol("id");
+
+
+        
+         
