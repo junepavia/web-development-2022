@@ -154,7 +154,7 @@ function test17(){
   document.getElementById("missy47").innerHTML = overnumm;
 
   function myFunction(value, index, array) {
-    return value > document.getElementById("numm").value ;
+    return value < document.getElementById("numm").value ;
   }}
   function test18(){
   const numbers = [45, 4, 9, 16, 25];
@@ -166,7 +166,7 @@ function test17(){
     return total + value;
   }}
   function test19(){
-  const numb = [15, 4, 9, 16, 10];
+  const numb = [15, 4, 9, 16, 20];
 let someOver18 = numb.some(myFunction5);
 document.getElementById("missy49").innerHTML = "Some over 18 is " + someOver18 +"["+numb+"]";
 function myFunction5(value, index, array) {
@@ -181,6 +181,29 @@ document.getElementById("missy50").innerHTML = "First number over 18 is " + firs
 function myFunction6(value, index, array) {
   return value > 18;
 }}
+function test21(){
+  const p = ["Peace", "Love", "Hope", "Faith"];
+  const f = p.entries();
+  
+  for (let x of f) {
+    document.getElementById("missy51").innerHTML += x + "<br>";
+  }
+}
+function test22(){
+  const l = [document.getElementById("entry").value];
+  const m = l.entries();
+  
+  for (let x of m) {
+    document.getElementById("missy52").innerHTML += x + "<br>";
+  }
+}
+function test23(){
+const vb = new Date();
+document.getElementById("missy53").innerHTML = vb;
+document.getElementById("missy54").innerHTML = vb.toDateString();
+document.getElementById("missy55").innerHTML = vb.toUTCString();
+document.getElementById("missy56").innerHTML = vb.toISOString();
+}
 
 /*function test9( m )
  { return (8-4) * (m-36);
