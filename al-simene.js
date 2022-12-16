@@ -258,5 +258,51 @@ function popUp() {
       return number <30;
     }
   }
-    
+   //normal function
+   /*function guessNum (){
+      let guess=document.getElementById('guess').value;
+      randm=Math.floor(Math.random()*10);
+      
+      if(guess==randm)
+      {
+        alert("You Guessed it Right!");
+      }
+      else{
+        alert("Wrong! The number was " +randm)
+      }
+   }*/
 
+   //arrow function
+
+   let guess=document.getElementById('guess').value;
+   console.log(guess);
+   let randm=Math.floor(Math.random()*10);
+   let guessNum = (guess, randm) => {
+    console.log(randm);
+    console.log(guess);
+      if (randm==guess){
+        console.log(randm,"random");
+        console.log(guess,"guess");
+      return alert(`${randm} is right`);
+    
+    }
+
+      else
+      return alert("Wrong! The number was ");
+    }
+   
+
+
+   //for/ofloop
+   
+     
+     /*function  searchElement1(){
+      const phones1=["Samsung","Huawei","Lenovo","Iphone","Nokia","LG", "Blackberry","Alcatel", "Xiaomi", "Oppo", "ROG", "Sony"];
+      let userinput=document.getElementById('userinput1').value;
+      let brand="";
+      for(let i of phones1){
+        brand=i;  
+        if(brand.toLowerCase()===userinput1){
+        document.getElementById("typeIdhere").innerHTML = "Element exist";}
+     }
+    }*/
