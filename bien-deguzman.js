@@ -289,5 +289,77 @@ const Boys = ["Bien", "Brent", "Al", "Erwin", "Ziegler",...Girls];
 const myProgrammer = Girls.concat(Boys);
 document.getElementById("merges").innerHTML = myProgrammer;
 
+/*Sorting Array*/
+const animals = ["Zebra", "Doraemon", "Monkey", "Cat","Dinosaur"];
+document.getElementById("sorts1").innerHTML = animals;
+
+animals.sort();
+animals.reverse();
+document.getElementById("sorts2").innerHTML = animals;
+/*Map method does not change the original array*/
+const numbers1 = [2, 4, 6, 8, 10];z
+const numbers2 = numbers1.map(myFunction2);
+
+document.getElementById("nums3").innerHTML = numbers2;
+
+function myFunction2(value, index, array) {
+  return value * 2;
+}
+
+/*Filter method creates a new array with all array elements that passes a test*/
+const numbers3 = [0, 22, 4, 15, 65, 39, 99];
+const over18 = numbers3.filter(myFunction3);
+
+document.getElementById("filt").innerHTML = over18;
+
+function myFunction3(value, index, array) {
+  return value > 22;
+}
+
+/*Reduce method runs a function on each array element to produce (reduce it to) a single value*/
+const numbers4 = [1,2,3,4,5,6,7,8,9,10];
+let sum = numbers4.reduce(myFunction4);
+
+document.getElementById("redu").innerHTML = "Total is: " + sum;
+
+function myFunction4(total, value, index, array) {
+  return total + value;
+}
+/*Find method returns the value of the first array element that passes a test function*/
+const numbers5 = [7, 9, 10, 11];
+let first = numbers5.find(myFunction5);
+
+document.getElementById("finds").innerHTML = "The first number over 5 is: " + first;
+function myFunction5(value, index, array) {
+  return value > 5;
+}
+
+/*Entries method returns an Array Iterator object with key/value pairs*/
+const planets2 = ["Earth", "Pluto", "Mars", "Saturn","Jupiter"];
+const f1 = planets2.entries();
+for (let x1 of f1) {
+  document.getElementById("entr").innerHTML += "["+ x1 +"]"+ "<br>";
+}
+
+/*let keyword allows you to declare a variable with block scope*/
+let  xxxx = 10;
+// Here x is 10
+{  
+  let xxxx = 5;//
+  // Here x is 5
+}
+// Here x is 10
+document.getElementById("lets").innerHTML = xxxx;
+/*With arrow functions, you don't have 
+to type the function keyword, the return keyword, and the curly brackets.*/
+const x1 = x => x;
+document.getElementById("arrow").innerHTML = x1(5, 5 , 5);
+
+/* Spread operator expands an iterable (like an array) into more elements*/
+const power1 = ["Red", "Blue", ...""];
+const power2 = ["Pink", "Black",];
+
+const combined = [power1, ...power2];
+document.getElementById("spread").innerHTML = combined; 
 /* */
 /* */

@@ -177,3 +177,14 @@ body{
     display: inline-block;
     vertical-align: top; 
 }
+.last2{
+    background-image: linear-gradient(to top,rgb(77, 255, 181), rgb(217, 255, 46));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+}
+.ES6{
+    border: 3px solid;
+    display: inline-block;
+    padding: 20px;
+}
