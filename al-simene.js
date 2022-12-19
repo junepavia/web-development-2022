@@ -270,61 +270,62 @@ function popUp() {
       else{
         alert("Wrong! The number was " +randm)
       }
-   }*/
-
-   
-   //using form
-   /*let form=document.getElementById('frm')
-   form.addEventListener('submit', function(event){
-    event.preventDefault()//prevent form form auto submitting
-    let guess=document.getElementById('guess').value
-    console.log(guess,"guess");
-    let randm=Math.floor(Math.random()*10);
-    console.log(randm ,"random");
-   })
-   const guessNum1 = (guess,randm) => {
-      if (randm==guess){
-        console.log(randm,"random2");
-        console.log(guess,"guess1");
-      return alert(`${randm} is right`);
-    }
-      else
-      return alert("Wrong! The number was ");
-    }*/
-   
+   }*/ 
 //arrow function
     let guess;
-    document.getElementById('btn').addEventListener("click",getGuess());
-
-    function getGuess(){
-      guess=document.getElementById('guess').value;
-    }
-
-    console.log(guess, "guess");
-    let randm=Math.floor(Math.random()*10);
+    let randm;
+    const guessNum = () => {  //always anonymous
+    guess=document.getElementById('guess').value;
+    randm=Math.floor(Math.random()*10);
     console.log(randm ,"random");
-    const guessNum = () => {
-    console.log(randm,"random before if")
-    console.log(guess,"guess before if")
-        if (randm==guess){
-         return alert(`${randm} is right`);}
+    console.log(guess, "guess");
+        if (randm == guess){
+          alert(`${randm} is right`);}
         else{
-          return alert(`Wrong! The number was ${randm}`);}
+          alert(`Wrong! The number was ${randm}`);}
     }
-
-   
-
-
-   //for/ofloop
-   
-     
-     /*function  searchElement1(){
-      const phones1=["Samsung","Huawei","Lenovo","Iphone","Nokia","LG", "Blackberry","Alcatel", "Xiaomi", "Oppo", "ROG", "Sony"];
-      let userinput=document.getElementById('userinput1').value;
-      let brand="";
-      for(let i of phones1){
-        brand=i;  
-        if(brand.toLowerCase()===userinput1){
-        document.getElementById("typeIdhere").innerHTML = "Element exist";}
+   //for/of loop
+   const phones3=["Samsung","Huawei", "Blackberry","Alcatel", "Xiaomi"];
+   document.getElementById('forOfElem').innerHTML = phones3;
+     function  forOf(){
+      let inpt=document.getElementById('inpt').value;
+      for(let i of phones3){
+        if(i.toLowerCase()===inpt){
+          document.getElementById("displayForOf").innerHTML = "Element does exist";
+          break;}
+        else{
+          document.getElementById("displayForOf").innerHTML = "Element does not exist";
+          }
      }
-    }*/
+    }
+    //Spread Operator
+    let str1= "lorem";
+    let arr1= ["i","p","s","u","m"];
+    document.getElementById('displayString').innerHTML=str1;
+    document.getElementById('displayArray').innerHTML=arr1;
+    function spread(){
+      const randomNumbers=[400,300,200,100,5,41,3124,46346,23213,856];
+      let spreadStr=[...str1];
+      console.log(typeof spreadStr);
+      console.log(spreadStr.length);
+      document.getElementById('displayString').innerHTML=spreadStr;
+      document.getElementById('spreadResult').innerHTML=[spreadStr,...arr1]
+      console.log([...spreadStr,...arr1]);
+      document.getElementById('numbers').innerHTML=randomNumbers;
+      document.getElementById('Max').innerHTML=Math.max(...randomNumbers);
+      document.getElementById('Min').innerHTML=Math.min(...randomNumbers);  
+    }
+    //javascript Map
+    function javaMap(){
+      let fName=new Map(); //creates new map
+      console.log(fName)
+      fName.set("Christian",1);//sets a value for a key in a map
+      fName.set("Laurence",2);
+      fName.set("Benedict",3);
+      console.log("This is the new Map ",fName);
+      console.log(fName.get('Laurence'))//get the value for a key in a map
+      fName.delete("Christian")
+      console.log(fName)
+      console.log(fName.set('matthew',4))
+      console.log(fName.size)
+    }
