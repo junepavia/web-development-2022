@@ -525,3 +525,45 @@
       Toyota[id] = 4111995;
       alert(`${Toyota[id]} Unique Identifier` );
       document.getElementById("symbo").innerHTML = Symbol("id") == Symbol("id");
+      //Default Parameter Values - function parameters to have default values
+      function myFunction(operator,y=10){
+        const x = parseFloat(document.getElementById("defpara").value);
+        //parseFloat => returns a new float initialized
+        if (operator == "+"){
+          document.getElementById("defpara1").innerHTML=(x + y);
+        }
+        else if (operator == "-"){
+          document.getElementById("defpara1").innerHTML=(x - y);
+        }
+        else if (operator == "*"){
+          document.getElementById("defpara1").innerHTML=(x * y);
+        }
+        else {
+          document.getElementById("defpara1").innerHTML=(x / y); 
+        }}
+      function restfunct(...param) {
+        let restfunct = 1;
+        for (let rest of param) restfunct *= rest;
+        return restfunct;
+      }
+      let rest = restfunct(2, 4, 6, 8, 9, 10, 12);
+      document.getElementById("restpara").innerHTML = rest;
+      document.getElementById("trunc").innerHTML = Math.trunc(32.758);
+      // returns the integer part - whole number
+      document.getElementById("sign").innerHTML = Math.sign(999);
+      //returns if x is negative, null or positive
+      document.getElementById("cbrt").innerHTML = Math.cbrt(27)
+      //returns the cube root of x
+      document.getElementById("log2").innerHTML = Math.log2(32);
+      document.getElementById("log10").innerHTML = Math.log10(1000000);
+      //returns the base x logarithm of a number
+      document.getElementById("isInt").innerHTML =
+      Number.isInteger(9) + "<br>" + Number.isInteger(7.99);
+      document.getElementById("isSafe").innerHTML =
+      Number.isSafeInteger(999) + "<br>"
+       + Number.isSafeInteger(12345678901234567);
+      document.getElementById("isFinite").innerHTML =
+       isFinite(1 / 0) + "<br>" + isFinite(1 / 1);
+      document.getElementById("isNan").innerHTML =
+       isNaN("Not a Number") + "<br>" + isNaN(25);
+
