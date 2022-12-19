@@ -364,10 +364,10 @@ document.getElementById("spread").innerHTML = combined;
 
 
 /*A JavaScript for loop executes a block of code as long as a specified condition is true*/
-let language = "BienMarco";
+let Name = "BienMarco";
 
 let loop = "";
-for (let x of language) {
+for (let x of Name) {
   loop += x + "<br>";
 }
 
@@ -384,7 +384,7 @@ document.getElementById("klass").innerHTML =
 myMe.name + " " + myMe.year;
 
 /* "Producing Code" can take some time */
-const myPromise = new Promise(function(myResolve, myReject) {
+const myPromise = new Promise(function(myResolve) {
   setTimeout(function(){ myResolve("Hello Goodafternoon!"); }, 2000);
 });
 // "Consuming Code" (Must wait for a fulfilled Promise)
@@ -398,6 +398,18 @@ function myFunction(x, y = 8) {
 }
 document.getElementById("functs").innerHTML = myFunction(3);
 
+/*The rest parameter (...) allows a function 
+to treat an indefinite number of arguments as an array*/
+function sum1(...args) {
+  let sum1 = 0;
+  for (let arg of args) sum1 += arg;
+  return sum1;
+}
+
+let x33 = sum1(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("rest").innerHTML = x33;
+
 /*The includes() method returns true if a string contains a specified value, otherwise false*/
 let text30 = "This not a lorem";
 document.getElementById("incl").innerHTML = text30.includes("not");
@@ -405,7 +417,14 @@ document.getElementById("incl").innerHTML = text30.includes("not");
 /*The startsWith() method returns true if a string begins with a specified value, otherwise false*/
 let text31 = "I am Iron-Man";
 document.getElementById("swith").innerHTML = text31.startsWith("Me");
-/* */
-/* */
+
+/*The endsWith() method returns true if a string ends with a specified value, otherwise false*/
+let text32 = "Bien Marco";
+document.getElementById("ewith").innerHTML = text32.endsWith("Marco");
+
+/*The Array.from() method returns an 
+Array object from any object with a length property or any iterable object*/
+const myArr = Array.from("BIENMARCO");
+document.getElementById("arrf").innerHTML = myArr;
 /* */
 /* */
