@@ -352,14 +352,60 @@ let  xxxx = 10;
 document.getElementById("lets").innerHTML = xxxx;
 /*With arrow functions, you don't have 
 to type the function keyword, the return keyword, and the curly brackets.*/
-const x1 = x => x;
+const x1 = (x, y , z) => x * y - z;
 document.getElementById("arrow").innerHTML = x1(5, 5 , 5);
 
-/* Spread operator expands an iterable (like an array) into more elements*/
+/*Spread operator expands an iterable (like an array) into more elements*/
 const power1 = ["Red", "Blue", ...""];
 const power2 = ["Pink", "Black",];
 
 const combined = [power1, ...power2];
 document.getElementById("spread").innerHTML = combined; 
+
+
+/*A JavaScript for loop executes a block of code as long as a specified condition is true*/
+let language = "BienMarco";
+
+let loop = "";
+for (let x of language) {
+  loop += x + "<br>";
+}
+
+document.getElementById("loops").innerHTML = loop;
+/*Classes are a template for creating objects*/
+class Me {
+  constructor(name, year) {//Method
+    this.name = name;
+    this.year = year;
+  }
+}
+const myMe = new Me("Bien", 2000);
+document.getElementById("klass").innerHTML =
+myMe.name + " " + myMe.year;
+
+/* "Producing Code" can take some time */
+const myPromise = new Promise(function(myResolve, myReject) {
+  setTimeout(function(){ myResolve("Hello Goodafternoon!"); }, 2000);
+});
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(function(value) {
+  document.getElementById("prom").innerHTML = value;
+});
+
+/*Default Parameter Values*/
+function myFunction(x, y = 8) {
+  return x + y;
+}
+document.getElementById("functs").innerHTML = myFunction(3);
+
+/*The includes() method returns true if a string contains a specified value, otherwise false*/
+let text30 = "This not a lorem";
+document.getElementById("incl").innerHTML = text30.includes("not");
+
+/*The startsWith() method returns true if a string begins with a specified value, otherwise false*/
+let text31 = "I am Iron-Man";
+document.getElementById("swith").innerHTML = text31.startsWith("Me");
+/* */
+/* */
 /* */
 /* */
