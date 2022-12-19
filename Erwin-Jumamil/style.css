@@ -75,3 +75,15 @@ input[type=text]:focus {
 #newHero{
     width: 25rem;
 }
+.const{
+    background-color: aquamarine;
+    border: solid 2px black;
+}
+.box2{
+    background-image: linear-gradient(to left ,black, yellow);
+    border: solid 2px magenta;
+}
+.conts3{
+    background-image: linear-gradient(to left, lightpink, #7F167F );
+    color: black;
+}

@@ -181,3 +181,49 @@ document.getElementById("demo9").innerHTML = txt;
 function myFunction1(value, index, array) {
   txt += value + "<br>"; 
 }
+const numberslist = [45, 4, 9, 16, 25];
+const numbers2 = numberslist.map(arrayMap);
+document.getElementById("arrayMap").innerHTML = numbers2;
+function arrayMap(value, index, array) {
+  return value * 2;
+}
+const over18 = numberslist.filter(arrayFilter);
+document.getElementById("arrayFilter").innerHTML = over18;
+function arrayFilter(value, index, array) {
+  return value > 18;
+}
+let sum = numberslist.reduce(arrayReduce);
+document.getElementById("arrayReduce").innerHTML = "The sum is " + sum;
+function arrayReduce(total, value, index, array) {
+  return total + value;
+}
+let sum1 = numberslist.reduceRight(arrayReduceRight);
+document.getElementById("arrayReduceRight").innerHTML = "The sum is " + sum1;
+function arrayReduceRight(total, value, index, array) {
+  return total + value;
+}
+let someOver18 = numberslist.some(arraySome);
+document.getElementById("arraySome").innerHTML = "Some over 18 is = " + someOver18;
+function arraySome(value, index, array) {
+  return value > 18;
+}
+const fruits = ["Apple[0]", "Orange[1]", "Apple[2]", "Mango[3]"];
+const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits1.indexOf("Apple");
+document.getElementById("fruits").innerHTML = fruits;
+document.getElementById("arrayIndexOf").innerHTML = "Apple is found in position " + position;
+let position1 = fruits1.lastIndexOf("Apple");
+document.getElementById("arrayLastOf").innerHTML = "Apple is found in position " + position1;
+const numberCount = [4, 9, 16, 25, 29];
+let first = numberCount.find(arrayFind);
+document.getElementById("arrayFind").innerHTML = "First number over 18 is " + first;
+document.getElementById("numbers").innerHTML = numberCount;
+function arrayFind(value, index, array) {
+  return value > 18;
+}
+document.getElementById("arrayFindIndex").innerHTML = "First number over 18 has index " 
++ numberCount.findIndex(arrayFindIndex);
+function arrayFindIndex(value, index, array) {
+  return value > 18;
+}
+
