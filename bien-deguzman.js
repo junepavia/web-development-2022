@@ -426,5 +426,27 @@ document.getElementById("ewith").innerHTML = text32.endsWith("Marco");
 Array object from any object with a length property or any iterable object*/
 const myArr = Array.from("BIENMARCO");
 document.getElementById("arrf").innerHTML = myArr;
-/* */
+
+/*Math.sign(x) returns if x is negative, null or positive*/
+document.getElementById("mathsign").innerHTML = "Positive: "+ Math.sign(4);
+document.getElementById("mathsign1").innerHTML = "Negative: "+ Math.sign(-5);
+document.getElementById("mathsign2").innerHTML = "Null: "+ Math.sign();
+
+/*Math.cbrt(x) returns the cube root of x*/
+document.getElementById("cubes").innerHTML = "Cube root of 9 is: " + Math.cbrt(27);
+document.getElementById("cubes1").innerHTML = "Cube root of 64 is: " + Math.cbrt(64);
+document.getElementById("cubes2").innerHTML = "Cube root of 125 is: " + Math.cbrt(125);
+
+/*Math.log2(x) returns the base 2 logarithm of x*/
+document.getElementById("log").innerHTML = "Logarithm of 16 is:" + Math.log2(16);
+document.getElementById("log1").innerHTML = "Logarithm of 4 is:" + Math.log2(4);
+
+/*The isInteger() method returns true if the argument is an integer*/
+document.getElementById("integerss").innerHTML =
+Number.isInteger(1) + "<br>" + Number.isInteger(3.5123) 
++ "<br>" +Number.isInteger(1.1) ;//integers don't include fractions or decimals
+
+/*isSafeInteger() method returns true if the argument is a safe integer*/
+document.getElementById("safes").innerHTML =
+Number.isSafeInteger(-1) + "<br>" + Number.isSafeInteger(12345678901234567);
 /* */

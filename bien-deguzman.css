@@ -194,3 +194,9 @@ body{
     padding: 20px;
     vertical-align: top;
 }
+.inter{
+    border: 3px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+}
