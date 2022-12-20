@@ -24,6 +24,8 @@ function answer(test){
     let y = parseFloat(document.getElementById("num2").value);
     document.getElementById("ans").innerHTML=(x / y).toFixed(4);
     
+  }else{
+    document.getElementById("ans").innerHTML="You Entered invalid Operator";
   }
 }
 function myFunction4() {

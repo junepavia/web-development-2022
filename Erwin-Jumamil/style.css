@@ -87,3 +87,11 @@ input[type=text]:focus {
     background-image: linear-gradient(to left, lightpink, #7F167F );
     color: black;
 }
+.conts4{
+    background-image: linear-gradient(to right, lightpink, #7F167F );
+    color: black;
+}
+.conts5{
+    background-image: linear-gradient(to right, #434242, #7D8F69 );
+    color: black;
+}
