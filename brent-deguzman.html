@@ -21,7 +21,8 @@
       #arsort-cont,
       #date-cont,
       #ES6-cont,
-      #es6b-cont {
+      #es6b-cont,
+      #review-cont {
         border: outset 5px royalblue;
         padding: 2px;
         margin: 2px;
@@ -45,6 +46,12 @@
         opacity: 0.7;
         transition: 0.2s;
         border: blue 3px solid;
+      }
+      h5 {
+        margin: 0;
+      }
+      input {
+        width: 300px;
       }
     </style>
   </head>
@@ -359,6 +366,27 @@ let Toyota4 = Fortunure
       <p><span id="isSafe"></span> -- Number.isSafeInteger(x)</p>
       <p><span id="isFinite"></span> -- Number.isFinite(x)</p>
       <p><span id="isNan"></span> -- isNaN()</p>
+    </div>
+    <div id="review-cont">
+      <h2>Quick Review</h2>
+      <h5>Input any text:</h5>
+      <input type="text" id="usertext" /><br />
+      <h5>Includes()</h5>
+      <input type="text" id="include" /><span id="includ"></span><br />
+      <h5>StartsWith()</h5>
+      <input type="text" id="startwth" /><span id="starts"></span>
+      <h5>EndsWith()</h5>
+      <input type="text" id="endwth" /><span id="ends"></span><br />
+      <button type="button" onclick="stringsFunction()">Show Answer</button>
+      <p>Length of User Text:<span id="lengths"></span></p>
+      <p>Array.from():<span id="arrayfrom"></span></p>
+      <p>Array.Slice():<span id="slices"></span></p>
+      <p>SubStr():<span id="stringsub"></span></p>
+      <p>SubString():<span id="substrings"></span></p>
+      <p>isNaN():<span id="isNan1"></span></p>
+      <p>charAt()+charCodeAt:<span id="charat"></span></p>
+      <p>Lower/Upper Case:<span id="uplowcase"></span></p>
+      <p>Replace Method:<span id="replaceme"></span></p>
     </div>
     <script src="/brent-deguzman.js"></script>
   </body>

@@ -567,3 +567,29 @@
       document.getElementById("isNan").innerHTML =
        isNaN("Not a Number") + "<br>" + isNaN(25);
 
+      function stringsFunction() {
+        const txtsample = document.getElementById("usertext").value;
+        const included = document.getElementById("include").value;
+        const startwth = document.getElementById("startwth").value;
+        const endwth = document.getElementById("endwth").value;
+        const arrfrom = Array.from(txtsample)
+        const slicer = txtsample.slice(0, 6);
+        //1st para begin of cut[index] | 2nd para end of cut[index]
+        document.getElementById("includ").innerHTML =txtsample.includes(included);
+        document.getElementById("starts").innerHTML = txtsample.startsWith(startwth);
+        document.getElementById("ends").innerHTML = txtsample.endsWith(endwth);
+        document.getElementById("lengths").innerHTML = txtsample.length;
+        document.getElementById("arrayfrom").innerHTML = arrfrom;
+        document.getElementById("slices").innerHTML = slicer;
+        document.getElementById("stringsub").innerHTML = txtsample.substr(0,10);
+        //1st para begin of cut[index] | 2nd para strings to take[length]
+        document.getElementById("substrings").innerHTML = txtsample.substring(7, 11);
+        document.getElementById("isNan1").innerHTML = isNaN(txtsample)
+        document.getElementById("charat").innerHTML =
+         `${txtsample.charAt(9)} ${txtsample.charCodeAt(9)}`;
+        document.getElementById("uplowcase").innerHTML = 
+        `${txtsample.toLowerCase()} <br> ${txtsample.toUpperCase()}`;
+        document.getElementById("replaceme").innerHTML = txtsample.replace(
+          /IPSUM/i,
+          "Apple Pen")
+      }
