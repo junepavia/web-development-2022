@@ -327,5 +327,58 @@ function popUp() {
       fName.delete("Christian")
       console.log(fName)
       console.log(fName.set('matthew',4))
-      console.log(fName.size)
+      console.log(fName.size);
     }
+
+    //javascript set
+    let call=["Father","Sister","Brother","Father","Father","Brother","Sister"];
+    document.getElementById('callDisplay').innerHTML=call;
+    jsSet=()=>{
+    let called=new Set(call);//creates new set
+    document.getElementById('newSetDisplay').innerHTML= [...called];
+    }
+
+    let game1="MIR4";
+    let game2="DOTA2";
+    let game3="FLYFF";
+    let game4="VALORANT";
+    jsSet1=()=>{
+      let games=new Set();
+      games.add(game1);
+      games.add(game2);
+      games.add(game3);
+      games.add(game4);
+      let searchGame=document.getElementById('searchGame').value;
+      document.getElementById('displayGame').innerHTML=games.has(searchGame)+" "+games.size;
+    }
+//Rest Paramter
+     function restParamter(a,b,...nums1){
+      console.log("REST PARAMETER");
+      console.log(a,b);
+      console.log(a,...nums1);
+      console.log(...nums1);
+    }
+    restParamter("lorem","ipsum","dolor","sit","amet");
+//NEW MATH METHODS
+function mapMethods(){
+document.getElementById("truncDisplay").innerHTML = Math.trunc(-3.7);
+document.getElementById("floorDisplay").innerHTML = Math.floor(-3.7);
+let getNum=document.getElementById('numSign').value;
+document.getElementById("sign").innerHTML = Math.sign(getNum);
+document.getElementById("displayUserInput").innerHTML = getNum;
+document.getElementById("displayCbrt").innerHTML = Math.cbrt(getNum);
+document.getElementById("displayUserInput1").innerHTML = getNum;
+document.getElementById("displayLog").innerHTML = Math.log2(getNum);
+}
+
+//entries method
+  const senators = ["Raffy", "Enrile", "Pia", "Ronald"];
+  const senator= senators.entries();
+//entries() returns an Array Iterator object with key/value pairs:
+for (let indx of senator) {
+  document.getElementById("senatorsDisplay").innerHTML += indx + "<br>"; 
+}
+
+
+    
+    
