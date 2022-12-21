@@ -208,12 +208,15 @@ function test24() {
 {  let cv = 2;}
 const ce = (x, y) => x * y;
 const operator = [23,55,21,87,56];
-let maxValue = Math.max(...operator);
-let language = "Missy";
+const operator2 =[10,20,30,40,50];
+const operator3 =[...operator,...operator2];
+const operator4 = new Set(operator);
+let maxValue = Math.max(...operator)+ "<br>"+ operator3;
+let language = "Missy";  //loop
 let km = "";
 for (let x of language) {
   km += x + "<br>";}
-const fts = new Map([                   //map
+const fruits = new Map([                   //map
   ["apples", 500],
   ["bananas", 300],
   ["oranges", 200]]);
@@ -228,35 +231,37 @@ class Car {                            //class
     this.year = year;
   }}
 const myCar = new Car("Ford", 2014);
+const myCar1 = new Car("Toyota",2023);
 const myPromise = new Promise(function(myResolve, myReject) {         //my promise
   setTimeout(function(){ myResolve("APPROVED!"); }, 3000);
 });
 myPromise.then(function(value) {
   document.getElementById("missy64").innerHTML =" "+ value;
 });
-let fun= (x, y = 10) => x + y;
-function sum(...args) {             //rest parameter
-  let sum = 0;
-  for (let arg of args) sum += arg;
-  return sum;}
-let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
-
-  
+let fun= (x, y = 10) => x + y;     // parameter values 
    document.getElementById("missy57").innerHTML="<mark>Redeclare:</mark>" + cv;
    document.getElementById("missy58").innerHTML ="<mark>Arrow Function:</mark>" +ce(11, 8);
    document.getElementById("missy59").innerHTML ="<mark>Operator:</mark>" +" "+ maxValue;
    document.getElementById("missy60").innerHTML ="<mark> for/of loop:</mark>" +"<br>"+ km;
-   document.getElementById("missy61").innerHTML ="<mark>Map Array:</mark>" +" "+ fts.get("apples");
-   document.getElementById("missy62").innerHTML ="<mark>new Set:</mark>" +" "+letters.size;
-   document.getElementById("missy63").innerHTML ="<mark>Class:</mark>" +" "+myCar.name + " " + myCar.year;
+   document.getElementById("missy61").innerHTML ="<mark>Map Array:</mark>" +" "+ fruits.get("apples");
+   document.getElementById("missy62").innerHTML ="<mark>new Set:</mark>" +" "+letters.size + "<br>"+operator4.has(21);
+   document.getElementById("missy63").innerHTML ="<mark>Class:</mark>" +" "+myCar.name + " " + myCar.year+
+   "<br>"+ myCar1.name + " " + myCar1.year;
    document.getElementById("missy65").innerHTML ="<mark>Parameter values:</mark>" +" "+fun(5);
-   document.getElementById("missy66").innerHTML ="<mark>...rest Parameter:</mark>" +" "+ x;
-  /* document.getElementById("missy61").innerHTML ="<mark>Map Array:</mark>" +" "+ fts.get("apples");
-   document.getElementById("missy62").innerHTML ="<mark>new Set:</mark>" +" "+letters.size; */
 }
-/*function test9( m )
- { return (8-4) * (m-36);
-  document.getElementById(missy12).innerHTML = test9(58);*/
+function heroes(v,s,...z) {             //rest parameter
+  console.log(v);
+  console.log(z);
+  console.log(z[1]);
+ }
+ heroes("Batman","Superman","wolverine","spiderman","wonderwoman");
+ function test25(){
+  document.getElementById("missy66").innerHTML ="<mark>trunc(8.8):</mark>"+"<br>" +Math.trunc(8.8);
+  document.getElementById("missy67").innerHTML ="<mark>Math.cbrt(8);</mark>"+"<br>" +Math.cbrt(8);
+  document.getElementById("missy68").innerHTML ="<mark>Math.log2(8);:</mark>"+"<br>" +Math.log2(8);
+  document.getElementById("missy69").innerHTML ="<mark>Number.isSafeInteger():</mark>"+"<br>"+
+   Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890);
+ }
 
 
 
