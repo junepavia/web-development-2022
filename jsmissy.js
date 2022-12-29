@@ -131,12 +131,13 @@ function test14() {
    document.getElementById("missy43").innerHTML =
    "<mark>sortrev:</mark>" +" "+g;g.sort(); g.reverse();
    document.getElementById("missy44").innerHTML ="<mark>reverse:</mark>" +" "+ g ;
-}
+} 
+let j = ['Missy', 'Erwin', 'Al', 'Princess','Brent','Bien','Zieg'];
+
 function test15() {
-  let j = ['Missy', 'Erwin', 'Al', 'Princess','Brent','Bien','Zieg'];
   j.push(document.getElementById("pushy").value);
          // console.log(j);
-document.getElementById("missy45").innerHTML =j.join(" ");
+document.getElementById("missy45").innerHTML =j.join("<br>");
 }
 function test16() {
 const numbers1 = [45, 4, 9, 16, 25];
@@ -209,8 +210,8 @@ function test24() {
 const ce = (x, y) => x * y;
 const operator = [23,55,21,87,56];
 const operator2 =[10,20,30,40,50];
-const operator3 =[...operator,...operator2];
-const operator4 = new Set(operator);
+const operator3 =[...operator,...operator2];           
+const operator4 = new Set(operator);                           //new set
 let maxValue = Math.max(...operator)+ "<br>"+ operator3;
 let language = "Missy";  //loop
 let km = "";
@@ -262,6 +263,4 @@ function heroes(v,s,...z) {             //rest parameter
   document.getElementById("missy69").innerHTML ="<mark>Number.isSafeInteger():</mark>"+"<br>"+
    Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890);
  }
-
-
 
