@@ -116,11 +116,12 @@ console.log("test")
 console.log('Hello Missy');
 
 class Account{
- id: number;
+ readonly id: number;            // read only= cannot assign to this property
  owner: string;
- balance: number;   
+ balance: number; 
+ nickname?: string;     // optional = not required but only optional
 
-constructor( id:number,owner:string,balance:number){  //to initialize,contructor is a special function
+constructor( id:number,owner:string,balance:number){  //to initialize,constructor is a special function
     this.id = id;
     this.owner = owner;
     this.balance = balance;
@@ -133,4 +134,4 @@ deposit(amount:number):void {
 }
 let account= new Account( 1,'Missy',0);
 account.deposit(100);
-console.log(typeof account);
+console.log(typeof account);  //typeof is an object
