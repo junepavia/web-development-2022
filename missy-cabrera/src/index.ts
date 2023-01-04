@@ -141,9 +141,28 @@ console.log(typeof account);  //typeof is an object
 
 /* //Parameter properties
 constructor(public readonly id:number,
-     public owner:string,
-     private _balance:number){ 
-    this.id = id;
-    this.owner = owner;
-    this.balance = balance;
-} */
+            public owner:string,
+            private _balance:number){ 
+   // this.id = id;
+   // this.owner = owner;
+   //this.balance = balance;} */
+//Getter & setter
+class Student {
+	constructor(
+       public name: string,
+       public semester: number,
+       public course: string ) {
+	}
+	public get courses() {     // Getter method = knowns as accessor
+		return this.course;
+	}
+	public set courses( thecourse: string) {    //setter = known as mutator
+		this.course = thecourse;
+	}
+}
+// Access any property of the Student class,
+let student = new Student ("Missy", 8, "Web Development" );
+// Setter call
+student.course = "Data structure";
+// Getter call
+console.log("Course purchased is " + student.courses);

@@ -75,4 +75,20 @@ class Account {
 let account = new Account(1, 'Missy', 0);
 account.deposit(100);
 console.log(typeof account);
+class Student {
+    constructor(name, semester, course) {
+        this.name = name;
+        this.semester = semester;
+        this.course = course;
+    }
+    get courses() {
+        return this.course;
+    }
+    set courses(thecourse) {
+        this.course = thecourse;
+    }
+}
+let student = new Student("Missy", 8, "Web Development");
+student.course = "Data structure";
+console.log("Course purchased is " + student.courses);
 //# sourceMappingURL=index.js.map
