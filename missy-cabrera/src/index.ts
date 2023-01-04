@@ -129,9 +129,21 @@ constructor( id:number,owner:string,balance:number){  //to initialize,constructo
 deposit(amount:number):void {
    if (amount <= 0) 
       throw new Error('Invalid amount');
+      //record transaction
       this.balance += amount;
 }
-}
+  //  private calculateTax(){ }    // access control key words public,private,protect
+}                                  // can only access inside the class
 let account= new Account( 1,'Missy',0);
 account.deposit(100);
 console.log(typeof account);  //typeof is an object
+//account.
+
+/* //Parameter properties
+constructor(public readonly id:number,
+     public owner:string,
+     private _balance:number){ 
+    this.id = id;
+    this.owner = owner;
+    this.balance = balance;
+} */
