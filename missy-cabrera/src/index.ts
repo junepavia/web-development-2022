@@ -88,7 +88,49 @@ let ride = {  //falsy ( undefined,null, '',false, 0 )
     speed: speed ?? 30         //30 will be the default value if speed is not null
 }
 // type assertion
- //let phone =<HTMLInputElement>   documentElementById('phone') //as HTMLInputElement;
+ /*let phone =<HTMLInputElement>   documentElementById('phone') //as HTMLInputElement;
 //HTMLElement
 //HTMLInputElement
-//phone.val
+phone.value  */
+//type unknown
+function render( document:unknown){
+// narrowing
+if(typeof document === 'string'){
+    document.toUpperCase();
+}
+//document.move();
+//document.fly();
+//document.whateverWeWant();
+}
+//never type
+function processEvents() //:never 
+{ 
+    let count = 0
+    while(count < 100){
+        console.log("test: ", count)
+        count++
+    }
+}
+processEvents();
+console.log("test")
+console.log('Hello Missy');
+
+class Account{
+ id: number;
+ owner: string;
+ balance: number;   
+
+constructor( id:number,owner:string,balance:number){  //to initialize,contructor is a special function
+    this.id = id;
+    this.owner = owner;
+    this.balance = balance;
+}
+deposit(amount:number):void {
+   if (amount <= 0) 
+      throw new Error('Invalid amount');
+      this.balance += amount;
+}
+}
+let account= new Account( 1,'Missy',0);
+account.deposit(100);
+console.log(typeof account);

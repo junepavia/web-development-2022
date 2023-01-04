@@ -45,4 +45,34 @@ let speed = null;
 let ride = {
     speed: speed !== null && speed !== void 0 ? speed : 30
 };
+function render(document) {
+    if (typeof document === 'string') {
+        document.toUpperCase();
+    }
+}
+function processEvents() {
+    let count = 0;
+    while (count < 100) {
+        console.log("test: ", count);
+        count++;
+    }
+}
+processEvents();
+console.log("test");
+console.log('Hello Missy');
+class Account {
+    constructor(id, owner, balance) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
+    }
+    deposit(amount) {
+        if (amount <= 0)
+            throw new Error('Invalid amount');
+        this.balance += amount;
+    }
+}
+let account = new Account(1, 'Missy', 0);
+account.deposit(100);
+console.log(typeof account);
 //# sourceMappingURL=index.js.map
