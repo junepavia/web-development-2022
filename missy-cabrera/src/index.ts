@@ -236,3 +236,38 @@ function printNames(people: Person[]) {
  for(let person of people)
  console.log(person.fullName);
 }*/
+//Abstract Class
+abstract class Shape {
+constructor(public color: string){}
+
+abstract render(): void;
+}
+class Circle extends Shape{
+    constructor( public radius: number,color: string){
+        super(color);
+    }
+    override render(): void {
+        console.log('Rendering a circle');
+    }
+}
+//let shape = new Shape('red');
+//shape.render();
+
+// Interface            //more concise and shorter compared to abstract
+interface Calendar {
+name: string;
+addEvent(): void;
+removeEvent(): void;
+}
+ interface CloadCalendar extends Calendar{
+    sync():void;
+ }
+   class GoogleCalendar implements Calendar {
+       constructor( public name: string){}
+       addEvent(): void {
+           throw new Error("Method not implemented.");
+       }
+       removeEvent(): void {
+           throw new Error("Method not implemented.");
+       }
+   }

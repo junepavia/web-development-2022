@@ -93,4 +93,29 @@ ride1.start();
 let ride2 = new Ride();
 ride2.start();
 console.log(Ride.activeRides);
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        console.log('Rendering a circle');
+    }
+}
+class GoogleCalendar {
+    constructor(name) {
+        this.name = name;
+    }
+    addEvent() {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent() {
+        throw new Error("Method not implemented.");
+    }
+}
 //# sourceMappingURL=index.js.map
