@@ -146,8 +146,8 @@ constructor(public readonly id:number,
    // this.id = id;
    // this.owner = owner;
    //this.balance = balance;} */
-//Getter & setter
-class Student {
+//Getter & setter 
+ /*class Student {
 	constructor(
        public name: string,
        public semester: number,
@@ -165,7 +165,7 @@ let student = new Student ("Missy", 8, "Web Development" );
 // Setter call
 student.course = "Data structure";
 // Getter call
-console.log("Course purchased is " + student.courses);
+console.log("Course purchased is " + student.courses); */     //student
 //index signature
 class SeatAssignment {
 // A1,A2, ...
@@ -193,3 +193,46 @@ seats.A2 = 'may';
  ride2.start();
 
  console.log(Ride.activeRides);
+ // inheritance
+ /*class Person{
+    constructor( public firstName: string,public lastName: string){
+      public get fullName() {
+            return this.firstName + ' ' + this.lastName;
+        }
+          walk() {
+           console.log('Walking');
+        }
+    }
+    class Student extends Person {
+        constructor(public studentId: number, firstName: string,lastName: string) {
+           super(firstName,lastName); 
+        }
+    
+        takeTest() {
+           console.log('Taking a test');
+        }
+        }
+//let student = new Student(1, 'missy','missy@gmail.com') 
+//method Overriding
+class Teacher extends Person{
+    override get fullName() {
+        return 'Professor' + super.fullName;
+    }
+}
+//let teacher= new Teacher('Missy', 'Cabrera');
+//console.log(teacher.fullName);
+// Polymorphism
+class Principal extends Person{
+    override get fullName() {
+        return 'Principal' + super.fullName;
+    }
+}
+printNames([
+    new Student(1, 'missy','cabrera'),
+    new Teacher('Missy', 'Cabrera'),
+    new Principal('misung','cabrera')
+])
+function printNames(people: Person[]) {
+ for(let person of people)
+ console.log(person.fullName);
+}*/
