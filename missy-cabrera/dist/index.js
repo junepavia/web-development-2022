@@ -91,4 +91,9 @@ class Student {
 let student = new Student("Missy", 8, "Web Development");
 student.course = "Data structure";
 console.log("Course purchased is " + student.courses);
+class SeatAssignment {
+}
+let seats = new SeatAssignment();
+seats.A1 = 'missy';
+seats.A2 = 'may';
 //# sourceMappingURL=index.js.map

@@ -166,3 +166,13 @@ let student = new Student ("Missy", 8, "Web Development" );
 student.course = "Data structure";
 // Getter call
 console.log("Course purchased is " + student.courses);
+//index signature
+class SeatAssignment {
+// A1,A2, ...
+// missy,may, ...
+//index signature property
+[seatNumber: string]: string;
+}
+let seats = new SeatAssignment();
+seats.A1 = 'missy';
+seats.A2 = 'may';
