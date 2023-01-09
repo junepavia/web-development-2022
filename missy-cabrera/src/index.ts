@@ -366,5 +366,15 @@ type Optional<T> ={
 type Nullable<T> ={
     [K in keyof T]: T[K] | null
  }
-
-
+// Class Decorators
+function Component(constructor: Function){
+   console.log ('Component decorator called');
+   constructor.prototype.uniqueId = Date.now();
+   constructor.prototype.insertInDom = () => {
+   console.log('inserting the component in the DOM');
+   }
+}
+@Component
+class ProfileComponent{
+    
+}
