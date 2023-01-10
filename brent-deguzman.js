@@ -1,4 +1,4 @@
-var x = myFunction(8, 6); // a=8 * b=6
+      var x = myFunction(8, 6); // a=8 * b=6
       document.getElementById("func1").innerHTML = x;
       //use to display the data
       function myFunction(a, b) {
@@ -359,3 +359,237 @@ var x = myFunction(8, 6); // a=8 * b=6
       document.getElementById("arrite01").innerHTML += x + "<br>";
       }//Return with Key + Element
       //for statement defines a code block that is executed as long as a condition is true
+
+      //JS Date
+      function datefunct() {//Shows the current date and time
+        const petsa = new Date();
+        document.getElementById("petsa").innerHTML = petsa;
+        }
+      function datefunct1() {
+        const petsa1 = new Date(2022, 11, 24, 23, 59, 59, 59);
+        document.getElementById("petsa1").innerHTML = petsa1;
+        }
+      function datefunct2() {
+        const petsa2 = new Date("December 15, 2022 13:26:52");
+        document.getElementById("petsa2").innerHTML = petsa2;
+      }
+      function datefunct3() {
+        const petsa3 = new Date(2022, 11);
+        document.getElementById("petsa3").innerHTML = petsa3;
+      }
+      function datefunct4() {
+        const petsa4 = new Date(2022); //use "" to be year
+        document.getElementById("petsa4").innerHTML = petsa4;
+      }//Standard Unix Time
+      function datefunct5() {
+        const petsa5 = new Date();
+        document.getElementById("petsa5").innerHTML = petsa5.toUTCString();
+      }//Coordinated Universal Time
+      function datefunct6() {
+        const petsa6 = new Date();
+        document.getElementById("petsa6").innerHTML = petsa6.toISOString();
+      }//International Organization for Standardization
+      function datefunct7() {
+      const petsa7 = Date.parse("December 15, 2022");
+      document.getElementById("petsa7").innerHTML = petsa7;
+      }//Date.parse convert the given date to millisecond
+      const methodget = new Date()
+      const months = ["January","February","March","April","May","June","July","August",
+      "September","October","November","December"];
+      let month = months[methodget.getMonth()];
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      let day = days[methodget.getDay()];
+      function datefunct8() {
+      document.getElementById("getmet").innerHTML = methodget.getFullYear();
+      document.getElementById("getmet1").innerHTML = methodget.getMonth() + 1;
+      //document.getElementById("getmet1").innerHTML = month;
+      document.getElementById("getmet2").innerHTML = methodget.getDate();
+      document.getElementById("getmet3").innerHTML = methodget.getDay();
+      //document.getElementById("getmet3").innerHTML = day;
+      document.getElementById("getmet4").innerHTML = methodget.getHours();
+      document.getElementById("getmet5").innerHTML = methodget.getMinutes();
+      document.getElementById("getmet6").innerHTML = methodget.getSeconds();
+      document.getElementById("getmet7").innerHTML = methodget.getMilliseconds();
+      document.getElementById("getmet0").innerHTML = methodget.getTimezoneOffset();
+      }// inset UTC after each get to check GMT
+      function LocaltoUTC() {
+      const Loc2UTC = new Date();
+      document.getElementById("getmet8").innerHTML = Loc2UTC;
+      }
+      function LocaltoUTC1() {
+        const Loc2UTC1 = new Date().toUTCString();
+        document.getElementById("getmet9").innerHTML = Loc2UTC1;
+      }
+      const setmet = new Date()
+      function datefunct9() {
+        setmet.setFullYear(1995);
+        document.getElementById("setmit").innerHTML = setmet; 
+        setmet.setMonth(3);
+        document.getElementById("setmit1").innerHTML = setmet;
+        setmet.setDate(11);
+        document.getElementById("setmit2").innerHTML = setmet;
+        setmet.setHours(10);
+        document.getElementById("setmit4").innerHTML = setmet;
+        setmet.setMinutes(30); 
+        document.getElementById("setmit5").innerHTML = setmet;
+        setmet.setSeconds(30);
+        document.getElementById("setmit6").innerHTML = setmet;
+        setmet.setMilliseconds(20);
+        document.getElementById("setmit7").innerHTML = setmet;
+        setmet.setTime(1671033600000);
+        document.getElementById("setmit8").innerHTML = setmet;
+      }
+      //ES6 
+      let  scope = `I'm outside block`;
+      {  
+        let scope = `I'm inside block`;
+        document.getElementById("varlet1").innerHTML = scope;
+      }
+      document.getElementById("varlet").innerHTML = scope;
+      function constfunct() {
+      const  block = `Using const outside block scope`;
+      document.getElementById("varlet").innerHTML = block;
+      {  
+        const block = `Using const inside block scope`;
+        document.getElementById("varlet1").innerHTML = block;
+        } 
+      }
+      const ax = (ax, ay) => ax * ay; //=> omits return and curly brackets
+      //const ax = function(ax, ay) { return ax * ay; };
+      //const ax = (ax, ay) => { return ax * ay };  //good habit to always keep them
+      document.getElementById("arrow").innerHTML = ax(10, 10);
+      const phold = ["Lorem", "Ipsum", ...'Dolor']; //expand the string like in from
+      const phold1 = ["Sit", "Amet", "Elit"];
+      const fusion = [phold, ...phold1]; // combines 2 array
+      document.getElementById("operator").innerHTML = fusion; 
+      const number0 = [10,20,-30,40,0];
+      let maxValue = Math.max(...number0); //Math.max/min.apply(null, max/min)
+      let minValue = Math.min(...number0);
+      document.getElementById("mathmax").innerHTML = `${maxValue}, ${minValue}`;
+      let loop = ""; // ln. 192
+      for (let x of Toyota) {
+        loop += x + "<br>";
+      }//loop over data structures[Array,String, etc]
+      document.getElementById("loopy").innerHTML = loop;
+      let loop1 = ""; // ln. 348
+      for (let x of from) { 
+        loop1 += x + "<br>";
+      }
+      document.getElementById("loopy1").innerHTML = loop1;
+      const perkilo = new Map([
+        ["Pork", 320],
+        ["Beef", 350],
+        ["Chicken", 250]
+      ]); //key-value pairs where the keys can be any datatype
+      document.getElementById("newmap").innerHTML = perkilo.get("Beef");
+      const lorems = new Set(['L','O','R','E','M','O','E']);
+      document.getElementById("newset").innerHTML = lorems.size;
+      //collection of unique values, value can only occur once
+      class Pet {//template for creating objects
+        constructor(name, born, breed) {
+          this.name = name;
+          this.born = born;
+          this.breed = breed;
+        }//executed automatically when a new object is created
+      }
+      const myPet = new Pet("Kirk", 2018, 'Half-chow Half-retriever');
+      document.getElementById("class").innerHTML =
+      myPet.name + " " + myPet.born + " " + myPet.breed;
+      const myPet1 = new Pet("Molly", 2021, 'Shih Tzu');
+      document.getElementById("class1").innerHTML =
+      myPet1.name + " " + myPet1.born + " " + myPet1.breed;
+
+      const curse = new Promise(function(curse1, myReject) {
+        setTimeout(function(){ curse1("Task failed successfully"); }, 2500);
+      });
+      curse.then(function(value) {
+        document.getElementById("promise").innerHTML = value;
+      })
+      //A Promise is a JavaScript object that links "Producing Code" and "Consuming Code".
+      function promifunct(some) {
+        document.getElementById("promi").innerHTML = some;
+      }
+      let curse2 = new Promise(function(success, fail) {
+        let x = "Yolo";
+        if (x == 'Yolo') {
+          success("Aw Yiss");
+        } else {
+          fail("Epic Fail");
+        }
+      });
+      curse2.then(
+        function(value) {promifunct(value);},
+        function(error) {promifunct(error);}
+      );
+      let id = Symbol('id');     
+      Toyota[id] = 4111995;
+      alert(`${Toyota[id]} Unique Identifier` );
+      document.getElementById("symbo").innerHTML = Symbol("id") == Symbol("id");
+      //Default Parameter Values - function parameters to have default values
+      function myFunction(operator,y=10){
+        const x = parseFloat(document.getElementById("defpara").value);
+        //parseFloat => returns a new float initialized
+        if (operator == "+"){
+          document.getElementById("defpara1").innerHTML=(x + y);
+        }
+        else if (operator == "-"){
+          document.getElementById("defpara1").innerHTML=(x - y);
+        }
+        else if (operator == "*"){
+          document.getElementById("defpara1").innerHTML=(x * y);
+        }
+        else {
+          document.getElementById("defpara1").innerHTML=(x / y); 
+        }}
+      function restfunct(...param) {
+        let restfunct = 1;
+        for (let rest of param) restfunct *= rest;
+        return restfunct;
+      }
+      let rest = restfunct(2, 4, 6, 8, 9, 10, 12);
+      document.getElementById("restpara").innerHTML = rest;
+      document.getElementById("trunc").innerHTML = Math.trunc(32.758);
+      // returns the integer part - whole number
+      document.getElementById("sign").innerHTML = Math.sign(999);
+      //returns if x is negative, null or positive
+      document.getElementById("cbrt").innerHTML = Math.cbrt(27)
+      //returns the cube root of x
+      document.getElementById("log2").innerHTML = Math.log2(32);
+      document.getElementById("log10").innerHTML = Math.log10(1000000);
+      //returns the base x logarithm of a number
+      document.getElementById("isInt").innerHTML =
+      Number.isInteger(9) + "<br>" + Number.isInteger(7.99);
+      document.getElementById("isSafe").innerHTML =
+      Number.isSafeInteger(999) + "<br>"
+       + Number.isSafeInteger(12345678901234567);
+      document.getElementById("isFinite").innerHTML =
+       isFinite(1 / 0) + "<br>" + isFinite(1 / 1);
+      document.getElementById("isNan").innerHTML =
+       isNaN("Not a Number") + "<br>" + isNaN(25);
+
+      function stringsFunction() {
+        const txtsample = document.getElementById("usertext").value;
+        const included = document.getElementById("include").value;
+        const startwth = document.getElementById("startwth").value;
+        const endwth = document.getElementById("endwth").value;
+        const arrfrom = Array.from(txtsample)
+        const slicer = txtsample.slice(0, 6);
+        //1st para begin of cut[index] | 2nd para end of cut[index]
+        document.getElementById("includ").innerHTML =txtsample.includes(included);
+        document.getElementById("starts").innerHTML = txtsample.startsWith(startwth);
+        document.getElementById("ends").innerHTML = txtsample.endsWith(endwth);
+        document.getElementById("lengths").innerHTML = txtsample.length;
+        document.getElementById("arrayfrom").innerHTML = arrfrom;
+        document.getElementById("slices").innerHTML = slicer;
+        document.getElementById("stringsub").innerHTML = txtsample.substr(0,10);
+        //1st para begin of cut[index] | 2nd para strings to take[length]
+        document.getElementById("substrings").innerHTML = txtsample.substring(7, 11);
+        document.getElementById("isNan1").innerHTML = isNaN(txtsample)
+        document.getElementById("charat").innerHTML =
+         `${txtsample.charAt(9)} ${txtsample.charCodeAt(9)}`;
+        document.getElementById("uplowcase").innerHTML = 
+        `${txtsample.toLowerCase()} <br> ${txtsample.toUpperCase()}`;
+        document.getElementById("replaceme").innerHTML = txtsample.replace(
+          /IPSUM/i,
+          "Apple Pen")
+      }
