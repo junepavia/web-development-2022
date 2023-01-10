@@ -10,10 +10,10 @@
 <body class="bg-dark">
         <nav class="navbar navbar-expand-lg bg-info">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">JavaScript</a>
+                <a href="erwin-jumamil.html" class="navbar-brand">JavaScript</a>
                     <div class="navbar-nav">
-                        <a href="#" class="nav-link active">Home</a>
-                        <a href="#" class="nav-link">Page 1</a>
+                        <a href="erwin-jumamil-home.html" class="nav-link active">Home</a>
+                        <a href="erwin-jumamil-page1.html" class="nav-link">Page 1</a>
                         <a href="#" class="nav-link">Page 2</a>
                         <a href="#" class="nav-link">Page 3</a>
                     </div>
@@ -121,32 +121,114 @@
             <h2>JavaScript Template Literals</h2>
             <p>Template literals allows variables in strings:</p>
             <p id="demo"></p>
-            <script>
-            let firstName = "John";
-            let lastName = "Doe";
-            let text = `Welcome ${firstName}, ${lastName}!`;
-            document.getElementById("demo").innerHTML = text;
-            </script>
-            <p id="demo1"></p>            
-            <script>
-            let price = 10;
-            let VAT = 0.25;
-            let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
-            document.getElementById("demo1").innerHTML = total;
-            </script>
+            <p id="demo1"></p>
             <p>Template literals allows variables in strings:</p>
+            <button onclick="total()">Click Me</button>
             <p id="demo2"></p>
             <p>Template literals are not supported in Internet Explorer.</p>
-            <script>
-            let header = "Templates Literals";
-            let tags = ["template literals", "javascript", "es6"];
-            let html = `<h2>${header}</h2><ul>`;
-            for (const x of tags) {
-            html += `<li>${x}</li>`;
-            }
-            html += `</ul>`;
-            document.getElementById("demo2").innerHTML = html;
-            </script>
+        </div>
+    </div>
+    <div class="container-fluid bg-info ">
+        <div class="row text-center ">
+            <div class="col-6">
+                <h1>OPERATORS</h1>
+                <div class="container text-center ">
+                    <table class="table table-secondary table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Keywords</th>
+                          <th scope="col">Discription</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>+</td>
+                          <td>Addtion</td>
+                        </tr>
+                        <tr>
+                          <td>-</td>
+                          <td>Subtraction</td>
+                        </tr>
+                        <tr>
+                          <td>*</td>
+                          <td>Multiplication</td>
+                        </tr>
+                        <tr>
+                          <td>**</td>
+                          <td>Exponentiation (ES2016)</td>
+                        </tr>
+                        <tr>
+                          <td>/</td>
+                          <td>Division</td>
+                        </tr>
+                        <tr>
+                          <td>%</td>
+                          <td>Modulus (Remainder)</td>
+                        </tr>
+                        <tr>
+                          <td>++</td>
+                          <td>Increment</td>
+                        </tr>
+                        <tr>
+                          <td>--</td>
+                          <td>Decrement</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+            <div class="col-6">
+                <h1>JavaScript Assignment Operators</h1>
+                <table class="table table-dark table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Operator</th>
+                        <th scope="col">example</th>
+                        <th scope="col">Same As</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>=</td>
+                        <td>x = y</td>
+                        <td>x = y</td>
+                      </tr>
+                      <tr>
+                        <td>+=</td>
+                        <td>x += y</td>
+                        <td>x = x + y</td>
+                      </tr>
+                      <tr>
+                        <td>-=</td>
+                        <td>x -= y</td>
+                        <td>x = x - y</td>
+                      </tr>
+                      <tr>
+                        <td>*=</td>
+                        <td>x *= y</td>
+                        <td>    x = x * y</td>
+                      </tr>
+                      <tr>
+                        <td>/=</td>
+                        <td>x /= y/td>
+                        <td>x = x / y</td>
+                      </tr>
+                      <tr>
+                        <td>%=</td>
+                        <td>x %= y</td>
+                        <td>x = x % y</td>
+                      </tr>
+                      <tr>
+                        <td>**=</td>
+                        <td>x **= y</td>
+                        <td>x = x ** y</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
         </div>
     </div>
     <script src="myScript.js"></script>

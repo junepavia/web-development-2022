@@ -18,7 +18,11 @@
       #number-cont,
       #ways-cont,
       #array-cont,
-      #arsort-cont {
+      #arsort-cont,
+      #date-cont,
+      #ES6-cont,
+      #es6b-cont,
+      #review-cont {
         border: outset 5px royalblue;
         padding: 2px;
         margin: 2px;
@@ -26,6 +30,9 @@
         width: auto;
         background: url(https://wallpaperaccess.com/full/2728566.jpg) no-repeat;
         background-size: cover;
+      }
+      #date-cont {
+        font-size: 18px;
       }
       h1 {
         text-align: center;
@@ -39,6 +46,12 @@
         opacity: 0.7;
         transition: 0.2s;
         border: blue 3px solid;
+      }
+      h5 {
+        margin: 0;
+      }
+      input {
+        width: 300px;
       }
     </style>
   </head>
@@ -220,7 +233,161 @@ let Toyota4 = Fortunure
       <p><span id="arrite0"></span> -- .keys()</p>
       <p><span id="arrite01"></span> -- .entries()</p>
     </div>
+    <div id="date-cont">
+      <h2>JS Dates</h2>
+      <p>
+        The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date
+        format
+      </p>
+      <p>Ways to create a new date object</p>
+      <ul>
+        <li>new Date()</li>
+        <li>new Date(date string)</li>
+        <li>new Date(year,month)</li>
+        <li>new Date(year,month,day)</li>
+        <li>new Date(year,month,day,hours)</li>
+        <li>new Date(year,month,day,hours,minutes)</li>
+        <li>new Date(year,month,day,hours,minutes,seconds)</li>
+        <li>new Date(year,month,day,hours,minutes,seconds,ms)</li>
+        <li>new Date(milliseconds)</li>
+      </ul>
+      <button onclick="datefunct()">i-Click</button
+      ><!--Tagalog-->
+      <button onclick="datefunct1()">Click</button>
+      <button onclick="datefunct2()">Klik</button
+      ><!--Indonesian-->
+      <button onclick="datefunct3()">Kurikku</button
+      ><!--Japanese-->
+      <button onclick="datefunct4()">Diǎnjī</button
+      ><!--Chinese-->
+      <button onclick="datefunct5()">Klicken</button
+      ><!--German-->
+      <button onclick="datefunct6()">Anqur</button
+      ><!--Arabic-->
+      <button onclick="datefunct7()">Clique</button
+      ><!--Portuguese-->
+      <p><span id="petsa"></span>Date()</p>
+      <!--JS will use browser timezone-->
+      <p>Date(year,month,day,hours,minutes,seconds,ms)</p>
+      <span id="petsa1"></span>
+      <p>Date(date string)</p>
+      <span id="petsa2"></span>
+      <p>Date(year,month)</p>
+      <span id="petsa3"></span>
+      <p>Date(1 parameter)</p>
+      <span id="petsa4"></span>
+      <p>Date() in UTC</p>
+      <!--GMT - Greenwich Mean Time-->
+      <span id="petsa5"></span>
+      <p>Date() in ISO</p>
+      <!--YYYY-MM-DDTHH:MM:SSZ-->
+      <span id="petsa6"></span>
+      <p>Date() in milliseconds</p>
+      <span id="petsa7"></span>
+      <h4>Date get Method</h4>
+      <button onclick="datefunct8()">Watashi o kurikku</button>
+      <p><span id="getmet"></span> -- .getFullYear()</p>
+      <p><span id="getmet1"></span> -- .getMonth()</p>
+      <p><span id="getmet2"></span> -- .getDate() - Day of the Month</p>
+      <p><span id="getmet3"></span> -- .getDay() - Day of the Week</p>
+      <p><span id="getmet4"></span> -- .getHours()</p>
+      <p><span id="getmet5"></span> -- .getMinutes()</p>
+      <p><span id="getmet6"></span> -- .getSeconds()</p>
+      <p><span id="getmet7"></span> -- .getMilliseconds()</p>
+      <p><span id="getmet0"></span> -- .getTimezoneOffset()</p>
+      <button onclick="LocaltoUTC()">Local</button>
+      <p>Local Time :<span id="getmet8"></span></p>
+      <button onclick="LocaltoUTC1()">UTC</button>
+      <p>Universal :<span id="getmet9"></span></p>
+      <button onclick="datefunct9()">Click Me!</button>
+      <p><span id="setmit"></span> -- .setFullYear()</p>
+      <p><span id="setmit1"></span> -- .setMonth()</p>
+      <p><span id="setmit2"></span> -- .setDate()</p>
+      <p><span id="setmit4"></span> -- .setHours()</p>
+      <p><span id="setmit5"></span> -- .setMinutes()</p>
+      <p><span id="setmit6"></span> -- .setSeconds()</p>
+      <p><span id="setmit7"></span> -- .setMilliseconds()</p>
+      <p><span id="setmit8"></span> -- .setTime()</p>
+    </div>
 
+    <div id="ES6-cont">
+      <h2>ES6</h2>
+      <p>ECMAScript 2015 is also known as ES6 and ECMAScript 6.</p>
+      <ul>
+        <li>var - not block scope , can be accessed in or out the scope</li>
+        <li>let - block scope , value can be change</li>
+        <li>const - block scope , value cannot be change</li>
+      </ul>
+      <p>
+        Block scope is an area between two { curly braces } which can be between
+        loops, if condition or switch statement. The let and const introduced in
+        ES2015 allow us to create block scoped variables that can be accessed
+        only inside those block.
+      </p>
+      <button onclick="constfunct()">Click Me!</button>
+      <p><span id="varlet"></span> -- let/const outside scope</p>
+      <p><span id="varlet1"></span> -- let/const inside scope</p>
+      <p><span id="arrow"></span> -- => as return</p>
+      <p><span id="operator"></span> -- ... to expand & as concat()</p>
+      <p><span id="mathmax"></span> -- Math.max,min</p>
+      <p><span id="loopy"></span> for/of statement loop of arrays</p>
+      <p><span id="loopy1"></span> for/of statement loop of string</p>
+      <p><span id="newmap"></span> -- new Map()</p>
+      <p><span id="newset"></span> -- new Set()</p>
+      <p><span id="class"></span></p>
+      <p><span id="class1"></span> -- keyword class</p>
+      <pre>
+    To create object:    
+    const Pet = {
+      name: "Kirk",
+      born: "2018",
+      breed: Half-chow Half-retriever,
+      };
+      </pre>
+      <p><span id="promise"></span> -- keyword Promise</p>
+      <p><span id="promi"></span> example 2 for Promise</p>
+      <p><span id="symbo"></span> Symbol</p>
+    </div>
+    <div id="es6b-cont">
+      <h3>ES6 Part II</h3>
+      <input type="number" name="number" id="defpara" />
+      <button onclick="myFunction('*')">*</button>
+      <button onclick="myFunction('/')">/</button>
+      <button onclick="myFunction('-')">-</button>
+      <button onclick="myFunction('+')">+</button>
+      <p>Is equal to: <span id="defpara1"></span></p>
+      <p><span id="restpara"></span> -- ... as Rest Parameter</p>
+      <p><span id="trunc"></span> -- Math.trunc(x)</p>
+      <p><span id="sign"></span> -- Math.sign(x)</p>
+      <p><span id="cbrt"></span> -- Math.cbrt(x)</p>
+      <p><span id="log2"></span> -- Math.log2(x)</p>
+      <p><span id="log10"></span> -- Math.log10(x)</p>
+      <p><span id="isInt"></span> -- Number.isInteger(x)</p>
+      <p><span id="isSafe"></span> -- Number.isSafeInteger(x)</p>
+      <p><span id="isFinite"></span> -- Number.isFinite(x)</p>
+      <p><span id="isNan"></span> -- isNaN()</p>
+    </div>
+    <div id="review-cont">
+      <h2>Quick Review</h2>
+      <h5>Input any text:</h5>
+      <input type="text" id="usertext" /><br />
+      <h5>Includes()</h5>
+      <input type="text" id="include" /><span id="includ"></span><br />
+      <h5>StartsWith()</h5>
+      <input type="text" id="startwth" /><span id="starts"></span>
+      <h5>EndsWith()</h5>
+      <input type="text" id="endwth" /><span id="ends"></span><br />
+      <button type="button" onclick="stringsFunction()">Show Answer</button>
+      <p>Length of User Text:<span id="lengths"></span></p>
+      <p>Array.from():<span id="arrayfrom"></span></p>
+      <p>Array.Slice():<span id="slices"></span></p>
+      <p>SubStr():<span id="stringsub"></span></p>
+      <p>SubString():<span id="substrings"></span></p>
+      <p>isNaN():<span id="isNan1"></span></p>
+      <p>charAt()+charCodeAt:<span id="charat"></span></p>
+      <p>Lower/Upper Case:<span id="uplowcase"></span></p>
+      <p>Replace Method:<span id="replaceme"></span></p>
+    </div>
     <script src="/brent-deguzman.js"></script>
   </body>
 </html>
