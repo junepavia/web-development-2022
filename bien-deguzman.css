@@ -140,3 +140,63 @@ body{
     padding: 20px;
     vertical-align: top; 
 }
+.max{
+    background: rgb(233, 255, 39);
+    border: 2px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top; 
+}
+.last{
+    background-image: linear-gradient(to right,rgb(77, 255, 181), rgb(255, 95, 95));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+}
+.arrays2{
+    background-image: linear-gradient(to right,rgb(243, 63, 189), rgb(157, 255, 0));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.meth{
+    background-image: linear-gradient(to right,rgb(98, 255, 255), rgb(105, 255, 46));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top; 
+}
+.change{
+    background-image: linear-gradient(grey, yellow);
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top; 
+}
+.last2{
+    background-image: linear-gradient(to top,rgb(77, 255, 181), rgb(217, 255, 46));
+    margin-top: 20px;
+    border: 3px solid;
+    padding: 20px;
+}
+.ES6{
+    border: 3px solid;
+    display: inline-block;
+    padding: 20px;
+}
+.ES61{
+    border: 3px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+}
+.inter{
+    border: 3px solid;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+}

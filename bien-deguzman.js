@@ -187,4 +187,266 @@ document.getElementById("prec").innerHTML =
   x21.toPrecision(2) + "<br>" +
   x21.toPrecision(4) + "<br>" +
   x21.toPrecision(5); 
-/**/
+
+/*The largest possible number in JavaScript*/
+let x22 = Number.MAX_VALUE;
+document.getElementById("maxv").innerHTML = x22;
+
+/*smallest number possible in JavaScript*/
+let x23 = Number.MIN_VALUE;
+document.getElementById("minv").innerHTML = x23;
+
+/*JavaScript array elements are accessed using numeric indexes (starting from 0)*/
+const arr = ["One", "Two", "Three" ,"Four"];
+document.getElementById("arr").innerHTML = arr[2];
+
+/*This statement changes the value of the first element in arr1*/
+const arr1 = ["One", "Two", "Three","Four"];
+arr1[0] = "Zero";
+document.getElementById("arr1").innerHTML = arr1;
+
+/*Access the Full Array the full array can be accessed by referring to the array name*/
+const me1 = ["Bien", "Marco", "De Guzman"];
+document.getElementById("arr2").innerHTML = me1;
+
+/*Length property of an array returns the length of an array (the number of array elements)*/
+const fruits = ["Banana", "Orange", "Apple", "Mango","Watermelon"];
+document.getElementById("arr3").innerHTML = fruits.length;
+
+/*push method way to add a new element to an array is using the push() method*/
+const me2 = ["Bien", "Marco"];
+document.getElementById("arr4").innerHTML = me2;
+function myFunction1() {
+  me2.push("De Guzman");
+  document.getElementById("arr4").innerHTML = me2;
+}
+/*Associative Arrays with named indexes are called associative arrays (or hashes)*/
+const me3 = [];
+me3[0] = "Bien";
+me3[1] = "Marco";
+me3[2] = "De Guzman";
+me3[3] = 1;
+document.getElementById("arr5").innerHTML =
+me3[0] + " " + me3.length;
+
+/*The typeof operator, when used on an array, returns object*/
+//const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+//document.getElementById("arr6").innerHTML = typeof fruits1;
+const fruits0 = ["Banana", "Orange", "Apple"];
+document.getElementById("arr6").innerHTML = Array.isArray(fruits0);
+
+/*String to Array*/
+const fruits2 = ["Banana", "Orange", "Avocado"];
+document.getElementById("meth1").innerHTML = fruits2.toString();
+
+/*The join() method joins array elements into a string. */
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("meth2").innerHTML = fruits3.join(" + ");//It this example we have used " * " as a separator between the elements
+
+/*Pop method removes the last element from an array*/
+const foods = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth3").innerHTML = foods;
+foods.pop();
+document.getElementById("meth4").innerHTML = foods;
+foods.pop();
+document.getElementById("meth5").innerHTML = foods;
+
+/*Push method method adds a new element to an array (at the end)*/
+const foods1 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth6").innerHTML = foods1;
+foods1.push("Hotdog");
+document.getElementById("meth7").innerHTML = foods1;
+
+/*Shift method removes the first array element and "shifts" all other elements to a lower index*/
+const foods2 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth8").innerHTML = foods2;
+foods2.shift();
+document.getElementById("meth9").innerHTML = foods2;
+
+/*Unshift method adds new elements to the beginning of an array*/
+const foods3 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("meth10").innerHTML = foods3;
+foods3.unshift("Adobo");
+document.getElementById("meth11").innerHTML = foods3;
+
+/*Array elements are accessed using their index number*/
+const foods4 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("change1").innerHTML = foods4;
+foods4[1] = "Afritada";
+document.getElementById("change2").innerHTML = foods4;
+
+/*Deleting elements leaves undefined holes in an array*/
+const foods5 = ["Tinola", "Menudo", "Sinigang", "Spam"];
+document.getElementById("ad1").innerHTML =
+"Ang lutong ulam ay: " + foods5[0];
+delete foods5[0];//Deleted 0 start
+document.getElementById("ad2").innerHTML =
+"Ang lutong ulam ay: " + foods5[0];
+
+/*Concat() method creates a new array by merging (concatenating) existing arrays*/
+const Girls = ["Missy", "Princess"];
+const Boys = ["Bien", "Brent", "Al", "Erwin", "Ziegler",...Girls];
+const myProgrammer = Girls.concat(Boys);
+document.getElementById("merges").innerHTML = myProgrammer;
+
+/*Sorting Array*/
+const animals = ["Zebra", "Doraemon", "Monkey", "Cat","Dinosaur"];
+document.getElementById("sorts1").innerHTML = animals;
+
+animals.sort();
+animals.reverse();
+document.getElementById("sorts2").innerHTML = animals;
+/*Map method does not change the original array*/
+const numbers1 = [2, 4, 6, 8, 10];z
+const numbers2 = numbers1.map(myFunction2);
+
+document.getElementById("nums3").innerHTML = numbers2;
+
+function myFunction2(value, index, array) {
+  return value * 2;
+}
+
+/*Filter method creates a new array with all array elements that passes a test*/
+const numbers3 = [0, 22, 4, 15, 65, 39, 99];
+const over18 = numbers3.filter(myFunction3);
+
+document.getElementById("filt").innerHTML = over18;
+
+function myFunction3(value, index, array) {
+  return value > 22;
+}
+
+/*Reduce method runs a function on each array element to produce (reduce it to) a single value*/
+const numbers4 = [1,2,3,4,5,6,7,8,9,10];
+let sum = numbers4.reduce(myFunction4);
+
+document.getElementById("redu").innerHTML = "Total is: " + sum;
+
+function myFunction4(total, value, index, array) {
+  return total + value;
+}
+/*Find method returns the value of the first array element that passes a test function*/
+const numbers5 = [7, 9, 10, 11];
+let first = numbers5.find(myFunction5);
+
+document.getElementById("finds").innerHTML = "The first number over 5 is: " + first;
+function myFunction5(value, index, array) {
+  return value > 5;
+}
+
+/*Entries method returns an Array Iterator object with key/value pairs*/
+const planets2 = ["Earth", "Pluto", "Mars", "Saturn","Jupiter"];
+const f1 = planets2.entries();
+for (let x1 of f1) {
+  document.getElementById("entr").innerHTML += "["+ x1 +"]"+ "<br>";
+}
+
+/*let keyword allows you to declare a variable with block scope*/
+let  xxxx = 10;
+// Here x is 10
+{  
+  let xxxx = 5;//
+  // Here x is 5
+}
+// Here x is 10
+document.getElementById("lets").innerHTML = xxxx;
+/*With arrow functions, you don't have 
+to type the function keyword, the return keyword, and the curly brackets.*/
+const x1 = (x, y , z) => x * y - z;
+document.getElementById("arrow").innerHTML = x1(5, 5 , 5);
+
+/*Spread operator expands an iterable (like an array) into more elements*/
+const power1 = ["Red", "Blue", ...""];
+const power2 = ["Pink", "Black",];
+
+const combined = [power1, ...power2];
+document.getElementById("spread").innerHTML = combined; 
+
+
+/*A JavaScript for loop executes a block of code as long as a specified condition is true*/
+let Name = "BienMarco";
+
+let loop = "";
+for (let x of Name) {
+  loop += x + "<br>";
+}
+
+document.getElementById("loops").innerHTML = loop;
+/*Classes are a template for creating objects*/
+class Me {
+  constructor(name, year) {//Method
+    this.name = name;
+    this.year = year;
+  }
+}
+const myMe = new Me("Bien", 2000);
+document.getElementById("klass").innerHTML =
+myMe.name + " " + myMe.year;
+
+/* "Producing Code" can take some time */
+const myPromise = new Promise(function(myResolve) {
+  setTimeout(function(){ myResolve("Hello Goodafternoon!"); }, 2000);
+});
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(function(value) {
+  document.getElementById("prom").innerHTML = value;
+});
+
+/*Default Parameter Values*/
+function myFunction(x, y = 8) {
+  return x + y;
+}
+document.getElementById("functs").innerHTML = myFunction(3);
+
+/*The rest parameter (...) allows a function 
+to treat an indefinite number of arguments as an array*/
+function sum1(...args) {
+  let sum1 = 0;
+  for (let arg of args) sum1 += arg;
+  return sum1;
+}
+
+let x33 = sum1(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("rest").innerHTML = x33;
+
+/*The includes() method returns true if a string contains a specified value, otherwise false*/
+let text30 = "This not a lorem";
+document.getElementById("incl").innerHTML = text30.includes("not");
+
+/*The startsWith() method returns true if a string begins with a specified value, otherwise false*/
+let text31 = "I am Iron-Man";
+document.getElementById("swith").innerHTML = text31.startsWith("Me");
+
+/*The endsWith() method returns true if a string ends with a specified value, otherwise false*/
+let text32 = "Bien Marco";
+document.getElementById("ewith").innerHTML = text32.endsWith("Marco");
+
+/*The Array.from() method returns an 
+Array object from any object with a length property or any iterable object*/
+const myArr = Array.from("BIENMARCO");
+document.getElementById("arrf").innerHTML = myArr;
+
+/*Math.sign(x) returns if x is negative, null or positive*/
+document.getElementById("mathsign").innerHTML = "Positive: "+ Math.sign(4);
+document.getElementById("mathsign1").innerHTML = "Negative: "+ Math.sign(-5);
+document.getElementById("mathsign2").innerHTML = "Null: "+ Math.sign();
+
+/*Math.cbrt(x) returns the cube root of x*/
+document.getElementById("cubes").innerHTML = "Cube root of 9 is: " + Math.cbrt(27);
+document.getElementById("cubes1").innerHTML = "Cube root of 64 is: " + Math.cbrt(64);
+document.getElementById("cubes2").innerHTML = "Cube root of 125 is: " + Math.cbrt(125);
+
+/*Math.log2(x) returns the base 2 logarithm of x*/
+document.getElementById("log").innerHTML = "Logarithm of 16 is:" + Math.log2(16);
+document.getElementById("log1").innerHTML = "Logarithm of 4 is:" + Math.log2(4);
+
+/*The isInteger() method returns true if the argument is an integer*/
+document.getElementById("integerss").innerHTML =
+Number.isInteger(1) + "<br>" + Number.isInteger(3.5123) 
++ "<br>" +Number.isInteger(1.1) ;//integers don't include fractions or decimals
+
+/*isSafeInteger() method returns true if the argument is a safe integer*/
+document.getElementById("safes").innerHTML =
+Number.isSafeInteger(-1) + "<br>" + Number.isSafeInteger(12345678901234567);
+/* */

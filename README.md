@@ -169,6 +169,27 @@ Javascript string - are written with quotes single or double (""/'')
 Javascript number - can be written in with or without decimal
 EL or ES numbers can be written in exponential (-e)
 Boolean can only have 2 values(True or False)
+__________________________________________________
+Union type - describes a value that can be one of several types. We use the vertical bar ( | ) to separate each type, so number | string | boolean is the type of a value that can be a number , a string , or a boolean .
+__________________________________________________
+Intersection type - combines multiple types into one. This allows you to add together existing types to get a single type that has all the features you need. 
+__________________________________________________
+Type aliases - give a type a new name. 
+They are similar to interfaces in that 
+they can be used to name primitives and any 
+other kinds that you'd have to define by hand otherwise.
+__________________________________________________
+Nullable types - TypeScript has two special types, null and undefined , that have the values null and undefined respectively.
+__________________________________________________
+Optional chaining - is defined as the ability to immediately stop running an expression if a part of it evaluates to either null or undefined 
+__________________________________________________
+Nullish Coalescing Operator - is an alternative to || which returns the right-side expression if the left-side is null or undefined. In contrast, || uses falsy checks, meaning an empty string or the number 0 would be considered false.
+__________________________________________________
+Type Assertion - Sometimes we know more about the type of a variable than the TypeScript compiler. In
+those situations, we can use the as keyword to specify a different type than the one inferred by the compiler.
+__________________________________________________
+Never type - which indicates the values that will never occur. The never type is used when you are sure that something is never going to occur.
+__________________________________________________ 
 
 # Ziegler Azarcon
 
