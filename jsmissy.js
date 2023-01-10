@@ -120,10 +120,10 @@ function test14() {
   let i =["rat", "ants", "flies", "frog"]
    document.getElementById("missy35").innerHTML=`Have a ${h}!`;
    document.getElementById("missy36").innerHTML ="<mark>toString:</mark>" +" "+ g.toString();
-   document.getElementById("missy37").innerHTML ="<mark>join:</mark>" +" "+ g.join("@");
+   document.getElementById("missy37").innerHTML ="<mark>join:</mark>" +" "+ g.join("&");
    document.getElementById("missy38").innerHTML ="<mark>pop:</mark>" +" "+g; g.pop();
    document.getElementById("mis38").innerHTML ="<mark>pop2:</mark>" +" "+ g;
-   document.getElementById("missy39").innerHTML ="<mark>shift:</mark>" +" "+g; g.shift();
+   document.getElementById("missy39").innerHTML ="<mark>shift:</mark>" +" "+g.shift();
    document.getElementById("mis39").innerHTML ="<mark>shift2:</mark>" +" "+ g;
    document.getElementById("missy40").innerHTML ="<mark>concat:</mark>" +" "+g.concat(i);
    document.getElementById("missy41").innerHTML ="<mark>sortalpha:</mark>" +" "+g; g.sort();
@@ -131,10 +131,136 @@ function test14() {
    document.getElementById("missy43").innerHTML =
    "<mark>sortrev:</mark>" +" "+g;g.sort(); g.reverse();
    document.getElementById("missy44").innerHTML ="<mark>reverse:</mark>" +" "+ g ;
+} 
+let j = ['Missy', 'Erwin', 'Al', 'Princess','Brent','Bien','Zieg'];
+
+function test15() {
+  j.push(document.getElementById("pushy").value);
+         // console.log(j);
+document.getElementById("missy45").innerHTML =j.join("<br>");
 }
-/*function test9( m )
- { return (8-4) * (m-36);
-  document.getElementById(missy12).innerHTML = test9(58);*/
+function test16() {
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction0);
 
+document.getElementById("missy46").innerHTML = numbers2;
 
+function myFunction0(value, index, array) {
+  return value * 2;
+}
+}
+function test17(){
+  const numbers = [45, 4, 9, 16, 25,2,38];
+  const overnumm = numbers.filter(myFunction);
+  document.getElementById("missy47").innerHTML = overnumm;
+
+  function myFunction(value, index, array) {
+    return value < document.getElementById("numm").value ;
+  }}
+  function test18(){
+  const numbers = [45, 4, 9, 16, 25];
+  let sum = numbers.reduceRight(myFunction3);
+  
+  document.getElementById("missy48").innerHTML = "The sum is " + sum;
+  
+  function myFunction3(total, value, index, array) {
+    return total + value;
+  }}
+  function test19(){
+  const numb = [15, 4, 9, 16, 20];
+let someOver18 = numb.some(myFunction5);
+document.getElementById("missy49").innerHTML = "Some over 18 is " + someOver18 +"["+numb+"]";
+function myFunction5(value, index, array) {
+  return value > 18;
+}}
+function test20(){
+const numbe = [4, 9, 16, 25, 29];
+let first = numbe.find(myFunction6);
+
+document.getElementById("missy50").innerHTML = "First number over 18 is " + first+"["+numbe+"]";
+
+function myFunction6(value, index, array) {
+  return value > 18;
+}}
+function test21(){
+  const p = ["Peace", "Love", "Hope", "Faith"];
+  const f = p.entries();
+  
+  for (let x of f) {
+    document.getElementById("missy51").innerHTML += x + "<br>";
+  }
+}
+function test22(){
+  const l = [...document.getElementById("entry").value];
+  const m = l.entries();
+  
+  for (let i of m) {
+   document.getElementById("missy52").innerHTML += i + "<br>"; }
+  }
+function test23(){
+const vb = new Date();
+document.getElementById("missy53").innerHTML = vb;
+document.getElementById("missy54").innerHTML = vb.toDateString();
+document.getElementById("missy55").innerHTML = vb.toUTCString();
+document.getElementById("missy56").innerHTML = vb.toISOString();
+}
+function test24() {
+  let  cv = 10;
+{  let cv = 2;}
+const ce = (x, y) => x * y;
+const operator = [23,55,21,87,56];
+const operator2 =[10,20,30,40,50];
+const operator3 =[...operator,...operator2];           
+const operator4 = new Set(operator);                           //new set
+let maxValue = Math.max(...operator)+ "<br>"+ operator3;
+let language = "Missy";  //loop
+let km = "";
+for (let x of language) {
+  km += x + "<br>";}
+const fruits = new Map([                   //map
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]]);
+  const letters = new Set();
+// Add Values to the Set
+letters.add("Mis");
+letters.add("Sy");
+letters.add("Sung");
+class Car {                            //class
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }}
+const myCar = new Car("Ford", 2014);
+const myCar1 = new Car("Toyota",2023);
+const myPromise = new Promise(function(myResolve, myReject) {         //my promise
+  setTimeout(function(){ myResolve("APPROVED!"); }, 3000);
+});
+myPromise.then(function(value) {
+  document.getElementById("missy64").innerHTML =" "+ value;
+});
+let fun= (x, y = 10) => x + y;     // parameter values 
+   document.getElementById("missy57").innerHTML="<mark>Redeclare:</mark>" + cv;
+   document.getElementById("missy58").innerHTML ="<mark>Arrow Function:</mark>" +ce(11, 8);
+   document.getElementById("missy59").innerHTML ="<mark>Operator:</mark>" +" "+ maxValue;
+   document.getElementById("missy60").innerHTML ="<mark> for/of loop:</mark>" +"<br>"+ km;
+   document.getElementById("missy61").innerHTML ="<mark>Map Array:</mark>" +" "+ fruits.get("apples");
+   document.getElementById("missy62").innerHTML ="<mark>new Set:</mark>" +" "+letters.size + "<br>"+operator4.has(21);
+   document.getElementById("missy63").innerHTML ="<mark>Class:</mark>" +" "+myCar.name + " " + myCar.year+
+   "<br>"+ myCar1.name + " " + myCar1.year;
+   document.getElementById("missy65").innerHTML ="<mark>Parameter values:</mark>" +" "+fun(5);
+}
+function heroes(v,s,...z) {             //rest parameter
+  console.log(v);
+  console.log(z);
+  console.log(z[1]);
+ }
+ heroes("Batman","Superman","wolverine","spiderman","wonderwoman");
+ function test25(){
+  document.getElementById("missy66").innerHTML ="<mark>trunc(8.8):</mark>"+"<br>" +Math.trunc(8.8);
+  document.getElementById("missy67").innerHTML ="<mark>Math.cbrt(8);</mark>"+"<br>" +Math.cbrt(8);
+  document.getElementById("missy68").innerHTML ="<mark>Math.log2(8);:</mark>"+"<br>" +Math.log2(8);
+  document.getElementById("missy69").innerHTML ="<mark>Number.isSafeInteger():</mark>"+"<br>"+
+   Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890);
+ }
 
