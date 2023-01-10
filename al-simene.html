@@ -113,6 +113,126 @@
             <p id="ans"></p>
         </div>
     </div>
+    <div class="container">
+        <div class="box4">
+        <h1 style="text-align:center ;">ARRAY</h1>
+        </div>
+        <div>
+            <p>Displaying Array </p>
+            <p  id="displayArr" style="margin-left:10px;"> </p>
+            <label for="newElem">Input new Element: </label><br><input type="text" id="newElem"> <br>
+            <button onclick="addElem()">Click Me</button>
+            <p id="newArr"></p>
+            
+            <label for="showElem">Show number of Element: </label><br><input type="number" id="showElem"><br>
+            <button onclick="noElem() ;convert()">Click Me</button>
+            <p id="nArr"></p> 
+        </div>
+        <div>
+            <p id="personDisplay"></p>
+            <button onclick="ind()">Show</button>
+            
+            <p style="margin-top:10px;">Display type String: <mark id="cn"> </markm></p>
+            <button onclick="conv()">Show</button>
+            <p style="margin-top:10px;">Display join() method: <mark id="jn"> </mark></p>
+            <p style="margin-top:10px;">New Array after pop: <mark id="na"> </mark></p>
+            <p style="margin-top:10px;">Pop Element: <mark id="ne"> </mark></p>
+            <p style="margin-top:10px;">New Array after Shift: <mark id="shft"> </mark></p>
+            <p style="margin-top:10px;">Shift Element: <mark id="shft1"> </mark></p>
+            <p style="margin-top:10px;">New Array afer Unshift Element: <mark id="ushft"> </mark></p>
+        </div>
+        
+        <div>
+            <p id="mix"></p>
+            <p>After Splicing: <mark id="anmls"></mark></p>
+            <p>Original Fruits <mark id="demo1"></mark></p>
+            <p>After Slicing: <mark id="demo"></mark></p>  
+        <button onclick="concatStr()">Show</button>
+        <p>Displaying Array: <mark id="dElement"></mark>   </p>
+        <input type="text" id="userinput"><button onclick="searchElement()">Search</button>
+            <p id="typeIdhere"></p>
+        </div>
+    </div>
+    <div class="container1" style="background-color: rgb(29, 32, 32);">
+        <div class="box3">
+            <h1 style="text-align:center ;">ARRAY ITERATION</h1>
+        </div>
+        <div>
+            <p>Array Example using foreach function: </p>
+            <mark id="expArr"></mark>
+            <p id="displayHere">Display Here</p>
+            <button onclick="frEach();mapFunc();filterFunc();reduc()">Display</button>
+            <p >Array using map Function: <span id="displayMap1"></span></p>
+            <p id="displayMap"></p>
+            <p >Array using filter Function:</p>
+            <p id="displayFilter"></p>
+            <p >Array using reduce Function:</p>
+            <p id="displayReduce"></p>
+            <p >Array using reduceright Function:</p>
+            <p id="displayReduceright"></p>
+            <p >Array using every Function:</p>
+            <p id="displayEvery"></p>
+            <p >Array using some Function:</p>
+            <p id="displaySome"></p>
+            <p >Array using find Function:</p>
+            <p id="displayFind"></p>
+            <p >Array using index Function:</p>
+            <p >Found in index <i id="displayIndex"></i></p>
+            <p>Array using last index Function:</p>
+            <p >Last Found in index <i id="displaylastIndex"></i></p>
+        </div>  
+</div>
+<div class="container" style="background-color: rgb(29, 32, 32);">
+    <div class="box4">
+        <h1 style="text-align:center ;">ES6</h1>
+        </div>
+    <div>
+        <h2 style="text-align:center ;">Arrow Function</h2>
+        <label for="guess">Guess a number from 0-9</label><br>
+        <input type="number" id="guess">
+        <button id="btn" onclick="guessNum()">Guess</button>
+    </div>
+    <div>
+        <h2 style="text-align:center ;">For Of Loop</h2>
+        <p>Displaying Array: <mark id="forOfElem"></mark></p>
+        <input type="text" id="inpt"><button onclick="forOf()">Search</button>
+        <p id="displayForOf"></p>
+        <h2 style="text-align:center;">Spread Operator</h2>
+        <p>Displaying String: <mark id="displayString"></mark></p>
+        <p>Displaying String: <mark id="displayArray"></mark></p>
+        <p id="spreadResult"></p>
+        <p>Displaying Numbers: <i id="numbers"></i></p>
+        <p>Max Number: <i id="Max"></i>  Min Number: <i id="Min"></i></p>
+        <button onclick="spread()" style="margin-top: 1rem;">Spread</button>
+    </div>
+    <div><h2 style="text-align:center ;">Javascript Map</h2>
+    <button onclick="javaMap()" style="margin-top: 1rem;">Map</button>
+</div>
+    <div><h2 style="text-align:center ;">Javascript Set</h2>
+        <p style="margin-bottom: 10px;">Display array:</p>
+        <p id="callDisplay" style="margin-bottom: 10px;"></p>
+        <button onclick="jsSet()" style="margin-top: 1rem;">Create a Set</button>
+        <p style="margin-bottom: 10px;">Display new Set:</p>
+        <p id="newSetDisplay" style="margin-bottom: 10px;"></p><br>
+        <p>Search Game</p>
+        <input type="text" id="searchGame"><button onclick="jsSet1()">Search</button>
+        <p id="displayGame" style="margin-bottom: 10px;"></p><br>
+    </div>
+    <div><h2 style="text-align:center ;">New Math Methods</h2>
+        <input type="number" id="numSign">
+        <button onclick="mapMethods()">Click</button>
+        <p>Comparing Math.floor and Math.trunc</p>
+        <p>Math.trunc <i id="truncDisplay"></i>  Math.floor <i id="floorDisplay"></i></p>
+        <p>Math.sign returns 1 if positive -1 if negative</p>
+        <p id="sign"></p>
+        <p>Cube root of <i id="displayUserInput"></i> is <mark id="displayCbrt"></mark></p>
+        <p>Multiply two, <mark id="displayLog"></mark> times to get <i id="displayUserInput1"></i>  </p>
+    </div>
+    <div>
+        <h2 style="text-align:center ;">Object entries()</h2>
+        <p id="senatorsDisplay"></p>
+    </div>
+</div>
 
 
 
@@ -120,6 +240,7 @@
 
 
 
-    <script src="al-simene.js"></script>      
+    <script src="al-simene.js">
+    </script>      
 </body>
 </html>
