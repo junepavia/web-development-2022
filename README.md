@@ -124,8 +124,7 @@ __________________________________________________
 Nullish Coalescing Operator - is an alternative to || which returns the right-side expression if the left-side is null or undefined. In contrast, || uses falsy checks, meaning an empty string or the number 0 would be considered false.
 __________________________________________________
 Type Assertion - Sometimes we know more about the type of a variable than the TypeScript compiler. In
-those situations, we can use the as keyword to specify a different type than the one
-inferred by the compiler.
+those situations, we can use the as keyword to specify a different type than the one inferred by the compiler.
 __________________________________________________
 Never type - which indicates the values that will never occur. The never type is used when you are sure that something is never going to occur.
 __________________________________________________ 
