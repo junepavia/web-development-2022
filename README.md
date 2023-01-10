@@ -169,7 +169,6 @@ Javascript string - are written with quotes single or double (""/'')
 Javascript number - can be written in with or without decimal
 EL or ES numbers can be written in exponential (-e)
 Boolean can only have 2 values(True or False)
-<<<<<<< HEAD
 __________________________________________________
 Union type - describes a value that can be one of several types. We use the vertical bar ( | ) to separate each type, so number | string | boolean is the type of a value that can be a number , a string , or a boolean .
 __________________________________________________
@@ -191,9 +190,7 @@ those situations, we can use the as keyword to specify a different type than the
 __________________________________________________
 Never type - which indicates the values that will never occur. The never type is used when you are sure that something is never going to occur.
 __________________________________________________ 
-=======
 
->>>>>>> main
 # Ziegler Azarcon
 
 -HTML zieg.html
