@@ -375,6 +375,43 @@ function Component(constructor: Function){
    }
 }
 @Component
-class ProfileComponent{
-    
+class ProfileComponent{} 
+//Parametized Decorator 
+/*type ComponentOptions = {
+   selector: string
 }
+//Decorator factory
+function Component( options:ComponentOptions){
+    return(constructor: Function) =>{
+    console.log ('Component decorator called');
+    constructor.prototype.options = value;
+    constructor.prototype.uniqueId = Date.now();
+    constructor.prototype.insertInDom = () => {
+    console.log('inserting the component in the DOM');
+    }
+ }}
+//Decorator Composition
+ function Pipe(constructor:Function){
+    console.log ('Pipe decorator called');
+    constructor.prototype.pipe = true;
+ }
+
+ @Component({ selector:'#my-profile'})
+ @Pipe
+ //f(g(x))
+ class ProfileComponent{} */
+// Method decorator
+function enumerable(value: boolean) {
+    return function (target: any,propertyKey: string,descriptor: PropertyDescriptor) {
+      descriptor.enumerable = value;
+    };}
+  // ---cut---
+  class Greeter {
+    greeting: string;
+    constructor(message: string) {    //"noUnusedParameters": true,  temporarily deactivated 
+      this.greeting = message;
+    }
+    @enumerable(false)
+    greet() {
+      return "Hello, " + this.greeting;
+    } }

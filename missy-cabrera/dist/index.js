@@ -185,4 +185,20 @@ let ProfileComponent = class ProfileComponent {
 ProfileComponent = __decorate([
     Component
 ], ProfileComponent);
+function enumerable(value) {
+    return function (target, propertyKey, descriptor) {
+        descriptor.enumerable = value;
+    };
+}
+class Greeter {
+    constructor(message) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+__decorate([
+    enumerable(false)
+], Greeter.prototype, "greet", null);
 //# sourceMappingURL=index.js.map
