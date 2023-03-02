@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { VoidExpression } from "typescript";
 import ReminderServices from "../services/reminder";
 interface NewReminderProps {
   onAddReminder: (title: string, id: number) => void;

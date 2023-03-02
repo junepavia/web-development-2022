@@ -17,7 +17,9 @@ function ReminderList({
   setReminder,
   reminders,
 }: ReminderListProps) {
-  const removeReminder = (id: number) => {};
+  const removeReminder = (id: number) => {
+    reminders.filter((reminders: any) => reminders.id !== id);
+  };
 
   return (
     <>
@@ -31,12 +33,7 @@ function ReminderList({
           <li className="list-group-item h5 text-info  bg-secondary" key={key}>
             {item.title}
             <button
-              onClick={() =>
-                setReminder(
-                  reminders.filter((reminders: any) => reminders.id !== item.id)
-                )
-              }
-              // onClick={() => console.log(item.id)}
+              onClick={() => removeReminder}
               className="btn btn-danger mx-5"
             >
               {" "}
